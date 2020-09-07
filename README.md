@@ -32,6 +32,5 @@ download your own copy of the data by doing:
 
 ```
 from download_catss import download_catss
-
 download_catss()
 ```
