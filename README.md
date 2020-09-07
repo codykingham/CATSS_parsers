@@ -28,4 +28,4 @@ it under a more open license.
 ## Source Data
 
 Note that due to the license, the CATSS data itself is not stored in this repository. But you can
-run `get_source_data.py` to download the files to your copy of the repo.
+run `download_catss.py` to download the files to your copy of the repo.
