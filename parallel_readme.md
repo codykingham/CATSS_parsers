@@ -252,12 +252,6 @@ parallel of the Hebrew is located two lines down, as marked by `{...}`.
 alignment. If we do a LXX-Hebrew alignment, the `{...}` should be replaced with 
 the Hebrew text from the first row [ZR(].*
 
-
-### difference in sequence
-
-Sometimes a difference in sequence leads to the parallel text being stored under
-a different line. 
-
 ## Order of the Text
 
 The order of the text in the database attempts to follow the printed text
