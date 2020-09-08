@@ -1,5 +1,5 @@
 # Add source directory to avoid uploadings CATSS dataset
-JSON
+*.json
 source
 
 # various system files
