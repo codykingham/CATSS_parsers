@@ -1,4 +1,4 @@
-# Interepreting the Parallel Database
+# Interepreting the CATSS Parallel Database
 *Cody Kingham, University of Cambridge*
 
 It doesn't appear to me that the CATSS parallel database has ever been
@@ -137,9 +137,17 @@ can be retrieved from the verse by stripping out the text critical symbols (1986
 text-critical sigla are either lowercase or other symbols.*
 
 ## Discontinuous Lines
-There is some significant complexity added by the fact that some lines 
-are divided across numerous lines of the document or need to be read 
-together to reconstruct the correct parallel reading.  
+
+The most problematic aspect of the database as received online is that some 
+data-lines are split up over several document-lines, or need to be read in
+conjunction with other lines. This is a bad side-effect of using in-line 
+annotation instead of stand-off. I suspect it is also simply a quirk from
+the older technology that was being used. For instance, the lines that are
+"too long" are split up. This is not necessary with modern data storage methods.
+
+Clustering discontinous data together into one place is a major goal of this repo.
+Thus, where relevant, I will propose some things to do in order to remedy the 
+discontinuities.
 
 ### long lines 
 
@@ -152,12 +160,19 @@ H/PGRYM TA\ SW/MATA {d} TA\ DIXOTOMH/MATA #
 #   AU)TW=N
 ```
 
-[But note, there are cases where # does not occur at beginning of 
-subsequent line, what do these mean?]
+In this example, the Greek line is continued on the second line.
+
+The Hebrew line can also be carried to the next line:
+
 ```
 {...$TYM W/$MWNYM} W/$B( #  O)KTAKO/SIA ^ DU/O
 M)WT =+ #
 ```
+
+Here `M)WT` should be read at the end of `W/$B(`. 
+
+Thus, the `#` sign on the follow-up line will go into the opposite
+column to whichever column is extended (1986:86).
 
 ### transpositions (marked with `^` or `^^^`)
 
@@ -165,10 +180,77 @@ Transpositions marked by `^` in one column are often cross-referenced
 with a column in a subsequent line. The line may or may not be adjacent. But 
 the documentation implies that it should at least be within the same verse.
 
-[NB: A proper extraction of alignments should seek to maintain this link.
+*NB: A proper extraction of alignments should seek to maintain this link.
 A better approach to the database would allow these links to be made more
 naturally. For instance, given a set of indexed Hebrew words, link each index i 
-to an index of Greek words j.]
+to an index of Greek words j.*
+
+#### local transpositions
+
+Gen 1:2
+```
+W/H/)RC H( ^ DE\ GH=
+```
+The Greek words H( and DE\ should be switched to match the Hebrew.
+
+*Remedy: There is the option here to re-arrange the Greek text to 
+better match the Hebrew order. But it is not mandatory for us to do 
+that. I will consider doing this.*
+
+#### adjacent transpositions
+
+Gen 2:4
+```
+)RC ^ =$MYM <sp>    TO\N OU)RANO\N
+^ W/$MYM =W/)RC <sp>    KAI\ TH\N GH=N
+```
+The single ^ in one column followed immediately by another line
+with ^ indicates a transposition of material between the two cols.
+
+*Remedy: Hebrew col b should take precedence, provided it is contained
+in col a of the adjacent line. i.e., in this case we only want $MYM rather
+than W/$MYM. The second row should likewise take col. b instead.*
+
+#### non-adjacent transpositions
+
+Gen 1:11
+```
+^ L/MYN/W   ^^^   
+)$R OU(=
+ZR(/W   TO\ SPE/RMA AU)TOU=
+B/W E)N AU)TW=|
+^^^ ^ =L/MYN/W  KATA\ GE/NOS
+```
+The first row contains 2 columns, hebrew col a and greek col.
+The single ^ before Hebrew and the triple ^^^ in the greek col
+indicate that the Greek is transposed elsewhere in the text. 
+The last row indicates the opposite: triple ^^^ indicate that 
+the Hebrew text is elsewhere in the verse, the single ^ then seems
+to serve as a placeholder. The Hebrew text is also contained in 
+col b, the reconstruction.
+
+*Remedy: When (+)Hebrew and (-)Greek with a ^ indication in the Hebrew
+column and a ^^^ indication in place of the Greek, we should
+go hunting for the Greek text elsewhere in the verse.*
+
+#### non-adjacent, stylistic transpositions
+
+Gen 1:29
+```
+ZR( {..^SPORI/MOU}
+ZR( SPE/RMATOS
+{...}   SPORI/MOU
+L/KM    U(MI=N
+```
+
+The `{..^ }` brackets indicate that all of the contents are part of a 
+transposition introduced for stylistic reasons. In this case, the true
+parallel of the Hebrew is located two lines down, as marked by `{...}`.
+
+*Remedy: We should keep the text contained in the brackets for the Hebrew-LXX
+alignment. If we do a LXX-Hebrew alignment, the `{...}` should be replaced with 
+the Hebrew text from the first row [ZR(].*
+
 
 ### difference in sequence
 
@@ -183,3 +265,9 @@ where possible. However, only the Hebrew text order is reliably unaltered:
 > The running text of MT thus has never been touched, while that of the LXX has been touched in the case of global differences between the two texts. (1986: 21). 
 
 [Question: which passages in particular have been altered?]
+
+## Unknown symbols
+
+|  |  | 
+|--|--|
+| `<sp>` | e.g. Gen 2:4 `)RC ^ =$MYM <sp>    TO\N OU)RANO\N` |
