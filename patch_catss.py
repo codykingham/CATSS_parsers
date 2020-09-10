@@ -51,6 +51,11 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     # subsequent line, in the Hebrew column.
     # This script will provide a detailed report in the log about which passages are affected,
     # as well as how these effects are corrected (either shift up or shift down).
+
+    # TODO: This could be better patched by doing a simple search/replace in the text 
+    # for all text beginning with book names and preceded by a newline
+    # will need a regex pattern that can differentiate genuine booknames and text
+
     report('patching orphaned lines (see code for description)...')
 
     # Ps 68:31 is a special case with 2 orphaned lines in a row
