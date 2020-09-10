@@ -64,7 +64,8 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
             
             # apply corrections to relevant lines
             elif '\t' not in line:
-                report(f'\tpatching {file} line {i}: {line}')
+                show = f'\n\t\t{lines[i-1]}\n\t--> {line}\n\t\t{lines[i+1]}'
+                report(f'\tpatching {file} at line {i}:{show}')
                 filtered_lines[-1] = filtered_lines[-1] + line 
 
             else:
