@@ -36,40 +36,67 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     # orphaned from their original line, for instance, see DanTh 6:17:
     # >>> 4132     L/DNY)L ,,a TO\N
     # >>> 4133     DANIHL
-    # here DANIHL should be a part of the previous line, or it should
-    # at least be marked with # to indicate the continuation of a line 
-    # in the subsequent line
-    # all such patched cases will be noted when running the patcher if 
-    # not silent 
+    # here DANIHL should be a part of the previous line
+    # this problem is found in Sirach, Psalms, Daniel, Chronicles, Ezekiel, Neh,
+    # etc. and is correlated with the book names. For instance, in the Psalms,
+    # the Hebrew column is affected anywhere the characters "PS" appear (פס)
+    # In Deuteronomy, the Greek column is affected where DEUT appears in the text
+    # This was probably caused by a bad export and regex pattern that inserted a 
+    # newline everywhere a book reference was found in the database, with the ill-effect
+    # that text containing the first characters of the books were also cleft by the newline. 
+    # Since most book abbreviations contain vowels, the Greek column is primarily affected,
+    # meaning that orphaned lines need to be shifted up and appended to the Greek column.
+    # The one exception to this is Psalms with the "PS" string that is anywhere a 
+    # פס appears in the text. These cases need to be merged down to the BEGINNING of the 
+    # subsequent line, in the Hebrew column.
+    # This script will provide a detailed report in the log about which passages are affected,
+    # as well as how these effects are corrected (either shift up or shift down).
     report('patching orphaned lines (see code for description)...')
-    report('the following lines will be joined to their previous')
 
     # Ps 68:31 is a special case with 2 orphaned lines in a row
-    # that instead of being merged up should be merged down together
-    # we handle that here
+    # to prevent need for recursive algorithm, just easier to do this
     report('\tpatching special double-orphan case in Ps 68:31')
     ps68_31 = file2text['20.Psalms.par']
     ps68_31_patch = [ps68_31[10848] + ps68_31[10849] + ps68_31[10850]]
     file2text['20.Psalms.par'] = ps68_31[:10848] + ps68_31_patch + ps68_31[10851:] 
-    
+
+    current_verse = None
     for file, lines in file2text.items():
 
         filtered_lines = []
 
-        for i, line in enumerate(lines):
+        i = 0
+        while i < len(lines):
 
-            # keep other lines 
-            if (ref_string.match(line)) or (not line):
+            line = lines[i]
+
+            # track references and keep them
+            if ref_string.match(line):
+                current_verse = line
                 filtered_lines.append(line)
             
             # apply corrections to relevant lines
-            elif '\t' not in line:
+            elif line and '\t' not in line:
+                
+                # append to log and report which lines are involved
                 show = f'\n\t\t{lines[i-1]}\n\t--> {line}\n\t\t{lines[i+1]}'
-                report(f'\tpatching {file} at line {i}:{show}')
-                filtered_lines[-1] = filtered_lines[-1] + line 
+                report(f'\tpatching {file} at line {i}, {current_verse}:{show}')
 
+                # shift line down to HB col if it's in Psalms
+                if current_verse.startswith('Ps'):
+                    filtered_lines.append(line+lines[i+1])
+                    i += 1 # shift forward 1 extra to skip already-covered line
+
+                # otherwise shift it up to GK col
+                else:
+                    filtered_lines[-1] = filtered_lines[-1] + line
+
+            # keep everything else unchanged            
             else:
                 filtered_lines.append(line) 
+
+            # advance the position 
+            i += 1
 
         # reassign to new lines
         file2text[file] = filtered_lines
