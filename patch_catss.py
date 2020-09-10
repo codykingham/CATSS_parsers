@@ -31,6 +31,12 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     joshb[3737] = 'W/YC+YRW =;W/YC+YDW .rd <9.12\t E)PESITI/SANTO {d} KAI\\ H(TOIMA/SANTO '
     joshb[9517] = "--+ '' =;L/GBWLWT/YHM <19.49>\t E)N TOI=S O(RI/OIS AU)TW=N "
     report('\tdone')
+
+    report('patching extra \\t chars in 06.JoshB.par...')
+    # the following lines have one too many tab characters
+    joshb[2006] = '-+ =;H/(YR/H <6.20>\tEI)S TH\\N PO/LIN '
+    joshb[9515] = "--+ '' =;M/XLQ <19.49>\tDIAMERI/SAS "
+    report('\tdone')
   
     # a search for lines without \t reveals that numerous lines are 
     # orphaned from their original line, for instance, see DanTh 6:17:
