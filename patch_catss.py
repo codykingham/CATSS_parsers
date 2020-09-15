@@ -59,7 +59,18 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     file2text['02.Exodus.par'] = fixed_lines
     report('\tdone')
 
-    # An identical corruption to the one discussed above can be found in
+    # orphaned lines are cases where parts of a line are inexplicably broken off
+    # these are handled in bulk in a loop further below; but Ps 68:31 contains a 
+    # special case with 2 orphaned lines in a row
+    # to prevent need for recursive algorith, we just fix it manually
+    # we do it here to avoid needed to adjust indices after the correction
+    # listed subsequent to this one
+    report('patching double-orphaned lines in lines 10849-10851 of 20.Psalms.par (Ps 68:31)')
+    ps68_31 = file2text['20.Psalms.par']
+    ps68_31_patch = [ps68_31[10848] + ps68_31[10849] + ps68_31[10850]]
+    file2text['20.Psalms.par'] = ps68_31[:10848] + ps68_31_patch + ps68_31[10851:] 
+
+    # An identical corruption to the one discussed above in Exodus 35:15
     # likewise in 20.Psalms.par lines 2455-2459
     report('patching corrupt lines 2457-2461 in 20.Psalms.par...')
     pss = file2text['20.Psalms.par']
@@ -92,13 +103,6 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     # will need a regex pattern that can differentiate genuine booknames and text
 
     report('patching orphaned lines (see code for description)...')
-
-    # Ps 68:31 is a special case with 2 orphaned lines in a row
-    # to prevent need for recursive algorithm, just easier to do this
-    report('\tpatching special double-orphan case in Ps 68:31')
-    ps68_31 = file2text['20.Psalms.par']
-    ps68_31_patch = [ps68_31[10848] + ps68_31[10849] + ps68_31[10850]]
-    file2text['20.Psalms.par'] = ps68_31[:10848] + ps68_31_patch + ps68_31[10851:] 
 
     current_verse = None
     for file, lines in file2text.items():
