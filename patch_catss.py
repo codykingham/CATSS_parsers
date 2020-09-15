@@ -24,7 +24,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
 
     # the following lines lack a tab character between the columns
     # corrections add a tab char
-    report('patching missing \\t chars in 06.JoshB.par...')
+    report('patching missing \\t chars in lines 984, 1367, 3738, 9518 of 06.JoshB.par...')
     joshb = file2text['06.JoshB.par']
     joshb[983] = 'W/)T H/GRG$Y ^ =W/)T W/H/)MRY\t KAI\\ TO\\N AMORRAI=ON '
     joshb[1366] = 'W/H/KHNYM =W/H/)BNYM .m .kb #\t KAI\\ OI( LI/QOI '
@@ -32,12 +32,41 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     joshb[9517] = "--+ '' =;L/GBWLWT/YHM <19.49>\t E)N TOI=S O(RI/OIS AU)TW=N "
     report('\tdone')
 
-    report('patching extra \\t chars in 06.JoshB.par...')
+    report('patching extra \\t chars in lines 2007 and 9516 of 06.JoshB.par...')
     # the following lines have one too many tab characters
     joshb[2006] = '-+ =;H/(YR/H <6.20>\tEI)S TH\\N PO/LIN '
     joshb[9515] = "--+ '' =;M/XLQ <19.49>\tDIAMERI/SAS "
     report('\tdone')
   
+    # there is a corruption in the lines for Exod 35:19:
+    # 
+    #     16283 ^ ^^^ =L/$RT {...?H/&RD} #  {+} E)N AI(=S LEITOURGH/SOUSIN
+    #     16284 
+    #     16285 Exod 1:10
+    #     16286     #
+    #     16287 
+    #     16288 Exod 35:19
+    #     16289 --+ E)N AU)TAI=S 
+    #
+    # the interposition of blank lines and the "Exod 1:10" string are not
+    # supposed to be there, and they interrupt the data-lines for Exod 35:19
+    # these incorrect lines will be removed; the extra Exod 35:19 heading will
+    # likewise become unnecessary
+    # NB that line numbers below will be 1 less due to zero-indexing of Python
+    report('patching corrupt lines 16283-16289 in 02.Exodus.par...')
+    exod = file2text['02.Exodus.par']
+    fixed_lines = exod[:16283] + [exod[16285]] + exod[16288:]
+    file2text['02.Exodus.par'] = fixed_lines
+    report('\tdone')
+
+    # An identical corruption to the one discussed above can be found in
+    # likewise in 20.Psalms.par lines 2455-2459
+    report('patching corrupt lines 2455-2459 in 20.Psalms.par...')
+    pss = file2text['20.Psalms.par']
+    fixed_lines = pss[:2456] + [pss[2457]] + pss[2460:]
+    file2text['20.Psalms.par'] = fixed_lines
+    report('\tdone')
+
     # a search for lines without \t reveals that numerous lines are 
     # orphaned from their original line, for instance, see DanTh 6:17:
     # >>> 4132     L/DNY)L ,,a TO\N
