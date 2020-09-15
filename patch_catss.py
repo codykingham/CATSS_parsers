@@ -61,7 +61,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
 
     # An identical corruption to the one discussed above can be found in
     # likewise in 20.Psalms.par lines 2455-2459
-    report('patching corrupt lines 2455-2459 in 20.Psalms.par...')
+    report('patching corrupt lines 2457-2461 in 20.Psalms.par...')
     pss = file2text['20.Psalms.par']
     fixed_lines = pss[:2456] + [pss[2457]] + pss[2460:]
     file2text['20.Psalms.par'] = fixed_lines
