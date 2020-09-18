@@ -30,7 +30,12 @@ this format. I'll refer to them as 1991 and 1986, respectively.
 
 There are numerous lacunae and typos in the two pieces of documentation. 
 
-#### on transpositions (~)
+#### Outdated Sigla
+
+The database dump as downloaded online has numerous incongruencies with 
+the 1991 and 1986 documents.
+
+##### transpositions (~)
 
 In 1991, `~` and `~~~` are provided as the sigla used for transpositions. 
 1986 presents these as `~` or `---` in the sigla appendix (pg. 14). 
@@ -46,6 +51,22 @@ in the PDF).
 **NB that the regular sign of transpositions in the downloaded database
 is one or three caret signs, i.e. ^ or ^^^**. Thus, everywhere in the documentation
 that reads `~` should be interpreted as `^`.  
+
+##### morphological separator (`\`)
+
+According to 1991, the backslash (`\`) serves  as a morphological separator for, e.g.,
+inseparable prepositions in Hebrew. But in the databse `/` is instead used for this purpose.
+
+##### maqqeph (`-`)
+
+1991 says that `-` is used in for maqqeph. But the online database uses whitespace instead 
+to represent maqqeph.
+
+##### shin/sin with `#`
+
+1991 says a `#` can represent "sin/shin", but this is not used in the database. 
+This character assignment conflicts with the alternative use of `#` to indicate
+discontinuous lines.
 
 ## Sample of `01.Genesis.par`: 
 
