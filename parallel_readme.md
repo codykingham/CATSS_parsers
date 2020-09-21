@@ -68,6 +68,34 @@ to represent maqqeph.
 This character assignment conflicts with the alternative use of `#` to indicate
 discontinuous lines.
 
+#### Other changed symbols
+|docs|actual| meaning |
+|----| ---- |  ----   |
+|`..a`|`,,a`|"word included in one of the Aramaic sections" |
+|`{..}`|`[..]`|"lacuna in [manuscript]" (1991:123)" |
+
+
+### Categories of Markup
+
+The CATSS database is a kind of column-based, in-line markup. In the repo,
+we want to change the markup to stand-off, which is more flexible. 
+
+The markup patterns used implicitly modify a word or stretch of words. For 
+instance, in the Greek column, words surrounded with `{..^}` are marked as 
+a "stylistic or grammatical transposition". This notation can also be considered
+as a "wrapper" markup, which modifies 1+ words. Another kind of markup can be 
+seen in the `:=` which "introduces a reconstructed proper noun". This symbol
+would thus seem to modify a string which follows it [question: can the string
+have spaces? If so, where do we end this markup?]. This might be called an
+"attached" markup pattern.
+
+| category | e.g. | desc |
+|  -----   |  --  | ---  |
+| wrapper | `{..^}` | surrounds modified words |
+| attacher | `:=` | adjacent to modified word(s) |
+| columner | `''` | modifies a whole column of words | 
+| place-holder | `{...}` | represents absent or transported words |  
+
 ## Sample of `01.Genesis.par`: 
 
 ```
