@@ -157,18 +157,24 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
 
     report('\tdone')
 
-    # all cases of tildes should be replaced with carrots 
+    # various errors / normalizations need to be made on string-matching bases
+    # those are listed below:
+    # 1. all cases of tildes should be replaced with carrots 
     # tildes are the original sigla as reflected in the docs;
     # but they have since been replaced, apparently, with ^
-    report('Replacing all remaining cases of tilde (~) sigla with ^')
+    # 2. a number of cases of the string ''= should be replaced 
+    # with a separating space
+    report('Making various string-based corrections and normalizations...')
     for file, lines in file2text.items():
         new_lines = []
         for i,line in enumerate(lines):
             if '~' in line:
-                report(f'\treplacing ~ in {file}, line {i+1}: {line}')
-                new_lines.append(line.replace('~', '^'))
-            else:
-                new_lines.append(line)
+                report(f'\treplacing ~ in {file} with ^, line {i+1}: {line}')
+                line = line.replace('~', '^')
+            elif "''=" in line:
+                report(f"\treplacing ''= in {file} with '' =, line {i+1}: {line}")
+                line = line.replace("''=", "'' =")
+            new_lines.append(line)
         file2text[file] = new_lines
     report('\tDONE with tilde replacements')
 
