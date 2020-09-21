@@ -1,0 +1,585 @@
+	sigla	freq	ex	other exs
+0	--+	20102	"01.Genesis.par.69 --+ =;W/YHY <1.7>	KAI\ E)GE/NETO"	Gen 1:6; Gen 1:7; Gen 1:8; Gen 1:8; Gen 1:8; Gen 1:8; Gen 1:9; Gen 1:9; Gen 1:9; Gen 1:9; Gen 1:9
+1	'=;	3740	"01.Genesis.par.69 --+ =;W/YHY <1.7>	KAI\ E)GE/NETO"	Gen 1:6; Gen 1:8; Gen 1:8; Gen 1:8; Gen 1:9; Gen 1:9; Gen 1:9; Gen 1:9; Gen 1:9; Gen 1:9; Gen 1:9
+2	''	8722	"01.Genesis.par.96 --+ '' =;W/YR) <1.10>	KAI\ EI)=DEN"	Gen 1:8; Gen 1:8; Gen 1:8; Gen 1:9; Gen 1:9; Gen 1:9; Gen 1:9; Gen 1:9; Gen 1:9; Gen 1:9; Gen 1:9
+3	'=;+	19	"01.Genesis.par.99 --+ '' =;+WB <1.10>	KALO/N"	Exod 38:18; Lev 12:4; Lev 12:5; Lev 13:39; Lev 14:49; Lev 15:3; Lev 22:5; Num 14:23; Num 19:3; 1/3Kgs 7:18; 1/3Kgs 7:18
+4	'=?	935	"01.Genesis.par.116 MQWM =?MQWH	SUNAGWGH\N"	Gen 1:30; Gen 2:7; Gen 3:16; Gen 3:24; Gen 4:7; Gen 4:22; Gen 6:3; Gen 6:7; Gen 6:20; Gen 6:20; Gen 7:20
+5	'=	8675	"01.Genesis.par.128 --+ '' =MQW/M,MQWM/M	TA\S SUNAGWGA\S AU)TW=N"	Gen 1:11; Gen 2:4; Gen 2:4; Gen 2:9; Gen 2:19; Gen 2:24; Gen 4:8; Gen 4:8; Gen 4:15; Gen 4:22; Gen 4:22
+6	,	172	"01.Genesis.par.128 --+ '' =MQW/M,MQWM/M	TA\S SUNAGWGA\S AU)TW=N"	Gen 3:15; Gen 3:15; Gen 4:26; Gen 14:14; Gen 20:2; Gen 21:16; Gen 23:2; Gen 23:6; Gen 23:11; Gen 25:3; Gen 27:6
+7	^	3719	"01.Genesis.par.160 ^ L/MYN/W	^^^"	Gen 1:11; Gen 2:4; Gen 2:4; Gen 4:15; Gen 4:15; Gen 4:22; Gen 4:22; Gen 4:22; Gen 6:16; Gen 6:16; Gen 7:8
+8	^^^	868	"01.Genesis.par.164 ^^^ ^ =L/MYN/W	KATA\ GE/NOS"	Gen 7:8; Gen 7:8; Gen 8:19; Gen 12:20; Gen 14:12; Gen 15:5; Gen 18:6; Gen 18:8; Gen 19:20; Gen 20:12; Gen 22:3
+9	'=%p	776	"01.Genesis.par.380 B/CLM/NW =%p	KAT' EI)KO/NA H(METE/RAN"	Gen 1:27; Gen 4:17; Gen 5:1; Gen 5:3; Gen 6:16; Gen 8:17; Gen 8:17; Gen 8:17; Gen 12:6; Gen 13:3; Gen 14:3
+10	{...?	283	"01.Genesis.par.401 {...?B/CLM/W} B/CLM =%p	KAT' EI)KO/NA"	Gen 7:22; Gen 8:5; Gen 17:23; Gen 18:5; Gen 18:25; Gen 20:10; Gen 21:16; Gen 22:2; Gen 22:5; Gen 23:1; Gen 23:1
+11	}	2175	"01.Genesis.par.401 {...?B/CLM/W} B/CLM =%p	KAT' EI)KO/NA"	Gen 3:1; Gen 3:23; Gen 4:13; Gen 5:5; Gen 5:5; Gen 5:6; Gen 5:6; Gen 5:7; Gen 5:7; Gen 5:8; Gen 5:8
+12	{...}	6263	"01.Genesis.par.461 {...}	SPORI/MOU"	Gen 1:30; Gen 2:5; Gen 2:11; Gen 2:17; Gen 2:20; Gen 3:5; Gen 3:12; Gen 3:16; Gen 4:7; Gen 4:7; Gen 4:8
+13	'=+	211	"01.Genesis.par.517 H/$BY(Y =+ <sp>	TH=| E(/KTH|"	Gen 5:3; Gen 5:4; Gen 5:6; Gen 5:7; Gen 5:9; Gen 5:10; Gen 5:12; Gen 5:13; Gen 5:15; Gen 5:16; Gen 5:21
+14	<sp>	893	"01.Genesis.par.517 H/$BY(Y =+ <sp>	TH=| E(/KTH|"	Gen 2:4; Gen 2:4; Gen 2:19; Gen 2:23; Gen 3:6; Gen 4:8; Gen 4:8; Gen 4:10; Gen 4:11; Gen 5:23; Gen 5:31
+15	'=:	1825	"01.Genesis.par.617 B/(DN =:B/(DM .nm	E)N EDEM"	Gen 2:10; Gen 3:9; Gen 4:15; Gen 4:16; Gen 4:16; Gen 4:18; Gen 4:18; Gen 4:18; Gen 4:25; Gen 7:16; Gen 8:13
+16	.nm	61	"01.Genesis.par.617 B/(DN =:B/(DM .nm	E)N EDEM"	Gen 2:10; Gen 4:16; Gen 10:12; Gen 25:2; Gen 25:4; Gen 36:27; Gen 36:27; Gen 36:27; Gen 36:28; Gen 36:35; Gen 37:17
+17	{!}nd	327	"01.Genesis.par.730 )KL {!}nd	BRW/SEI"	Gen 2:16; Gen 2:17; Gen 2:17; Gen 3:4; Gen 3:4; Gen 17:13; Gen 17:13; Gen 31:15; Gen 31:15; Gen 31:30; Gen 31:30
+18	<sp^>	68	"01.Genesis.par.868 --+ =$N/YHM <sp^>	OI( DU/O"	Gen 11:11; Gen 11:13; Gen 11:13; Gen 11:15; Gen 11:17; Gen 11:19; Gen 11:21; Gen 11:23; Gen 11:25; Gen 14:22; Gen 14:24
+19	{...	1235	"01.Genesis.par.884 (RWM {...M/}	FRONIMW/TATOS"	Gen 3:23; Gen 4:13; Gen 5:5; Gen 5:5; Gen 5:6; Gen 5:6; Gen 5:7; Gen 5:7; Gen 5:8; Gen 5:8; Gen 5:10
+20	'=@	1525	"01.Genesis.par.1118 Y$WP/K =@CPH,CPN .$c	SOU ^ THRH/SEI"	Gen 3:15; Gen 3:17; Gen 4:15; Gen 4:26; Gen 8:21; Gen 11:4; Gen 12:6; Gen 14:5; Gen 14:7; Gen 14:13; Gen 15:11
+21	.	280	"01.Genesis.par.1118 Y$WP/K =@CPH,CPN .$c	SOU ^ THRH/SEI"	Gen 3:15; Gen 4:12; Gen 4:14; Gen 13:14; Gen 14:2; Gen 14:2; Gen 14:8; Gen 24:21; Gen 25:13; Gen 25:15; Gen 30:35
+22	c	7	"01.Genesis.par.1118 Y$WP/K =@CPH,CPN .$c	SOU ^ THRH/SEI"	Gen 3:15; JudgA 15:14; 2Sam/K 8:3; 1/3Kgs 14:28; Ezek 27:20; DanTh 8:11
+23	{!}p	344	"01.Genesis.par.1127 HRBH {!}p	PLHQU/NWN"	Gen 3:16; Gen 15:13; Gen 15:13; Gen 16:10; Gen 16:10; Gen 18:18; Gen 18:18; Gen 20:18; Gen 20:18; Gen 22:17; Gen 22:17
+24	'=@?	219	"01.Genesis.par.1130 W/HRN/K =@?HGH .rg	KAI\ TO\N STENAGMO/N SOU"	Gen 4:12; Gen 4:14; Gen 5:29; Gen 6:16; Gen 14:14; Gen 19:17; Gen 38:14; Exod 4:25; Exod 32:12; Lev 2:7; Lev 5:15
+25	.rg	1	"01.Genesis.par.1130 W/HRN/K =@?HGH .rg	KAI\ TO\N STENAGMO/N SOU"	
+26	.qb	3	"01.Genesis.par.1136 T$WQT/K =?T$WBT/K .qb	H( A)POSTROFH/ SOU"	Gen 4:7; Song 7:11
+27	.rd	234	"01.Genesis.par.1162 B/(BWR/K =@(BD .rd	E)N TOI=S E)/RGOIS SOU"	Gen 4:18; Gen 4:18; Gen 8:21; Gen 10:12; Gen 22:13; Gen 46:16; Gen 47:21; Gen 49:14; Exod 6:16; Exod 6:17; Exod 21:29
+28	'=v	1298	"01.Genesis.par.1362 L/PTX =v	DIE/LH|S"	Gen 4:7; Gen 11:31; Gen 14:5; Gen 14:11; Gen 14:16; Gen 14:21; Gen 15:11; Gen 15:11; Gen 15:17; Gen 17:27; Gen 18:12
+29	x	15	"01.Genesis.par.1442 N( =@?)NX .(x	STE/NWN"	Gen 4:14; Exod 4:31; Num 24:24; JoshB 7:7; 2Sam/K 17:3; Neh 4:11; Ps 119:117; Prov 1:23; Prov 23:28; Hos 8:9; Hos 8:10
+30	.s	75	"01.Genesis.par.1479 L/KN =@L) KN .s	OU)X OU(/TWS"	Gen 30:15; Exod 16:32; Num 23:10; Num 27:14; JoshB 19:22; JudgB 1:35; JudgB 9:37; JudgB 14:14; JudgA 8:7; JudgA 9:37; JudgA 11:8
+31	.wy	135	"01.Genesis.par.1503 NWD =:NYD .wy	NAID"	Gen 4:18; Gen 10:27; Gen 11:31; Gen 23:13; Gen 33:13; Gen 41:2; Exod 33:15; Exod 40:38; Num 3:9; Num 10:34; Num 19:11
+32	---+	12	"01.Genesis.par.1578 ---+ =?HW) HYH <4.20>	{...?KAI\ H)=N}"	Exod 24:10; Exod 24:11; Exod 25:4; Exod 28:3; Exod 35:2; Exod 39:33; 2Sam/K 17:28; 2Sam/K 19:1; Job 41:25; Job 41:25; Job 41:25
+33	'=%vpa	328	"01.Genesis.par.1652 HWXL =@YXL =%vpa	H)/LPISEN"	Gen 7:19; Gen 7:20; Gen 9:2; Gen 12:15; Gen 17:24; Gen 17:27; Gen 20:9; Gen 25:10; Gen 29:27; Gen 32:19; Gen 33:11
+34	#	179	"01.Genesis.par.1950 {...$TYM W/$MWNYM} W/$B( #	O)KTAKO/SIA ^ DU/O"	Gen 5:31; Gen 7:2; Gen 14:5; Gen 14:19; Gen 18:10; Gen 23:1; Gen 36:5; Gen 36:14; Gen 46:12; Exod 10:26; Exod 13:5
+35	.nr	20	"01.Genesis.par.2071 YDWN =?YDWR .nr	KATAMEI/NH|"	Deut 23:14; JoshB 7:1; JoshB 7:18; JoshB 7:19; JoshB 7:20; JoshB 7:24; JoshB 15:55; JoshB 22:20; 2Sam/K 23:8; 1Chr 2:29; Prov 6:7
+36	--'=	1	"01.Genesis.par.2316 --= '' =H/BHMH	TW=N KTHNW=N"	
+37	'=%p-	377	"01.Genesis.par.2378 K/KL =%p-	PA/NTA"	Gen 7:5; Gen 7:22; Gen 8:17; Gen 35:7; Gen 38:16; Gen 38:24; Gen 40:10; Gen 47:24; Exod 7:28; Exod 8:1; Exod 8:13
+38	'=%p+	419	"01.Genesis.par.2522 W/KL =%p+ <sp>	KAI\ A)PO\ PA/NTWN"	Gen 14:4; Gen 15:6; Gen 21:2; Gen 24:10; Gen 31:13; Gen 31:15; Gen 49:21; Gen 49:32; Gen 50:25; Exod 3:4; Exod 5:16
+39	'=??	485	"01.Genesis.par.2657 B/(D/W =??	E)/CWQEN AU)TOU="	Gen 14:1; Gen 19:13; Gen 27:37; Gen 28:6; Gen 29:14; Gen 36:24; Gen 36:35; Gen 38:5; Gen 39:8; Gen 41:56; Gen 42:9
+40	.rh	4	"01.Genesis.par.2709 GBRW =?GBHW .rh	U(YW/QH"	Gen 7:24; Isa 8:12; Isa 8:12
+41	---	65	"01.Genesis.par.2872 --- =;L/R)T <8.8>	TOU= I)DEI=N"	Gen 8:7; Gen 8:7; Exod 37:14; Lev 21:20; Lev 21:20; Lev 21:20; Lev 21:20; JoshB 6:18; JoshB 17:17; JudgB 1:31; JudgB 4:3
+42	{!}-	66	"01.Genesis.par.2875 W/YC) YCW) {!}-	KAI\ E)CELQW\N"	Gen 20:7; Gen 24:5; Gen 27:30; Gen 30:16; Gen 31:30; Gen 43:7; Gen 43:20; Exod 2:19; Exod 5:23; Exod 5:23; Exod 12:9
+43	*	2903	"01.Genesis.par.3035 *HWC) **HYC)	E)CA/GAGE"	Gen 9:21; Gen 12:8; Gen 13:3; Gen 14:2; Gen 14:8; Gen 24:33; Gen 25:23; Gen 27:3; Gen 27:29; Gen 30:11; Gen 33:4
+44	**	1493	"01.Genesis.par.3035 *HWC) **HYC)	E)CA/GAGE"	Gen 9:21; Gen 12:8; Gen 13:3; Gen 14:2; Gen 14:8; Gen 24:33; Gen 25:23; Gen 27:3; Gen 27:29; Gen 30:11; Gen 33:4
+45	?	195	"01.Genesis.par.3118 --+ ?	SA/RKA"	Gen 12:17; Gen 13:14; Gen 18:5; Gen 18:14; Gen 19:29; Gen 27:5; Gen 35:3; Gen 35:3; Exod 2:9; Exod 4:7; Exod 4:14
+46	.m	333	"01.Genesis.par.3570 W/TGRMH =:W/TRGMH .m	KAI\ QORGAMA"	Gen 10:7; Gen 11:31; Gen 12:6; Gen 22:2; Gen 24:59; Gen 25:13; Gen 36:11; Gen 36:15; Gen 36:23; Gen 36:23; Gen 36:39
+47	.dr	270	"01.Genesis.par.3578 W/DDNYM =:W/RDNYM .dr <sp>	R(O/DIOI"	Gen 14:1; Gen 14:7; Gen 14:9; Gen 36:21; Gen 36:28; Gen 36:30; Gen 36:35; Gen 36:39; Gen 42:13; Gen 47:21; Gen 49:6
+48	.+d	2	"01.Genesis.par.3596 W/PW+ =:W/PWD .+d	FOUD"	1Chr 1:8
+49	.mb	25	"01.Genesis.par.3615 )T NMRD =:NBRD .mb	TO\N NEBRWD"	Gen 10:9; Deut 33:11; JoshB 13:27; JudgA 7:1; 1Sam/K 2:29; 1Sam/K 6:20; 1Sam/K 9:26; 2Sam/K 23:34; 1Chr 1:10; 1Chr 11:43; 1Esdr 5:49
+50	<sp	7	"01.Genesis.par.3811 W/)T )WZL =:W/)T )YZL .wy <sp	KAI\ AIZHL"	Lev 9:3; Lev 17:4; Deut 5:22; Deut 13:1; Deut 13:19; Deut 18:5
+51	'=%vap	495	"01.Genesis.par.3982 QR) =%vap	E)KLH/QH"	Gen 15:13; Gen 16:13; Gen 17:15; Gen 19:13; Gen 25:30; Gen 27:36; Gen 31:28; Gen 31:40; Gen 31:48; Gen 32:11; Gen 38:29
+52	.yw	147	"01.Genesis.par.4502 )XT/Y =)XT/W .yw	A)DELFH\ AU)TOU="	Gen 46:23; Gen 49:5; Num 11:26; Num 11:27; Num 19:12; Num 23:10; JoshB 3:14; JoshB 6:10; JudgB 5:13; 1Sam/K 12:3; 2Sam/K 1:21
+53	{d?}	33	"01.Genesis.par.4734 H/L) =H/L) {d?} HNH	OU)K {d?} I)DOU\"	Gen 47:19; Lev 11:1; Lev 15:12; Lev 16:33; Num 20:3; Deut 14:13; Deut 24:2; Deut 24:2; 2Sam/K 24:23; 2/4Kgs 8:29; 2/4Kgs 18:17
+54	'={d?}	6	"01.Genesis.par.4829 )TH ={d?} (TH .)(	{d?} {...NU=N} SU\ {...EI)=}"	Isa 2:13; Isa 21:2; Ezek 16:31; Ezek 17:18; Ezek 30:5
+55	.rl	5	"01.Genesis.par.4908 BR( =:BL( .rl	BALLA"	1Chr 2:53; Ps 37:35; Prov 15:22; Prov 24:6
+56	.br	10	"01.Genesis.par.4915 $N)B =:$N(R .)( .br <14.1>	KAI\ SENNAAR"	1/3Kgs 1:6; 1/3Kgs 12:2; Job 3:14; Job 6:14; Jer 25:23; Jer 30:16; Jer 36:14; Ezek 8:5; Ezek 30:9
+57	{**}	290	"01.Genesis.par.4920 *CBYYM **CBWYM {**}	SEBWIM"	Gen 14:8; Gen 25:23; Gen 27:29; Gen 36:5; Gen 36:14; Gen 43:28; Exod 21:8; Exod 39:33; Lev 11:21; Lev 25:30; Deut 2:33
+58	q	8	"01.Genesis.par.4922 BL( =:BLQ .(q	BALAK"	Gen 14:8; Gen 23:2; Gen 36:27; Gen 36:32; Gen 36:33; 1Sam/K 11:7; 1/3Kgs 22:47
+59	.rn	14	"01.Genesis.par.5087 (NR =:(NN .rn	AUNAN"	Gen 14:24; Exod 33:5; Num 21:30; JoshB 15:58; JoshB 19:29; 1/3Kgs 1:36; Prov 5:3; Isa 20:1; Jer 2:18; Jer 15:11; Ezek 41:15
+60	.x	13	"01.Genesis.par.5100 )T XNYK/YW =@?)NY,)NKY .x)	TOU\S I)DI/OUS"	Deut 28:30; JudgA 20:11; Ruth 2:12; 1Sam/K 16:20; 1Sam/K 23:21; 2Sam/K 2:24; 2Sam/K 10:16; 2Sam/K 23:9; Prov 17:1; Hab 2:3; Zeph 2:14
+61	{..r	366	"01.Genesis.par.5486 L) {..r(D}	{..^OU)/PW}"	Gen 19:7; Gen 28:13; Gen 39:20; Gen 45:6; Gen 49:26; Exod 7:23; Exod 9:6; Exod 10:6; Exod 12:9; Exod 14:22; Exod 14:29
+62	{!}pd	28	"01.Genesis.par.6321 $WB {!}pd	E)PANASTRE/FWN"	Gen 18:10; Exod 21:5; Exod 21:5; Exod 22:22; Exod 22:22; Exod 23:4; Exod 23:4; Lev 13:7; Lev 13:7; Lev 14:48; Lev 14:48
+63	{!}na	34	"01.Genesis.par.6826 W/Y$P+ {!}na	KAI\ KRI/SIN"	Gen 19:9; Gen 50:15; Gen 50:15; Exod 21:22; Exod 21:22; Exod 22:25; Exod 22:25; Lev 5:19; Lev 5:19; Lev 7:24; Lev 7:24
+64	'={d}	113	"01.Genesis.par.6942 H/NMC)T ={d}C)	A(\S E)/XEIS {d} KAI\ E)/CELQE"	Gen 26:12; Lev 13:13; Lev 18:25; Deut 7:15; Deut 7:15; Deut 28:37; Deut 32:43; Deut 32:43; JoshB 8:14; JudgB 1:16; JudgB 2:19
+65	{!}p+	15	"01.Genesis.par.6972 --+ =ML+ {!}p+	SW/|ZWN"	Gen 19:17; Exod 11:9; Exod 11:9; 1Sam/K 2:25; 1Sam/K 2:25; 1Sam/K 2:25; 2Sam/K 20:18; 2Sam/K 20:18; Jer 3:1; Jer 22:24; Jer 22:24
+66	.z	15	"01.Genesis.par.7165 B/HPK =?B/HPKY .z <sp^>	E)N TW=| KATASTRE/YAI {...KU/RION}"	Exod 16:32; Deut 32:35; 1Sam/K 29:11; 2Sam/K 6:21; 1/3Kgs 8:28; Esth 6:1; Song 4:1; Jonah 1:9; Jer 3:19; Jer 3:22; Jer 6:11
+67	'=?@	78	"01.Genesis.par.8170 H/MRYH =?@RM .m <^12.6,MWRH>	TH\N U(YHLH\N"	Num 6:25; Num 24:7; Deut 28:30; JudgA 9:27; 1Sam/K 24:12; 1/3Kgs 3:20; 1/3Kgs 4:11; 1/3Kgs 7:36; 2/4Kgs 4:2; Esth 8:5; Ps 17:3
+68	<^\d.\d,	1	"01.Genesis.par.8170 H/MRYH =?@RM .m <^12.6,MWRH>	TH\N U(YHLH\N"	
+69	>	22	"01.Genesis.par.8170 H/MRYH =?@RM .m <^12.6,MWRH>	TH\N U(YHLH\N"	Job 12:18; Sir 3:20; Sir 4:21; Sir 10:25; Sir 10:25; Sir 10:25; Sir 10:25; Sir 10:25; Sir 10:25; Sir 14:23; Sir 15:19
+70	--'=;	2	"01.Genesis.par.8417 --=;M/MN/Y <22.12> <sp>	DI' E)ME/"	Exod 10:24
+71	{..	6	"01.Genesis.par.8526 M)H {..W/(&RYM} {...W/$B(}	E(KATO\N EI)/KOSI E(PTA/"	Exod 3:18; JudgB 14:20; 1/3Kgs 2:35; Job 6:14; Sir 44:9
+72	'=.	5	"01.Genesis.par.8540 B/QRYT )RB( =.(q	E)N PO/LEI ARBOK"	Num 27:13; Isa 27:4; Isa 45:9; Isa 45:9
+73	.w	38	"01.Genesis.par.8584 L/W =L) .w) <sp>	MH/ [6]"	Gen 23:14; Gen 49:19; Gen 49:20; Exod 12:39; Exod 12:39; Lev 3:9; Lev 3:9; Num 23:20; Deut 2:29; Deut 32:29; 1Sam/K 1:24
+74	{*}	174	"01.Genesis.par.9363 *W/YY&M **W/YW&M {*}	KAI\ PARE/QHKEN"	Gen 30:11; Gen 33:4; Num 34:4; JoshB 9:7; JoshB 24:15; JudgB 6:5; Ruth 3:3; Ruth 3:5; 1Sam/K 2:10; 1Sam/K 8:3; 1Sam/K 14:27
+75	'	21	"01.Genesis.par.9550 --+ ' =;W/BH <24.14>	KAI\ E)N TOU/TW|"	Gen 24:44; Sir 10:22; Sir 30:11; Sir 30:17; Sir 34:5; Sir 37:26; Sir 39:24; Sir 40:5; Sir 40:11; Sir 41:10; Sir 42:10
+76	'=:A	1	"01.Genesis.par.9557 --+ =:ABRHM	ABRAAM"	
+77	'=:?	56	"01.Genesis.par.9932 --+ =:?R(W)L <36.10>	RAGOUHL"	Gen 25:3; Gen 36:11; Gen 36:15; Gen 36:23; Gen 36:27; Gen 36:27; Gen 36:27; Gen 36:36; Gen 36:39; Gen 36:39; Gen 36:43
+78	'=.dr	5	"01.Genesis.par.9944 W/)BYD( =.dr	KAI\ ABIRA"	Gen 25:4; Num 33:12; Num 33:13; Job 36:30
+79	n	8	"01.Genesis.par.10081 W/)DB)L =:W/NBD)L .)n .m	KAI\ NABDEHL"	Gen 25:15; Gen 30:35; 1Sam/K 24:11; 1Chr 1:29; 1Chr 1:30; Neh 7:54; Prov 14:35
+80	{!}v	28	"01.Genesis.par.10556 MWT {!}v	QANA/TOU"	Gen 26:11; Exod 22:3; Exod 22:3; Exod 22:12; Num 22:38; JoshB 17:13; JoshB 17:13; 2/4Kgs 3:23; 2/4Kgs 3:23; Job 13:5; Job 13:10
+81	'=vs	128	"01.Genesis.par.10567 M)H $(RYM ={d} &(RYM =vs	E(KATOSTEU/OUSAN {d} KRIQH/N"	Gen 26:20; Gen 26:20; Exod 4:31; Exod 26:33; Exod 32:25; JoshB 9:14; JoshB 19:6; JudgB 5:8; JudgA 5:8; 1Sam/K 5:6; 1Sam/K 12:2
+82	'=v?	8	"01.Genesis.par.10876 $B(H =v?	O(/RKOS"	1Sam/K 2:23; Prov 20:22; Prov 25:4; Prov 30:25; Song 4:8; Sir 10:12; Isa 54:11
+83	.tw	1	"01.Genesis.par.10899 H/XTY =:H/XWY .tw <sp>	TOU= EUAI/OU"	
+84	.h	24	"01.Genesis.par.10978 L/HBY) =L/)BY/W .h) ?	TW=| PATRI\ AU)TOU="	Gen 38:5; JoshB 2:14; 2Sam/K 23:36; 1/3Kgs 22:30; 2/4Kgs 3:24; 2/4Kgs 23:16; 2/4Kgs 25:11; 2Chr 21:11; Prov 15:32; Prov 17:9; Job 1:7
+85	'=?v	5	"01.Genesis.par.11143 W/YB) =?v	KAI\ EI)SH/NEGKEN"	Exod 28:22; 1/3Kgs 6:15; 1/3Kgs 6:15; Ps 112:7
+86	'=.j	1	"01.Genesis.par.11941 W/)WLM LWZ =.j	KAI\ OULAMLOUS {t}"	
+87	.x+	4	"01.Genesis.par.12751 L/H =:L)H .x+	LEIA"	2Chr 32:5; Ezek 13:14; Ezek 23:41
+88	.a	1	"01.Genesis.par.12939 B/GLL/K =?B/RGL/YK .a <^30.30	TH=| SH=| ^ EI)SO/DW|"	
+89	<^\d.\d	1	"01.Genesis.par.12939 B/GLL/K =?B/RGL/YK .a <^30.30	TH=| SH=| ^ EI)SO/DW|"	
+90	{!}ad	16	"01.Genesis.par.14363 HY+B {!}ad	KALW=S"	Gen 32:13; Gen 46:4; Gen 46:4; Num 22:17; Num 22:17; 1Sam/K 20:7; 1Sam/K 20:7; Prov 23:1; Prov 23:1; Prov 23:24; Prov 23:24
+91	'=%p?	2	"01.Genesis.par.15690 B/MQWM =%p?	E)K TOU= TO/POU"	Ps 145:4
+92	.mn	55	"01.Genesis.par.16228 W/HYMM .mn	KAI\ AIMAN"	Gen 36:24; Gen 38:14; Gen 38:21; Num 25:1; Num 34:4; Deut 2:10; Deut 2:20; Deut 2:20; Deut 2:20; Deut 32:34; Deut 33:2
+93	'=:??	2	"01.Genesis.par.16248 W/(NH =:??	KAI\ WNAN"	Gen 36:26
+94	.qr	4	"01.Genesis.par.16385 M/M&RQH =:?M/M&QQH .qr	E)K MASEKKAS"	JudgB 5:14; JudgA 5:14; 2/4Kgs 22:1
+95	.dt	7	"01.Genesis.par.16424 M+RD =:M+RT .dt	MATRAIQ"	1/3Kgs 18:29; Ezr 8:6; Hos 12:1; Jer 11:14; Ezek 22:4; Ezek 22:30
+96	.tr	4	"01.Genesis.par.16443 YTT =:YTR .tr	IEQER"	2Sam/K 23:4; 2Chr 18:31; Jer 42:20
+97	{!}nad	6	"01.Genesis.par.16981 +RP {!}nad	QHRI/ON"	Gen 37:33; Jer 25:30; Jer 25:30; DanTh 11:13; DanTh 11:13
+98	.wh	5	"01.Genesis.par.17051 W/$M/W =W/$M/H .wh	H(=| O)/NOMA"	Gen 43:21; 1Sam/K 2:10; 1/3Kgs 10:5; Jer 2:12
+99	'=%pa	1	"01.Genesis.par.17238 NTNH =NTN/H =v =%pa	E)/DWKEN AU)TH\N"	
+100	@	11	"01.Genesis.par.19994 W/YYR)W =W/YR)W @R)H	I)DO/NTES ^ DE\"	Exod 17:16; JudgB 15:14; JudgA 5:16; JudgA 15:14; 1Sam/K 2:3; 1Sam/K 21:3; 2/4Kgs 3:25; Job 29:12; Isa 44:12; Jer 8:18
+101	{..^	207	"01.Genesis.par.20515 )$R {..^B/YD/W}	PAR' W(=|"	Gen 44:17; Exod 13:14; Num 22:13; Num 23:25; JoshB 1:7; JoshB 5:14; JoshB 6:22; JoshB 8:20; JoshB 9:7; 1/3Kgs 11:14; 1Chr 12:18
+102	{!}aj	11	"01.Genesis.par.20696 +RP +RP {!}aj	QHRIO/BRWTOS GE/GONEN"	Exod 15:1; Exod 15:21; Num 13:30; Num 13:30; Job 14:18; Job 14:18; Amos 7:11; Amos 7:11; Amos 7:17; Amos 7:17
+103	'=.nm	3	"01.Genesis.par.21424 W/$MRWN =.nm	KAI\ ZAMBRAM"	Deut 10:6; JoshB 11:16
+104	t	7	"01.Genesis.par.21455 W/)CBN =:W/TCBN .)t	KAI\ QASOBAN"	Gen 50:24; 1Sam/K 17:52; 2Sam/K 7:25; 2/4Kgs 12:10; 2/4Kgs 17:30; Jer 21:12
+105	w	9	"01.Genesis.par.21458 W/)R)LY =:W/)RWLY .)w <sp>	KAI\ AROHLIS"	Num 14:31; Num 27:13; Num 31:2; JoshB 5:14; 1/3Kgs 11:22; Job 9:33; Hos 11:5; Jer 23:31
+106	'=.mn	1	"01.Genesis.par.21547 MPYM =.mn	KAI\ MAMFIN"	
+107	{!}nd+	16	"01.Genesis.par.22173 --+ =NTN {!}nd+	{..^E)N DO/SEI}"	Gen 47:22; Exod 22:19; Exod 22:19; Exod 23:22; Exod 23:22; Lev 24:21; Lev 24:21; Num 35:21; Num 35:21; Deut 13:16; Deut 28:2
+108	{d}?@	1	"01.Genesis.par.22455 KBRT =K/KBRT {d}?@RKB .m	KATA\ TO\N I(PPO/DROMON {d} XABRAQA {t}"	
+109	--	3	"01.Genesis.par.22552 -- =;)T/M <48.10>	AU)TOU\S"	1Chr 11:20; Sir 1:19
+110	'=@?a	2	"01.Genesis.par.22724 )XD =@?a	E)CAI/RETON"	Isa 30:20
+111	h	20	"01.Genesis.par.22743 YQR) =@QRH .)h	A)PANTH/SEI"	Num 24:6; Deut 2:25; JoshB 9:3; 1Sam/K 6:19; 1Sam/K 10:12; 2/4Kgs 3:10; 2/4Kgs 17:6; 2/4Kgs 18:11; 2/4Kgs 23:15; Ps 37:3; Prov 3:31
+112	.ld	5	"01.Genesis.par.22896 (L =?(D .ld <sp>	E(/WS"	Deut 13:9; 1Chr 5:10; Isa 66:19; Ezek 30:13
+113	.ms	5	"01.Genesis.par.22902 GRM =?GRS .ms <p119.20>	E)PEQU/MHSEN"	2Sam/K 24:15; Prov 11:30; Isa 3:10; Lam 2:13
+114	.rb	8	"01.Genesis.par.22986 $WR =?$WB .rb	A)NA/STREYON"	JoshB 16:1; JoshB 17:1; JoshB 19:8; JoshB 21:20; JoshB 21:40; 1/3Kgs 22:32; Ezek 27:16
+115	<	53	"01.Genesis.par.23549 --+ <Dt 1.8>	O( QEO\S"	Num 29:22; JoshB 5:2; JoshB 5:3; Sir 3:14; Sir 3:20; Sir 3:28; Sir 4:21; Sir 5:10; Sir 6:11; Sir 8:2; Sir 10:17
+116	\d.\d>	2	"01.Genesis.par.23549 --+ <Dt 1.8>	O( QEO\S"	2Chr 22:6
+117	<^	1	"01.Genesis.par.23550 --+ =L/)BWT/YN <^Dt1.8,6.10>	TOI=S PATRA/SIN H(MW=N"	
+118	t\d.\d,\d.\d>	1	"01.Genesis.par.23550 --+ =L/)BWT/YN <^Dt1.8,6.10>	TOI=S PATRA/SIN H(MW=N"	
+119	'=%p+?	3	"02.Exodus.par.558 W/TML)NH =%p+?	E(/WS E)/PLHSAN"	Exod 4:9; Exod 14:9
+120	?'=?	1	"02.Exodus.par.1569 --+ ?=?MWLWT	TH=S PERITOMH=S"	
+121	.n-	5	"02.Exodus.par.2091 L/KN =LK .n-	BA/DIZE"	2Sam/K 5:8; Job 1:16; Jer 2:34; Jer 46:12
+122	{x}	464	"02.Exodus.par.2281 --+ =BYT {x}	OI)=KOI"	Exod 6:17; Exod 6:20; Exod 6:20; Exod 6:20; Exod 10:13; Exod 11:3; Exod 25:23; Exod 25:23; Exod 26:16; Exod 27:3; Exod 27:3
+123	'=%p'=	1	"02.Exodus.par.3136 )T YD/W =%p=	TH=| XEIRI\"	
+124	.kt	2	"02.Exodus.par.4318 W/TX$K =?W/T$XT .m .kt	KAI\ E)FQA/RH"	Nah 2:14
+125	{!}	40	"02.Exodus.par.5966 PQD YPQD {!}	E)PISKOPH=| E)PISKE/YETAI"	Exod 19:5; Exod 19:5; Exod 19:12; Exod 19:12; Exod 34:7; Exod 34:7; Num 22:30; Num 22:30; Num 30:9; Deut 15:8; Deut 15:8
+126	.yc	4	"02.Exodus.par.6031 H/XYRT =H/XCRWT .yc <8.9>	TH=S E)PAU/LEWS"	Exod 14:9; Isa 11:15; Jer 40:5
+127	:	9	"02.Exodus.par.6506 ^^^ ^ =)T :Y&R)L	TO\N ISRAHL"	1/3Kgs 9:6; 1/3Kgs 17:2; 1/3Kgs 17:8; 1Chr 2:10; 1Chr 4:28; 1Esdr 5:65; Jer 3:16; Jer 34:1
+128	.yr	6	"02.Exodus.par.6560 (Z/Y =?(ZR .yr	BOHQO\S"	2/4Kgs 9:7; 1Chr 1:36; 1Chr 1:50; 1Chr 2:47; Ezek 28:9
+129	{...r	1	"02.Exodus.par.6735 {...rB/} ?	EI)S"	
+130	--+?	4	"02.Exodus.par.6964 --+? =?MKYM	PLHGE/NTES"	1Chr 10:3; Isa 51:4; Jer 22:15
+131	<qi>	1	"02.Exodus.par.7174 MXSPS =%p+  <qi>	W(SEI\ KO/RION"	
+132	'=p	1	"02.Exodus.par.7775 B/)ZNY =p	EI)S TA\ W)=TA"	
+133	{!}ndd	16	"02.Exodus.par.7778 MXH )MXH {!}ndd	A)LOIFH=| E)CALEI/YW"	Exod 18:18; Exod 19:13; Exod 19:13; Exod 19:13; Exod 19:13; Exod 22:18; Exod 22:18; Exod 22:22; Exod 22:22; Num 11:15; Num 11:15
+134	--?	1	"02.Exodus.par.8502 --? =??	KAI\ AI( SA/LPIGGES"	
+135	'=;{...}	10	"02.Exodus.par.10348 --+ '' =;{...}	GA/R"	Exod 23:22; 1/3Kgs 2:35; 1/3Kgs 2:35; 1/3Kgs 2:35; 1/3Kgs 2:35; 1/3Kgs 12:24; 1/3Kgs 14:26; 1/3Kgs 15:8; Isa 23:13
+136	.h-	12	"02.Exodus.par.10809 M$H =$M .m .h-	E)KEI="	Num 4:39; JoshB 13:8; Neh 10:5; Job 9:29; Jer 43:2; Ezek 21:15; Ezek 26:3; Ezek 32:18; Ezek 40:22; Ezek 40:26; Ezek 42:8
+137	'=p-	1	"02.Exodus.par.11811 (L )RB(H =p-	TE/SSARES"	
+138	.db	5	"02.Exodus.par.13982 DRWR =?BRWR .db	E)KLEKTH=S"	2/4Kgs 24:17; 1Chr 7:4; Ezek 28:9; Ezek 29:15
+139	.bp	16	"02.Exodus.par.14820 B/R( =;PR( <32.25> <sp> .bp	{..^TO\ O(/RMHMA}"	Exod 33:8; Deut 1:15; Deut 29:9; Deut 31:28; 1Sam/K 14:18; 2/4Kgs 1:11; 2/4Kgs 1:13; 1Esdr 1:12; Amos 5:9; Nah 2:4; Jer 25:9
+140	{**}<sp^>	1	"02.Exodus.par.16194 )T *BRYX/W **BRYX/YW {**}<sp^>	KAI\ TOU\S MOXLOU\S"	
+141	.bm	50	"02.Exodus.par.17684 H/CB)T =H/CMT .bm .)-	TW=N NHSTEUSASW=N [38.26]"	Exod 38:8; JoshB 3:16; JoshB 7:1; JoshB 7:18; JoshB 15:52; JoshB 19:2; JoshB 21:13; 2Sam/K 6:3; 2Sam/K 6:3; 2Sam/K 11:21; 2/4Kgs 9:8
+142	-	52	"02.Exodus.par.17684 H/CB)T =H/CMT .bm .)-	TW=N NHSTEUSASW=N [38.26]"	Exod 38:8; Num 14:15; Deut 2:25; JoshB 6:27; JoshB 9:9; JudgB 5:8; 1Sam/K 4:2; 1Sam/K 9:24; 1Sam/K 12:14; 1Sam/K 14:32; 1Sam/K 20:3
+143	.qp	2	"02.Exodus.par.17838 --+ '' =W/YCQ,W/YCP .qp #	KAI\ E)XRU/SWSEN"	Ezek 45:15
+144	<\d.\d,	2	"02.Exodus.par.17986 --+ =TRWMT,H/TNWPH <30.13, #	A)FAI/REMA [39.2]"	Exod 39:40
+145	^?	9	"02.Exodus.par.18142 W/YRQ(W ^? =W/QCC =%vap	KAI\ E)TMH/QH [36.10]"	1/3Kgs 7:37; 1/3Kgs 7:37; Ps 22:20; Ps 22:20; Job 8:11; Job 8:11; Hag 2:17; Hag 2:17
+146	'=;{...?	1	"02.Exodus.par.18796 --+ =;{...?L/M$KN} )HL #	TH=S SKHNH=S"	
+147	<\d.\d}	1	"02.Exodus.par.18834 --+ '' {x} =;B/W <40.9}	AU)TH=S"	
+148	'=;{d}	4	"03.Lev.par.1170 W/)$M =;{d}W/X+) <5.15>	KAI\ A(MA/RTH| {d?} KAI\ PLHMMELH/SH|"	Lev 5:3; Lev 13:49; 2Sam/K 1:22
+149	{d}	395	"03.Lev.par.1728 W/)M {d}	KAI\ ---"	Lev 7:19; Lev 13:18; Lev 14:31; Lev 14:31; Lev 14:31; Lev 27:10; Num 17:2; Deut 2:31; JudgB 19:22; JudgA 19:22; 2Sam/K 1:19
+150	.n	4	"03.Lev.par.3726 W/YRNW =?W/YR)W .n)	KAI\ E)CE/STH"	Prov 25:13; Prov 28:16; Dan 9:22
+151	{!}pc	8	"03.Lev.par.4016 DR$ {!}pc	ZHTW=N"	Lev 10:16; Num 12:14; Num 12:14; Num 30:15; Num 30:15; Hos 4:18; Hos 4:18
+152	'={d}@	27	"03.Lev.par.4063 PNYM/H ={d}@	KATA\ PRO/SWPON {d} E)/SW"	1Sam/K 14:25; 1Sam/K 26:24; 1Sam/K 27:8; 1Sam/K 27:8; 2Sam/K 18:14; 2Sam/K 19:8; 2Sam/K 19:43; 2Sam/K 19:43; 1/3Kgs 21:25; Prov 13:12; Prov 20:6
+153	.kb	18	"03.Lev.par.5570 KHWT =;BHRT <13.38> .kb .wr	AU)GA/ZONTA"	Lev 24:3; Lev 24:4; JoshB 4:11; 1/3Kgs 11:22; 2/4Kgs 12:22; 1Chr 8:10; Prov 11:19; Prov 24:12; Prov 26:10; Qoh 5:16; Qoh 8:10
+154	.wr	5	"03.Lev.par.5570 KHWT =;BHRT <13.38> .kb .wr	AU)GA/ZONTA"	1Sam/K 20:30; 2Sam/K 24:17; Ezek 25:13; Ezek 26:9
+155	a	103	"03.Lev.par.6645 W/HNH =@HNa	EI)"	Num 19:9; Num 19:13; Num 19:20; Num 19:21; Num 19:21; Num 21:14; Num 21:20; Num 22:30; Num 22:30; Num 22:41; Num 23:3
+156	{!}n	4	"03.Lev.par.6705 --+ =;P&H {!}n <13.35>	DIAXU/SEI"	Lev 14:48; Job 6:2; Job 6:2
+157	<sp^	1	"03.Lev.par.6866 --+ '' =;B/W <nu19.13> <sp^ #	E)N AU)TW=|"	
+158	.l	1	"03.Lev.par.8126 Y(LH =Y(&H .l& <sp>	POIH/SH|"	
+159	'=r	61	"03.Lev.par.11461 --+ =rMWT	KAI\ A)POQA/NH|"	Lev 26:41; Num 21:28; Num 22:11; Deut 5:33; Deut 19:15; Deut 32:43; JudgB 3:20; JudgB 4:8; JudgB 5:26; JudgB 20:43; JudgA 3:20
+160	.y-	40	"03.Lev.par.12210 HWLYDW =%vap <sp> .y-	GE/NWNTAI"	Num 23:10; Num 24:18; Deut 28:54; Deut 28:55; JoshB 3:16; JoshB 6:18; 1Sam/K 14:47; 1Sam/K 17:52; 1Sam/K 19:13; 1Sam/K 19:16; 2Sam/K 6:5
+161	.w-	40	"03.Lev.par.13366 Y$WB =%vap .w-	A)PODOQH/SETAI"	Deut 28:31; 2Sam/K 3:34; 1/3Kgs 7:5; 1/3Kgs 7:8; 1/3Kgs 16:28; 1/3Kgs 22:48; 1Chr 4:11; 1Chr 4:18; 1Chr 4:35; 1Chr 6:59; 1Chr 9:42
+162	'={...	5	"04.Num.par.2934 T(BR ={...(L/}	E)PE/LQH|"	JudgB 1:18; JudgA 1:18; Joel 2:27; Isa 38:8
+163	'=>	3	"04.Num.par.3086 MT =>	E)CA/PINA"	Job 13:4; Job 14:17
+164	.j	78	"04.Num.par.4718 (L H/LWYM =(L/YHM .j	PERI\ AU)TW=N"	Num 16:8; Num 20:10; Num 24:22; Deut 33:21; JoshB 3:15; JoshB 4:11; JoshB 15:12; JoshB 15:23; JoshB 15:56; JudgB 18:8; JudgB 19:18
+165	-%vap	1	"04.Num.par.6386 W/YQR) -%vap	KAI\ E)KLH/QH"	
+166	.wb	3	"04.Num.par.6518 W/MR)H =%p+ .wb <sp>	E)N EI)/DEI"	1Chr 3:5; Prov 12:8
+167	k	7	"04.Num.par.7317 )L =KL .)k	PA/NTES"	1Sam/K 1:8; 1/3Kgs 7:17; 1/3Kgs 7:17; 2/4Kgs 15:18; 1Chr 1:42; Nah 1:10
+168	{+}	1	"04.Num.par.7398 --+ {+}	TO\N E)/NOXON"	
+169	<de\d.\d	1	"04.Num.par.7479 --+ '' =;)$R <de1.39)	O(/SOI"	
+170	.dc	1	"04.Num.par.8477 MW(D =@Y(C .dc	BOULH=S"	
+171	y	14	"04.Num.par.8570 $M(W N) =$M(W/NY .)y .j	EI)SAKOU/SATE/ MOU"	Num 20:10; 1Sam/K 2:29; 2Sam/K 14:19; 2/4Kgs 9:31; 1Chr 8:36; 1Chr 8:36; 2Chr 31:15; Neh 7:51; Neh 11:17; Hos 10:10; Hos 10:10
+172	.h+	5	"04.Num.par.9597 MN H/)$ =MN H/)$H .h+	TW=N KARPWMA/TWN"	Num 32:3; 1Sam/K 2:34; 1Sam/K 13:3; 2Sam/K 17:3
+173	.wz	8	"04.Num.par.11077 )T WHB =:)T ZHB .wz	TH\N ZWOB"	1Sam/K 25:9; 1/3Kgs 11:25; Prov 8:29; Zech 11:14; Isa 16:9; Ezek 16:22; Ezek 47:19
+174	.n+	2	"04.Num.par.11131 MTNH .n+	{..pEI)S} MANQANAIN"	Prov 2:6
+175	.yh	6	"04.Num.par.11555 MY =MH .yh <sp>	TI/"	2Sam/K 2:22; 2Sam/K 17:11; 2/4Kgs 9:32; Ezek 32:21; Dan 11:14
+176	,@	14	"04.Num.par.11914 H/HSKN {!} =@SKL,@SKHa	MH\ U(PERORA/SEI"	Num 22:30; 1Sam/K 26:9; 1/3Kgs 6:27; Esth 5:1; Prov 1:11; Prov 1:18; Prov 7:16; Prov 15:15; Job 30:28; Mic 6:16; Jer 15:12
+177	.w+	2	"04.Num.par.12686 M/)GG =:M/GWG .w+	H)\ GWG"	JoshB 11:21
+178	.rw	6	"04.Num.par.12865 &(YR =(&W .m .rw .y- <sp>	HSAU"	1Sam/K 14:47; 1/3Kgs 16:9; Ezek 21:27; Ezek 32:27; Ezek 40:40
+179	.d	10	"04.Num.par.12872 W/YRD =@(WR .m .d(	KAI\ E)CEGERQH/SETAI"	2Chr 22:10; Ps 72:14; Prov 24:2; Job 10:17; Hos 9:6; Jer 17:11; Ezek 7:23; Ezek 9:9; Ezek 42:4
+180	.pb	12	"04.Num.par.13001 )L $P+Y =)L $B+Y .pb	TAI=S FULAI=S"	Deut 32:31; 1Sam/K 1:1; 2Sam/K 3:34; 1/3Kgs 20:38; 2/4Kgs 12:5; Mic 4:14; Amos 6:10; Lam 2:20; Ezek 21:2; Ezek 21:7; Ezek 42:11
+181	{t}	4	"04.Num.par.13007 L/B(L P(WR {t}	TW=| BEELFEGWR"	JudgB 4:21; 1Sam/K 12:10; Ezek 10:6
+182	'={d}'=@	1	"04.Num.par.14190 L/HQDY$/NY ={d}=@L) .s	A(GIA/SAI ME {d?} OU)X #"	
+183	p>	1	"04.Num.par.15060 ^^^ ^ =)XD <Sp>	E(/NA"	
+184	{!}+	4	"04.Num.par.15356 HNY) {!}+	A)NANEU/WN"	Sir 49:4; Sir 49:4; Isa 19:22
+185	.mp	1	"04.Num.par.15632 W/YMSRW =@?SPR .mp .m	KAI\ E)CHRI/QMHSAN"	
+186	.zc	2	"04.Num.par.16492 H/QNZY =@QNCa .zc	O( DIAKEXWRISME/NOS"	Obad 7
+187	'={...}	25	"04.Num.par.16776 --+ '' ={...}	EI)S"	Deut 31:14; 1Sam/K 20:12; 1/3Kgs 2:12; 1/3Kgs 2:46; 1/3Kgs 6:1; 1/3Kgs 6:1; 1/3Kgs 6:37; 1/3Kgs 8:53; 1/3Kgs 9:12; 1/3Kgs 12:2; 1/3Kgs 12:2
+188	'=.rd	2	"04.Num.par.17142 B/RSH =.rd	EI)S DESSA"	Num 33:22
+189	.xh	23	"04.Num.par.17210 B/XR =B/HR .xh <sp>	EI)S TO\ O)/ROS"	Num 33:33; JudgB 1:35; JudgB 5:10; JudgA 1:35; JudgA 21:14; 2Sam/K 11:11; 2/4Kgs 3:25; 1Chr 4:22; 1Chr 12:41; Neh 5:14; Prov 9:1
+190	.wly	1	"04.Num.par.17775 $MW)L =:$MLY)L .wly	SALAMIHL"	
+191	.nh	4	"04.Num.par.17831 (ZN =:(ZH .nh	OZA"	Neh 4:17; Ps 144:13; Ps 144:13
+192	.hk	2	"04.Num.par.17939 L/HM =L/KM .hk <sp>	U(MI=N"	2/4Kgs 3:10
+193	'={..r	5	"05.Deut.par.3027 --+ ={..rW/L)}	OU)/TE"	1/3Kgs 2:46; 1/3Kgs 10:26; Isa 39:6; Isa 42:8
+194	<q\dp-bj	1	"05.Deut.par.3046 --+ =;X$K <4.11> <sp <q4p-bj	SKO/TOS"	
+195	'=.wy	1	"05.Deut.par.5111 MWSR/H =.wy .rd	MISADAI"	
+196	.r	13	"05.Deut.par.5720 $MR {!}nd =$M( .r(	A)KOH=|"	Deut 11:22; Deut 19:9; Deut 31:12; JoshB 11:1; JoshB 12:20; JoshB 22:2; 1Sam/K 24:11; 2Sam/K 18:21; Prov 15:4; Hos 6:9; Isa 14:13
+197	.nb	2	"05.Deut.par.6471 TNQ$ =TBQ$ .nb	E)KZHTH/SH|S"	2Sam/K 6:6
+198	<q\dt	2	"05.Deut.par.6519 --+ =;H/YWM <11.28> <sp <q11t	SH/MERON"	Deut 13:19
+199	{!}p<je\d.\d	1	"05.Deut.par.6706 THRG/NW =;TGD/NW {!}p<je20.10	A)NAGGELEI=S PERI\ AU)TOU="	
+200	{!}na+	2	"05.Deut.par.7465 --+ '' =;W/H(B+ {!}na+ <15.8>	KAI\ DA/NEION"	Deut 15:10
+201	.nx	2	"05.Deut.par.9777 L/NP$/H =?L/XP$/H .nx	E)LEUQE/RAN"	2Sam/K 15:34
+202	I	2	"05.Deut.par.11172 --+ '' =;KI <24.22>	O(/TI"	1Esdr 9:32
+203	.y+	14	"05.Deut.par.11716 $NT =$NYT .y+	TO\ DEU/TERON"	1Chr 8:20; 2Chr 26:5; Ps 104:17; Prov 15:15; Prov 28:22; Hos 13:15; Amos 8:8; Ezek 7:9; Ezek 8:2; Ezek 16:4; Ezek 48:11
+204	<l>	1	"05.Deut.par.13125 HCG <l>	BAI/NEIN"	
+205	d	5	"05.Deut.par.14540 W/YR) =;W/YRD <nu12.5> .)d	KAI\ KATE/BH"	1Chr 5:29; Ps 17:3; Job 6:4; Jer 36:14
+206	.pc	2	"05.Deut.par.15016 YRXP =@RXCa .pc	E)PEPO/QHSEN"	Prov 30:4
+207	.zs	3	"05.Deut.par.15186 MZY =@MSH .zs	THKO/MENOI"	1/3Kgs 7:50; 2/4Kgs 12:14
+208	.gk	2	"05.Deut.par.15230 )GWR =@?)GR,)RK .gk .m	MAKROXRONI/SWSIN"	Prov 25:4
+209	<sp?>	2	"05.Deut.par.15313 KMS =KNWS .mn <sp?>	SUNH=KTAI"	Deut 33:6
+210	<q\dq	1	"05.Deut.par.15439 --+ '' =;H$TXWW <ps97.7> <q4q	KAI\ PROSKUNHSA/TWSAN"	
+211	.nl	3	"05.Deut.par.15788 MN =BL <q4-175> .mb .nl	MH\"	2Sam/K 18:9; 2/4Kgs 1:11
+212	<sp> <l>	1	"05.Deut.par.15827 GR$ <sp> <l>	SUNO/DWN"	
+213	.nz	7	"05.Deut.par.15988 M(NH =@?M(WZ .nz	KAI\ SKE/PASIS"	1/3Kgs 15:20; 1Chr 2:26; 1Chr 2:28; 1Chr 23:10; Neh 3:15; Ezek 21:15
+214	.cq	1	"06.JoshB.par.1089 CRTN =:QRYT Y(RYM .cq .nm	KARIAQIARIM "	
+215	^'=	8	"06.JoshB.par.1142 ^^^ ^=)N$YM	A)/NDRAS "	JoshB 6:8; JoshB 6:13; JoshB 6:26; JoshB 7:11; JoshB 7:11; JoshB 8:28; JoshB 8:28
+216	t.\d.\d>	2	"06.JoshB.par.1629 --+ =?XLMY$ <Dt.8.15>	A)KROTO/MOU "	JoshB 5:3
+217	-+	4	"06.JoshB.par.2006 -+ =;H/(YR/H <6.20>	EI)S TH\N PO/LIN "	JoshB 12:3; 1/3Kgs 8:53; Isa 51:13
+218	^'=:	1	"06.JoshB.par.2425 ^^^ ^=:YHWH	KURI/OU "	
+219	<\d.\d	7	"06.JoshB.par.3737 W/YC+YRW =;W/YC+YDW .rd <9.12	 E)PESITI/SANTO {d} KAI\ H(TOIMA/SANTO "	JudgB 21:11; JudgA 18:9; 1/3Kgs 2:35; 1/3Kgs 16:28; Prov 11:16; Ezek 42:12
+220	.gd	1	"06.JoshB.par.4229 (GLWN =:(DWLM .gd .nm	ODOLLAM "	
+221	.pd	1	"06.JoshB.par.5032 M/CPWN =M/CDWN .pd	KATA\ SIDW=NA "	
+222	'={d}:	5	"06.JoshB.par.5033 B/HR ={d}:RBH .m	TH\N MEGA/LHN {d} EI)S TH\N O)REINH\N "	2Sam/K 8:8; 2Sam/K 20:18; 2Sam/K 23:24; 1/3Kgs 11:1
+223	.bd	4	"06.JoshB.par.5035 NGB =NGD .bd	A)PE/NANTI "	JoshB 15:3; Ezek 40:2; Dan 11:27
+224	.hd	2	"06.JoshB.par.5401 HR =DWR .hd .w+	GE/NOUS "	Prov 16:26
+225	.gy	2	"06.JoshB.par.5732 L/GLGL =:L/GLYL .gy	TH=S GALILAI/AS "	2Sam/K 21:22
+226	.lb	4	"06.JoshB.par.5767 GLYLWT =GBWLWT .lb	O(/RIA "	Ruth 1:2; 1Chr 4:8; 1Chr 12:12
+227	.rz	1	"06.JoshB.par.5800 W/M(RH =:M/(ZH .rz	E)NANTI/ON GA/ZHS "	
+228	.zn	3	"06.JoshB.par.6966 W/BZYWTYH .zn	KAI\ AI( KW=MAI AU)TW=N "	1Chr 11:34; Isa 30:12
+229	.xm	3	"06.JoshB.par.7038 W/LXMS .xm .m	KAI\ MAXES "	1Sam/K 1:15; 1Sam/K 5:3
+230	A	4	"06.JoshB.par.7104 W/DNH =:W/RNA .dr	KAI\ RENNA "	2Sam/K 10:16; 1Esdr 5:33; Bar 2:31
+231	.bn	4	"06.JoshB.par.7110 W/(NB .bn	KAI\ ANWN "	1Chr 3:24; Jer 11:15; Ezek 25:12
+232	'=.qc	1	"06.JoshB.par.7431 XLQ =.qc	KELEZ "	
+233	.rk	8	"06.JoshB.par.8283 B)R =B)/K .rk	POREUOME/NWN "	1Sam/K 1:8; 2Sam/K 22:12; 2Sam/K 23:11; Ps 76:11; Prov 11:15; Jer 4:11; Dan 8:9
+234	'=p%-	1	"06.JoshB.par.8330 L/YM/H =p%-	H( QA/LASSA "	
+235	'''=	61	"06.JoshB.par.10792 --+ ''=W/YHYW	KAI\ E)GE/NONTO "	JoshB 24:4; JoshB 24:4; JoshB 24:4; JoshB 24:4; JoshB 24:4; 1Sam/K 10:1; 1Sam/K 10:1; 1Sam/K 10:1; 1Sam/K 10:1; 1Sam/K 10:1; 1Sam/K 10:1
+236	'=vpa	1	"07.JoshA.par.510 W/NSB )T/W =vpa	KAI\ PERIELEU/SETAI"	
+237	,{d}	1	"08.JudgesB.par.579 XRS =:XR&,{d} HDS .s& .xh .rd	TW=| O)STRAKW/DEI {d} #"	
+238	'={d}?	10	"08.JudgesB.par.2093 $(RYM ={d}?&RYM .(- =vs	PO/LEIS {d} A)RXO/NTWN"	2Sam/K 2:22; 2Sam/K 6:2; 2/4Kgs 19:16; Prov 1:19; Prov 1:19; Prov 9:13; Prov 15:6; Prov 22:21; Jer 29:2
+239	.dy	2	"08.JudgesB.par.2212 (DRYM =?(YRYM .dy	A)GGE/LWN {c?A)GELW=N}"	Hos 6:8
+240	.pk	5	"08.JudgesB.par.3978 )YPH =)YKH .pk	POU="	JudgA 8:18; 1Chr 21:12; Amos 8:6; Ezek 47:22
+241	.b	3	"08.JudgesB.par.4397 MCB =@MC) .b)	TH=| EU(RETH=| {d} TH=S STA/SEWS"	2Chr 21:15; Ezek 22:25
+242	.tm	1	"08.JudgesB.par.4790 B/TRMH =?B/MRMH .tm	E)N KRUFH=|"	
+243	{..?	41	"08.JudgesB.par.5966 {..?YDY} )RNWN =:H/YRDN	TO\N IORDA/NHN"	JudgA 11:26; 1Sam/K 25:34; 2Sam/K 13:5; 1Chr 27:6; 1Chr 29:9; Esth 9:2; Prov 7:7; Job 10:17; Mic 6:15; Isa 3:20; Isa 3:20
+244	?}	3	"08.JudgesB.par.6106 {.../RQ?} YXYDH	MONOGENH/S"	JudgA 11:34; Ps 35:20
+245	'=@a+	1	"08.JudgesB.par.7568 +RYH =@a+R)	E)KRERIMME/NHN"	
+246	'=;r	10	"08.JudgesB.par.7918 --+ '' =;rXLH <16.11>	A)SQENH/S"	JudgA 15:12; JudgA 15:12; JudgA 16:13; 1/3Kgs 12:24; 2/4Kgs 9:16; Isa 3:25; Isa 9:3; Isa 10:27; Isa 16:12
+247	...	2	"08.JudgesB.par.8041 W/TY$N/HW =W/TY$N...)T $M$WN	KAI\ E)KOI/MISEN {...TO\N SAMYWN}"	1Esdr 6:5
+248	%vpa	1	"08.JudgesB.par.8151 W/YCXQ ={d} %vpa	KAI\ E)/PAIZEN {d} {...KAI\ E)RRA/PIZON}"	
+249	.hx	22	"08.JudgesB.par.9124 W/TZNH =@?ZNX .hx	KAI\ E)POREU/QH"	JudgA 9:21; JudgA 9:27; JudgA 19:2; 1Sam/K 1:28; 1Chr 2:29; Ps 119:119; Prov 1:21; Prov 5:11; Prov 9:13; Prov 10:3; Prov 18:21
+250	'=:{d}	5	"09.JudgesA.par.589 H/)MRY =:{d}H/)DMY .m .rd	TOU= AMORRAI/OU {d} O( IDOUMAI=OS"	JudgA 21:19; 2Sam/K 12:30; 1Chr 4:17; 1Chr 11:34
+251	{**?}	1	"09.JudgesA.par.3640 *W/YNYSW **W/YNWSW {**?}	KAI\ E)/FUGON"	
+252	.bk	14	"09.JudgesA.par.3908 L/NBX ={d} L/NKX .bk	TH=S NABEQ {d} E)C E)NANTI/AS"	2Sam/K 23:35; 1/3Kgs 15:19; 1/3Kgs 21:4; 2/4Kgs 23:7; 1Esdr 5:47; Neh 9:4; Neh 12:14; Prov 14:7; Prov 15:14; Prov 29:11; Jer 48:33
+253	'=@+	4	"09.JudgesA.par.7670 +RYH =@+R)a	E)RRIMME/NHN"	Job 37:11; Job 38:36; Isa 14:23
+254	.nd	1	"09.JudgesA.par.8446 L/BN/Y =L/BD/Y .nd	KATA\ MO/NAS"	
+255	*z	9	"09.JudgesA.par.10065 *z **BNY {**}	OI( UI(OI\"	Ruth 3:5; Ruth 3:17; 2Sam/K 8:3; 2Sam/K 16:23; 2Sam/K 18:20; 2/4Kgs 19:31; 2/4Kgs 19:37; Jer 50:29
+256	.hb	1	"09.JudgesA.par.10426 M/M(RH =M/M(RB .hb	A)PO\ DUSMW=N"	
+257	.+r	1	"10.Ruth.par.639 W/YCB+ =@CBR .+r	KAI\ E)BOU/NISEN"	
+258	**z	5	"10.Ruth.par.989 KY *)M **z {**}	---"	2Sam/K 13:33; Jer 39:12; Jer 51:3; Ezek 48:16
+259	.yms	1	"11.1Sam.par.85 )PYM =)PS .yms	PLH\N"	
+260	.ry	8	"11.1Sam.par.283 Q$T RWX =Q$T YWM .ry .xm	H(=| SKLHRA\ H(ME/RA"	1Sam/K 22:8; 1Sam/K 22:13; 2/4Kgs 9:27; 1Chr 4:31; Neh 12:36; Hos 12:1; Ezek 32:9
+261	;'=	3	"11.1Sam.par.471 --+ '' ;=L/PNY <1.19>	E)NW/PION [25]"	1Sam/K 1:24; Mal 3:3
+262	'=.dt	12	"11.1Sam.par.2021 )$DWD/H =.dt	EI)S A)/ZWTON"	1Sam/K 5:3; 1Sam/K 5:5; 1Sam/K 5:6; 1Sam/K 5:7; 1Sam/K 6:17; 2Chr 26:6; 2Chr 26:6; Amos 1:8; Zeph 2:4; Zech 9:6; Jer 25:20
+263	O	1	"11.1Sam.par.2096 --+ '' =KPWT                 O	I( KARPOI\"	
+264	!	6	"11.1Sam.par.2127 --+ =DLWG (!)	U(PERBAI/NONTES"	1Sam/K 5:5; Ps 49:8; Ps 49:8; Job 6:25; Job 6:25
+265	**+	4	"11.1Sam.par.2224 *(PLYM **+XRYM	E(/DRAS"	1Sam/K 6:4; 1Sam/K 6:5; Prov 22:11
+266	.ln	3	"11.1Sam.par.2646 )BL =)BN .ln	LI/QOU"	1Sam/K 14:13; 1/3Kgs 7:5
+267	.hr	4	"11.1Sam.par.3259 W/(&H =;W/(&R .hr <8.15>	KAI\ A)PODEKATW/SEI"	Isa 6:11; Jer 13:17; Jer 25:15
+268	.qk	4	"11.1Sam.par.3833 QR)TY =@?QR(,KRT .)( .)- .qk	A)PO/KNIZE"	Jer 6:29; Ezek 7:25; Ezek 42:5
+269	:'=	2	"11.1Sam.par.4600 --+ :=NX$	NAAS"	1Sam/K 11:10
+270	.nq	1	"11.1Sam.par.4914 W/)T BDN =W/)T BRQ .dr .nq	KAI\ TO\N BARAK"	
+271	'=;?	6	"11.1Sam.par.5556 H/PCYRH =;?H/QCYR <8.12>	O( TRUGHTO\S"	1/3Kgs 2:46; Ps 14:3; Isa 29:24; Dan 4:11; Dan 4:11
+272	'=r?	7	"11.1Sam.par.5557 PYM =r?KWN	E(/TOIMOS"	Isa 12:2; Isa 26:9; Isa 26:14; Lam 1:15; Dan 9:27; Dan 10:17
+273	r	8	"11.1Sam.par.6071 DB$ =DBR .$r	LALW=N"	1/3Kgs 11:38; 1Chr 3:5; Ps 11:1; Prov 8:34; Prov 15:32; Isa 3:10; Isa 37:12
+274	.gb	1	"11.1Sam.par.6075 M&YG =M$YB .gb =vs	E)PISTRE/FWN"	
+275	;	1	"11.1Sam.par.6206 ^ )BN =H/YWM;HLWM <14.36>	E)NTAU=QA"	
+276	.m-	2	"11.1Sam.par.6762 NMBZH =NBZH .m-	H)TIMWME/NON"	Prov 31:8
+277	.mh	3	"11.1Sam.par.6808 MCYB =HCYB .mh	A)NE/STAKEN"	1/3Kgs 7:8; Ezek 26:12
+278	.mny	1	"11.1Sam.par.8138 )DM =)DN/Y .mny	TOU= KURI/OU MOU"	
+279	.sp	2	"11.1Sam.par.8567 W/Y$SW =W/Y$PW .sp	KAI\ KATEPA/TOUN"	1Sam/K 23:1
+280	.d+	2	"11.1Sam.par.10017 W/YQM =W/YQDYM .d+	KAI\ PROE/FQASEN"	Isa 27:1
+281	.dw	3	"11.1Sam.par.10630 B/YD/M ={d}B/YWM .dw	E)N TH=| H(ME/RA| {d} {...E)N TAI=S #"	1/3Kgs 14:27; Hos 12:2
+282	.sx	1	"11.1Sam.par.11110 SBTY =XBTY .sx	AI)/TIOS"	
+283	.r-	2	"11.1Sam.par.11609 (+RYM =?(+YM .r-	PARENE/BALON"	Mic 6:16
+284	.np	3	"11.1Sam.par.12216 W/YNWXW =;W/YPXZ .np .wz #	KAI\ A)NEPH/DHSEN"	1Sam/K 28:14; Ezek 25:13
+285	.wk	2	"11.1Sam.par.13936 L/W =L/K .wk	SOI"	1/3Kgs 22:37
+286	'''=+	1	"11.1Sam.par.14330 --+ ''=+WB	A)GAQO\S"	
+287	.yz	1	"12.2Sam.par.60 ^ ^^^ =HYH,H/ZH .yz	OU(=TOS"	
+288	'=?+	2	"12.2Sam.par.1194 --+ =?+LM	{...EI)/S} QAILAM"	Jer 23:15
+289	.cz	1	"12.2Sam.par.2468 (CY =;(Z .cz .y- <c13.8>	H(RMOSME/NOIS {d} E)N I)SXU/I"	
+290	.kd	8	"12.2Sam.par.2481 NKWN =:NWDB .kd .nb	NWDAB"	2Sam/K 20:18; 2/4Kgs 5:19; Prov 8:23; Jer 12:2; Ezek 7:14; Ezek 23:3; Ezek 36:12
+291	.tn	2	"12.2Sam.par.3056 B/H(WT/W =?B) (WN/W .s .tn	E)A\N E)/LQH| H( A)DIKI/A AU)TOU="	1/3Kgs 1:35
+292	.hy	5	"12.2Sam.par.3782 MH =MY .hy	TI/S EI)MI"	2/4Kgs 8:13; 2Chr 24:6; Neh 3:2; Qoh 8:11
+293	.dx	2	"12.2Sam.par.6064 DWD =RWX .dr .dx <4qa>	TO\ PNEU=MA"	Prov 26:23
+294	'=?r	3	"12.2Sam.par.7060 --+ '' =?rNCB	OI( PERI\ AU)TO\N"	1/3Kgs 7:8; 2/4Kgs 3:10
+295	'={d}v	5	"12.2Sam.par.7171 )TY ={d}v	EQQI {...MET' E)MOU}"	1/3Kgs 6:1; Job 1:3; Job 7:2; Isa 21:6
+296	.qg	2	"12.2Sam.par.7220 W/YCQW =?W/YCGW .qg	KAI\ E)/STHSAN"	Isa 8:15
+297	m	2	"12.2Sam.par.7224 )BYTR =M/BYTR .)m	ABIAQAR {d} {...A)PO\ BAIQAR}"	1Chr 7:15
+298	'={d}r	1	"12.2Sam.par.7400 (BD/K ={d}r(BR .dr	{...DIELHLU/QASIN {d} PAI=S SOU/"	
+299	'={...?	1	"12.2Sam.par.8441 M$KB ={...?(R&WT} M$KB	KOI/TAS"	
+300	'={d}%p	1	"12.2Sam.par.8629 B/(M ={d}%p	E)K TOU= LAOU= {d} {...E)N TW=| LAW=|}"	
+301	.ml	2	"12.2Sam.par.8728 MY =L/Y .ml	MOI"	1Chr 11:11
+302	.bl	1	"12.2Sam.par.8759 $B+YM =?$LXYM .bl .+x	BE/LH"	
+303	.+x	1	"12.2Sam.par.8759 $B+YM =?$LXYM .bl .+x	BE/LH"	
+304	.pl	1	"12.2Sam.par.9334 M/KP =M/KL .pl	A)PO\ PA/NTWN"	
+305	.b-	1	"12.2Sam.par.9513 L/(BYR ={d}L/(YR .b-	TOU= DIABIBA/SAI {d} {...E)CEGEI=RAI}"	
+306	.dk	2	"12.2Sam.par.10026 B/DWD ={d}BKWR .dk .dr	{...PRWTO/TOKOS} {d} E)N TW=| DAUID"	Ezek 1:13
+307	.k+	1	"12.2Sam.par.10339 H/BRYM =H/BKRYM .k+	E)N XARRI"	
+308	.twn	1	"12.2Sam.par.10680 B/GB(T =:B/GB(WN .twn	E)N GABAWN"	
+309	.dz	1	"12.2Sam.par.10730 L/(DRY)L =?(ZRY)L .dz	TW=| ESRIHL"	
+310	.bt	2	"12.2Sam.par.10934 B/GWB =:B/GT .bt	E)N GEQ"	1/3Kgs 6:5
+311	.gs	1	"12.2Sam.par.11685 )G) =:)S) .gs	ASA"	
+312	b	5	"12.2Sam.par.11849 )T $NY ={d}BNY  .$b	TOU\S DU/O {d} UI(OU\S"	1/3Kgs 5:8; 2/4Kgs 17:29; Jer 34:10; Jer 46:15
+313	.xs	1	"12.2Sam.par.11972 H/BRXMY .xs	O( BARSAMI/THS {t?}"	
+314	,?@	4	"12.2Sam.par.12339 --+ =W/TXL,?@XLH	KAI\ H)/RCATO"	1/3Kgs 1:9; Hos 7:6; Hab 3:14
+315	%p+	2	"13.1Kings.par.923 K/KTWB = %p+	TA\ GEGRAMME/NA"	Isa 43:23
+316	+;	1	"13.1Kings.par.2019 --+ '' +;W/NBWN <3.12>	KAI\ SOFO/S"	
+317	.nk	1	"13.1Kings.par.2850 B(N) =:B(K) .nk	BAKXA"	
+318	.yt	3	"13.1Kings.par.3385 (BD/YK =?(BDT/K .yt	DOULEI/AS SOU"	Prov 26:10; Ezek 22:12
+319	by	1	"13.1Kings.par.3522 $N/YHM =BYN/YHM .$by	A)NA\ ME/SON E(AUTW=N"	
+320	?.z	1	"13.1Kings.par.3758 --+ =H/BYT ?.z	TOU= OI)/KOU"	
+321	.qc	1	"13.1Kings.par.4160 QL(YM =?CL(YM .qc	PTUXAI\"	
+322	.rp	1	"13.1Kings.par.4257 W/KRTWT =W/KTPT .rp .m <7.30>	KAI\ W)MI/AI [39]"	
+323	.zwx	3	"13.1Kings.par.4289 W/H/MZWZWT =W/H/MXZWT .zwx	KAI\ AI( XW=RAI [42]"	1/3Kgs 7:5; 1/3Kgs 7:5
+324	.rq	2	"13.1Kings.par.4452 W/YCR =W/YCQ .rq	KAI\ E)XW/NEUSEN [3]"	Amos 6:6
+325	.pm	2	"13.1Kings.par.4639 MQPYM =MQMYM .pm	A)NISTA=N [11]"	1Chr 2:51
+326	.kq	3	"13.1Kings.par.4848 K/M(R =?@QM (D .kq .s	E(STW=TA [22]"	Hos 8:1; Ezek 35:12
+327	.p	1	"13.1Kings.par.4969 (L PNY =(L $NY .p$	E)P' A)MFOTE/ROIS [28]"	
+328	.xk	2	"13.1Kings.par.6580 )$LX =)$LYK,)T$ .xk	A)PORRI/YW"	2/4Kgs 19:16
+329	.kg	1	"13.1Kings.par.6719 )RC KBWL =@GBWL .kg	O(/RION"	
+330	.x-	9	"13.1Kings.par.7038 $LXN/W =:$LMH .x- .nm .wh	SALWMWN"	2/4Kgs 18:18; 2/4Kgs 18:26; 2/4Kgs 18:37; 2Chr 24:10; Isa 16:7; Lam 2:8; Ezek 24:10; Ezek 24:10
+331	'=.m	1	"13.1Kings.par.7249 H/(RB =:H/(BR =.m	TOU= PE/RAN"	
+332	.wd	4	"13.1Kings.par.8073 W/YLKW =W/YLKD .wd	KAI\ PROKATELA/BETO [14]"	2/4Kgs 11:6; Hos 10:12; Hab 1:5
+333	.kn	9	"13.1Kings.par.11146 M(KH =:(NH .kn	ANA"	1Esdr 9:2; Ps 143:9; Mic 2:4; Jer 31:9; Ezek 19:10; Ezek 41:22; Dan 9:27; DanTh 9:27
+334	'=*	5	"13.1Kings.par.12139 --+ '' =*(&R **(&H {**}	E)POI/HSEN [[22.49]]"	1/3Kgs 16:28; Jer 3:4; Dan 4:28; DanTh 4:4
+335	.km	4	"13.1Kings.par.12816 W/YKR/HW =?W/YMHR .km .m	{...KAI\} E)/SPEUSEN"	Prov 3:26; Ezek 27:4; Ezek 41:7
+336	.pt	1	"13.1Kings.par.13824 PTX =?TXT .pt .m	U(PO\"	
+337	.kh	1	"13.1Kings.par.14774 KN =?HN .kh	I)DOU\ [21.40]"	
+338	{p}+	1	"13.1Kings.par.15489 W/YTN =N/NTN TTN {p}+	KAI\ DIDOU\S DW/SEI"	
+339	'=;@	3	"13.1Kings.par.15747 --+ =;@L) KN,L/KN	OU)X OU(/TWS"	Prov 25:5; Ezek 40:25
+340	{...EI	1	"13.1Kings.par.15936 W/YBW) {...EI)S}	KAI\ EI)SH=LQEN"	
+341	.q	1	"13.1Kings.par.16035 W/YCQ ={d}W/YC) .q)	{...KAI\ A)PE/XUNNE} {d} KAI\ #"	
+342	'={d}%p+	1	"13.1Kings.par.16038 H/MKH ={d}%p+	{...E)K TH=S PLHGH=S} {d} TH=S TROPH=S"	
+343	s	6	"14.2Kings.par.1366 B/QYR XR&T =B/QYR @HRS .&s .xh	TOU= TOI/XOU KAQH|RHME/NOUS"	2/4Kgs 12:5; Job 41:25; Isa 23:3; Ezek 8:12; Ezek 21:15
+344	.+	3	"14.2Kings.par.5929 W/)T H/$L+YM =H/$L$YM .+$	KAI\ TOU\S TRISSOU\S"	Prov 10:30; Ezek 16:30
+345	.td	6	"14.2Kings.par.9372 W/)T =W/(D .)( .td	KAI\ E(/WS"	Prov 13:15; Prov 14:22; Jer 9:9; Ezek 25:15; Dan 10:17
+346	{t?}	1	"14.2Kings.par.9891 )$WR {t?}	A)SSURI/WN"	
+347	.yx	2	"14.2Kings.par.11479 W/YTM =W/XTM,W/HTM .yx	KAI\ SFRA/GISON"	Ps 66:12
+348	.lr	3	"14.2Kings.par.11936 W/L/MZLWT =W/L/MZRWT .lr	KAI\ TOI=S MAZOURWQ {t}"	Ezek 23:42; Ezek 27:23
+349	.my	3	"14.2Kings.par.11994 )T BMWT =BYT .my .wy	TO\N OI)=KON"	2/4Kgs 23:13; Ezr 10:36
+350	.dn	1	"14.2Kings.par.12897 DD/W =;BN/W .db .dn	UI(O\N AU)TOU="	
+351	.h-<ge\d.\d	1	"15.1Chron.par.47 W/TR$Y$H =;W/TR$Y$ .h-<ge10.4	KAI\ QARSIS"	
+352	l	3	"15.1Chron.par.283 W/Y(W$ =:W/Y(WL .$l	KAI\ IEOUL"	Ps 55:9; Jer 36:12
+353	.hm	6	"15.1Chron.par.1050 W/H/PWTY =:W/MPYTYM .hm .wy	KAI\ MIFIQIM"	1Chr 12:21; Nah 2:8; Ezek 23:24; Ezek 40:25; Ezek 47:8
+354	.t	3	"15.1Chron.par.1152 L/BT $W( =:L/B)R $B( .wb .t)r	TH=| BHRSABEE"	Lam 3:49; Ezek 44:13
+355	.pn	2	"15.1Chron.par.1164 W/YPY( =:W/YNW( .pn .yw	KAI\ IANOUE"	Ezek 7:3
+356	.gw	1	"15.1Chron.par.1299 W/YG)L =:W/YW)L .gw	KAI\ IWHL"	
+357	.hn	2	"15.1Chron.par.1365 XW$H =:?XW$N .hn	WSAN"	1Chr 7:28
+358	'=:r	1	"15.1Chron.par.1426 B/(CB =:rY(BC .m	W(S GABHS"	
+359	.kp	2	"15.1Chron.par.1476 RKH =:RPH .kp	RHFA"	Ps 53:6
+360	.pr	1	"15.1Chron.par.1517 W/ZYPH =:ZYRH .pr	KAI\ ZAIRA"	
+361	.nt	1	"15.1Chron.par.2991 W/)T XMWN =:W/)T XMWT .nt	KAI\ TH\N XAMWQ"	
+362	.ql	1	"15.1Chron.par.3851 ($Q =:($L .ql	ASHL"	
+363	{...?}	2	"15.1Chron.par.4044 {...?}	EI)S"	1Chr 11:11
+364	.wm	2	"15.1Chron.par.4148 YHWH =W/HMH .yw .wm	KAI\ OU(=TOI"	Jer 41:5
+365	.gl	1	"15.1Chron.par.5154 $GH =:$LH .gl	SWLA"	
+366	??	15	"15.1Chron.par.11211 L/BNWT ??	TA\ EI)S TH\N KATASKH/NWSIN E)PITH/DEIA"	Ps 32:9; Ps 38:18; Ps 39:3; Ps 39:6; Ps 56:9; Ps 58:3; Ps 59:7; Ps 59:15; Ps 68:7; Ps 68:20; Job 38:40
+367	.zm	1	"16.2Chron.par.7271 (ZRW =(MDW .zm .rd	A)NE/STHSAN"	
+368	<\d	1	"16.2Chron.par.7970 W/(ZRYHW =:)ZRYHW <2K8.29>	KAI\ OXOZIAS"	
+369	.gc	2	"16.2Chron.par.9659 B/GWR =B/CWR .gc	E)PI\ TH=S PE/TRAS"	Jer 46:5
+370	.sn	1	"16.2Chron.par.12792 L/HSYR =L/HNYD .sn .rd	SALEU=SAI"	
+371	'=@,?	1	"17.1Esdras.par.413 )TH =@,?$LX/NY	E)CAPE/STALMAI [cc35.21]"	
+372	{...+	2	"17.1Esdras.par.3848 &M {...+(M}	SUNTA/CANTOS [e5.3]"	1Esdr 6:10
+373	<es\d.\d,\d.\d	1	"18.Esther.par.91 --+ '' =W/(TYDYM <es3.14,8.13	KAI\ H(TOIMA/SQHSAN"	
+374	,,a	10635	"18.Ezra.par.1164 RXWM ,,a	RAOUM"	Ezr 4:8; Ezr 4:8; Ezr 4:8; Ezr 4:8; Ezr 4:8; Ezr 4:8; Ezr 4:8; Ezr 4:8; Ezr 4:8; Ezr 4:8; Ezr 4:8
+375	{**	1	"19.Neh.par.166 *W/HBW)TY/M **W/HBY)WTY/M {**	KAI\ EI)SA/CW AU)TOU\S"	
+376	.wn	2	"19.Neh.par.901 BWY =:BNY .wn	BENI"	Prov 18:1
+377	.xt	2	"19.Neh.par.2688 M/TL MLX .xt	A)PO\ QELMELEQ"	Prov 2:18
+378	'=:+	1	"19.Neh.par.4637 +LMWN =:+LMYN .wy	TELAMIN"	
+379	.tx	1	"19.Neh.par.4854 MTNYH =:MXNYH .tx	MAXANIA"	
+380	.sc	1	"20.Psalms.par.3591 SWD =CWR? .sc .dr	KRATAI/WMA [24.14]"	
+381	z	2	"20.Psalms.par.4233 RG( =RGZ? .(z	O)RGH\ [29.6]"	Hos 7:2
+382	'=.s	5	"20.Psalms.par.7108 B/CLMWT =.s	SKIA\ QANA/TOU [43.20]"	Ps 107:10; Ps 107:14; Job 24:17; Job 24:17
+383	'=@a	11	"20.Psalms.par.9610 RXC/Y =@a	TH=S E)LPI/DOS MOU [59.10]"	Prov 28:15; Qoh 2:12; Job 4:18; Job 8:19; Job 9:11; Job 9:12; Mic 2:8; Isa 44:7; Isa 53:8; Isa 53:10
+384	'=?%p+	7	"20.Psalms.par.10298 (LYLH =?%p+	E)N BOULAI=S [65.5]"	Ps 68:5; Ps 68:28; Ps 80:6; Isa 45:20; Isa 46:1; Isa 55:4
+385	,?	4	"20.Psalms.par.10703 $N)N =?$)NN,?R(NN	EU)QHNOU/NTWN [67.18]"	Ps 69:27; Hos 10:1; Hos 13:2
+386	.gn	2	"20.Psalms.par.12093 $)GW =?$)NW .gn	KAI\ E)NEKAUXH/SANTO [73.4]"	Ezek 5:14
+387	?{..r	2	"20.Psalms.par.12106 --+ ?{..rK/}	W(S [73.6]"	Job 16:3
+388	{..d	4	"20.Psalms.par.14191 {..dL/H}	E(AUTW=| [83.4]"	Prov 6:4; Job 31:16; Isa 17:3
+389	'=?:	1	"20.Psalms.par.14694 H/)ZRX/Y =?:H/Y&R)LY	TW=| ISRAHLI/TH| [87.1]"	
+390	.dg	1	"20.Psalms.par.19056 W/DR$W =?YGR$W .dg	E)KBLHQH/TWSAN [108.10]"	
+391	g	2	"20.Psalms.par.22395 (BWT =@?GB .(g	AU)XE/NAS [128.4]"	Jer 2:18
+392	'={d};	1	"23.Prov.par.66 XKMH ={d};&KL <ps111.10>	SOFI/AN {d?} {...SU/NESIS DE\}"	
+393	<ju\d.\d	1	"23.Prov.par.89 W/(NQYM <ju8.26 ge41.42 c18.7	KAI\ KLOIO\N XRU/SEON"	
+394	ge\d.\d	1	"23.Prov.par.89 W/(NQYM <ju8.26 ge41.42 c18.7	KAI\ KLOIO\N XRU/SEON"	
+395	c\d.\d	1	"23.Prov.par.89 W/(NQYM <ju8.26 ge41.42 c18.7	KAI\ KLOIO\N XRU/SEON"	
+396	p	4	"23.Prov.par.619 ^ ^^^ =)L =&p	E)PI\"	Prov 3:5; Prov 3:22; Prov 20:4
+397	.tc	2	"23.Prov.par.1655 PT( =PC( .tc	DIAKOPH\"	Ezek 43:12
+398	'=?@+	1	"23.Prov.par.2024 )+WN =v =?@+(N,@N+H	E)/STRWKA"	
+399	{..r+	2	"23.Prov.par.2325 {..r+WB}	KREI/SSW"	Prov 16:32
+400	.yd	2	"23.Prov.par.2667 HMYH ={d}?XMDH .hx .yd	KAI\ QRASEI=A {d} E)NDEH\S {...GI/NETAI}"	Amos 9:12
+401	E	2	"23.Prov.par.3274 W(/SPER	{...}"	Isa 6:13
+402	.tk	1	"23.Prov.par.3624 YTR =?YKR .tk	E)PIGNW/MWN"	
+403	+?	1	"23.Prov.par.4515 M+H =@ML+?	SWQH=|"	
+404	.md	1	"23.Prov.par.5457 W/K/XWMH =W/K/HWD/H .xh .md	H( DE\ ^ DO/CA AU)TH=S"	
+405	.pw	1	"23.Prov.par.5530 NP$( =NW$( .pw	BOHQOU/MENOS"	
+406	.bz	1	"23.Prov.par.5553 W/)HB/YH =W/)XZ/YH .hx .bz	OI( DE\ KRATOU=NTES AU)TH=S"	
+407	.+n	1	"23.Prov.par.5739 +RD =NDR <nu6.5> .+n .rd .dr	A(GNAI\ {d} EU)XAI\"	
+408	.b+	2	"23.Prov.par.5824 T)WT =TB)WT .b+	KARPO\S"	Prov 30:27
+409	.cw	1	"23.Prov.par.5847 (CL =(WL? .cw	{..^A)DI/KWS}"	
+410	.xr	1	"23.Prov.par.6500 L/NCX =NCR? .xr	FULASSO/MENOS"	
+411	?,@	2	"23.Prov.par.6556 *W/YSTR **W/NSTR =@S+R?,@YSR?	TIMWROU/MENON"	Prov 27:22
+412	*+	5	"23.Prov.par.6659 *+HWR **+HR	O(SI/AS {d?} {...?A)/MWMOI}"	Sir 3:31; Sir 9:9; Sir 40:6; Sir 43:14
+413	.zw	2	"23.Prov.par.7346 ZMT =W/MT .zw	A)POQNH/|SKEI DE\"	Ezek 24:13
+414	.xy	2	"23.Prov.par.7687 XQR =@?YQR .xy	TIMA=|"	Prov 25:27
+415	?,	2	"23.Prov.par.7817 B/YWM QCYR ={d}B/XWM?,QYC?	E)N A)MH/TW| {d} KATA\ KAU=MA"	Prov 25:20
+416	.dp	1	"23.Prov.par.9157 XRDT ={d}XRPT .dp	FOBHQE/NTES {d} KAI\ AI)SXUNQE/NTES #"	
+417	.dl	1	"23.Prov.par.9649 L/)WBD =?L/)BL .dl	TOI=S E)N LU/PAIS"	
+418	.xw	1	"23.Prov.par.9837 XSD ={d}W/SDR .xw	KAI\ TA/CIN [25] {d} {...H( DE\ #"	
+419	,@?	3	"23.Prov.par.9843 CWPYH =@?CPN,@?CWP	STEGNAI\"	Jer 8:18; Jer 20:2
+420	.yg	1	"24.Qoh.par.2785 YBY( =?GBY( .yg	SKEUASI/AN"	
+421	+a	1	"25.Cant.par.1209 B/RH+YM =@RH+a	E)N PARADROMAI=S"	
+422	'=;{x}	2	"25.Cant.par.1321 --+ =;{x}W/)L XDR <3.4>	KAI\ EI)S TAMI/EION"	Song 8:2
+423	'=?@a	1	"26.Job.par.271 $B) =@$BH =?@a	OI( AI)XMALWTEU/ONTES"	
+424	.t-	2	"26.Job.par.839 W/YSTR =;W/YSR .t- <9.34>	A)PH/LLACEN ^ GA\R A)\N"	Lam 2:22
+425	'=a	2	"26.Job.par.2063 $DY =a$/DY	O( TA\ PA/NTA POIH/SAS"	Isa 51:20
+426	.zy	1	"26.Job.par.2216 YXZH =YXYH .zy	ZH/SETAI"	
+427	{..^OU	1	"26.Job.par.2245 W/L) {..^OU)}	DE\"	
+428	?{..^	2	"26.Job.par.3706 ?{..^BLTY} L)	OU) MH\"	Job 14:12
+429	[[	2	"26.Job.par.3761 W/T+PL => [[XTM]]	E)PESHMH/NW DE/ ^ EI)/"	Job 41:11
+430	]]	1	"26.Job.par.3761 W/T+PL => [[XTM]]	E)PESHMH/NW DE/ ^ EI)/"	
+431	.kx	1	"26.Job.par.6927 (RK/H =)RX/H .() .kx	O(DO\N AU)TH=S"	
+432	?{...	1	"26.Job.par.8219 HWXLTY ?{...)ZYN}	E)NWTI/ZESQE/"	
+433	\d.\d]]	2	"26.Job.par.10972 KYDWDY =KYWRY [[Za 12.6]]	E)SXA/RAI"	Job 41:25
+434	'=[[	1	"26.Job.par.11110 ---+ {x} =[[Ps 104.26]]	E)GKATAPAI/ZESQAI"	
+435	[..]	4531	"27.Sirach.par.176 [..]	PA=SA"	Sir 1:1; Sir 1:1; Sir 1:1; Sir 1:1; Sir 1:1; Sir 1:1; Sir 1:1; Sir 1:2; Sir 1:2; Sir 1:2; Sir 1:2
+436	\d	9372	"27.Sirach.par.647 W/K/$M/W 3 =??	W(S ^ GA\R H( MEGALWSU/NH AU)TOU="	Sir 2:18; Sir 2:18; Sir 3:6; Sir 3:6; Sir 3:8; Sir 3:8; Sir 3:8; Sir 3:8; Sir 3:8; Sir 3:8; Sir 3:8
+437	<>[	5	"27.Sirach.par.714 (BW<>[R] 3	I(/NA"	Sir 5:6; Sir 9:4; Sir 10:11; Sir 14:14
+438	]	389	"27.Sirach.par.714 (BW<>[R] 3	I(/NA"	Sir 3:14; Sir 3:21; Sir 3:21; Sir 3:28; Sir 5:6; Sir 5:6; Sir 5:10; Sir 6:11; Sir 7:21; Sir 7:25; Sir 7:25
+439	>\d	92	"27.Sirach.par.793 HY) 3 >4	---"	Sir 3:15; Sir 4:21; Sir 4:21; Sir 5:12; Sir 7:6; Sir 7:23; Sir 10:25; Sir 10:30; Sir 10:31; Sir 10:31; Sir 15:18
+440	>[	28	"27.Sirach.par.794 <TNT(>[TN+(] 3 TTNC[..] 4 #	PROSANOIKODOMHQH/SETAI/"	Sir 3:28; Sir 5:10; Sir 6:11; Sir 8:2; Sir 10:17; Sir 11:25; Sir 12:13; Sir 14:9; Sir 14:18; Sir 14:18; Sir 14:18
+441	{\d}	487	"27.Sirach.par.800 CRH {3} >4	QLI/YEW/S SOU"	Sir 3:16; Sir 3:16; Sir 3:16; Sir 3:17; Sir 3:17; Sir 3:17; Sir 3:17; Sir 3:18; Sir 3:18; Sir 3:18; Sir 3:18
+442	>{\d}	42	"27.Sirach.par.834 BN/Y 4 >{3}	---"	Sir 4:30; Sir 5:4; Sir 5:11; Sir 7:1; Sir 10:25; Sir 10:25; Sir 10:29; Sir 10:30; Sir 15:11; Sir 15:19; Sir 16:7
+443	{\d?}	2	"27.Sirach.par.844 RXMYM 3 XN {4?}	XA/RIN"	Sir 4:30
+444	'=[	7	"27.Sirach.par.863 TDRW$ {3} TXQWR ^ =[TD]RW$ 4	ZH/TEI"	Sir 9:8; Sir 11:17; Sir 25:23; Sir 30:39; Sir 47:24; Sir 51:5
+445	[	273	"27.Sirach.par.867 TXQWR {3} ^ [TD]RW$ =TXQWR 4	E)CE/TAZE"	Sir 5:6; Sir 7:21; Sir 7:25; Sir 7:25; Sir 7:31; Sir 7:31; Sir 7:31; Sir 7:32; Sir 8:1; Sir 8:1; Sir 8:2
+446	{\d}#	3	"27.Sirach.par.1470 <L/D(T/K>[(L D(T/K] {3}#	E)N SUNE/SEI SOU"	Sir 15:3; Sir 37:24
+447	*-	11	"27.Sirach.par.1623 B/NYSW*-Y*N 3	E)N PEIRASMW=|"	Sir 11:2; Sir 34:13; Sir 34:24; Sir 36:16; Sir 36:23; Sir 37:4; Sir 42:5; Sir 44:4; Sir 51:13; Sir 51:17
+448	{?\d}	23	"27.Sirach.par.1830 W/NHPK {?3} W/THPK 4	KAI\ STRAFH/SETAI/"	Sir 11:9; Sir 16:6; Sir 36:27; Sir 36:27; Sir 37:1; Sir 37:1; Sir 37:1; Sir 37:1; Sir 37:19; Sir 37:23; Sir 40:18
+449	*[	75	"27.Sirach.par.2273 L/)BY*W*[N] 3	PTWXW=|"	Sir 7:32; Sir 8:2; Sir 8:9; Sir 9:10; Sir 9:10; Sir 10:23; Sir 10:26; Sir 11:7; Sir 11:19; Sir 11:20; Sir 11:20
+450	*+*	7	"27.Sirach.par.2274 [HW]$*Y*+* 3	E)/KTEINON"	Sir 26:13; Sir 36:15; Sir 37:18; Sir 39:20; Sir 40:4; Sir 41:15
+451	+]	2	"27.Sirach.par.2491 Y$[P+] 3	KRINOU=SIN"	Sir 42:4
+452	<<	124	"27.Sirach.par.2510 <<PN>> 3	I(/NA MH\"	Sir 9:10; Sir 10:13; Sir 10:13; Sir 10:13; Sir 10:25; Sir 10:25; Sir 10:25; Sir 11:17; Sir 11:21; Sir 11:21; Sir 11:25
+453	>>	115	"27.Sirach.par.2510 <<PN>> 3	I(/NA MH\"	Sir 9:10; Sir 10:13; Sir 10:13; Sir 10:25; Sir 10:25; Sir 10:25; Sir 10:25; Sir 11:17; Sir 11:21; Sir 11:21; Sir 11:25
+454	]<	1	"27.Sirach.par.2696 YD[W](*[Y]<M*>/[K*] 3	E)/FISOS AU)TW=|"	
+455	*>	2	"27.Sirach.par.2696 YD[W](*[Y]<M*>/[K*] 3	E)/FISOS AU)TW=|"	Sir 42:14
+456	*]	1	"27.Sirach.par.2696 YD[W](*[Y]<M*>/[K*] 3	E)/FISOS AU)TW=|"	
+457	*>>	9	"27.Sirach.par.2942 <<R*(*>> 3	---"	Sir 15:18; Sir 16:23; Sir 30:19; Sir 30:19; Sir 30:20; Sir 37:23; Sir 43:21; Sir 44:15
+458	*[..]	49	"27.Sirach.par.3026 B/(*[..] 3	E)N O)FQALMOI=S AU)TOU="	Sir 11:12; Sir 11:12; Sir 11:21; Sir 30:37; Sir 30:38; Sir 30:40; Sir 36:2; Sir 36:3; Sir 36:12; Sir 36:23; Sir 36:23
+459	<<[..]	2	"27.Sirach.par.3074 <<[..]D>> 1 {d}	--- ''"	Sir 30:19
+460	+[..]	2	"27.Sirach.par.3117 +[..] 3 +(M 1 =??	TIMH\N"	Sir 43:22
+461	]+*	2	"27.Sirach.par.3431 [M/]+*W*B*[T/Y] 3	E)K TW=N A)GAQW=N MOU"	Sir 47:23
+462	[+	3	"27.Sirach.par.3602 [+W]B*T/M 3	--- ''"	Sir 16:3; Sir 43:1
+463	'=p%+	1	"27.Sirach.par.3867 (MWQWT 3 =p%+	EI)S BO/QRON"	
+464	{?d}	4	"27.Sirach.par.4422 W/TYN W/PNYQ* 3 {?d}	KAI\ A)PA/THSON"	Sir 16:3; Sir 16:3; Sir 45:24
+465	{d}?	3	"27.Sirach.par.4688 W/Y$TY/HW 3 W/Y$YT/HW 1 {d}?	---"	Sir 15:14; Sir 15:14
+466	{..}	1	"27.Sirach.par.4843 {..}	A)PO\"	
+467	[+]	3	"27.Sirach.par.7987 [+]WBH 4	A)GAQH\"	Sir 39:27; Sir 41:13
+468	{...<<	1	"27.Sirach.par.9339 <<)$R>> {...<<L)>>} 1	OU)/TE"	
+469	>>}	3	"27.Sirach.par.9339 <<)$R>> {...<<L)>>} 1	OU)/TE"	Sir 43:30; Sir 47:9
+470	*[..]>>	1	"27.Sirach.par.9344 <<Y*D*[..]>> 1	O)SFRANQH=|"	
+471	'=[..]	6	"27.Sirach.par.9509 H/NXL ^ =[..] 6	DIA/DOS [33.24]"	Sir 30:39; Sir 35:24; Sir 36:13; Sir 45:12; Sir 48:3
+472	\d#	9	"27.Sirach.par.9976 W/B/H&GT {1} <B>/[K]/HG$T 2#	KAQ' EU(/REMA [35.9]"	Sir 40:30; Sir 41:2; Sir 41:10; Sir 41:20; Sir 42:10; Sir 42:14; Sir 42:17; Sir 44:8
+473	]+*[	1	"27.Sirach.par.10920 [P]+*[R] 1 {d}	--- ''"	
+474	{d	1	"27.Sirach.par.10994 W/K/<H>[X]MWT 1 W/XKMWT 26 {d	---"	
+475	++*[	1	"27.Sirach.par.11129 ++*[PT] 1 =??	PISTO\S [33.3]"	
+476	<[..]	1	"27.Sirach.par.11178 <[..]MT> 6	---"	
+477	]>>	1	"27.Sirach.par.11212 <<W*/Y*$*N*[H]>> 6 {d}	---"	
+478	+*	7	"27.Sirach.par.11248 +*W*B* 6	TO\ A)GAQO/N [33.14]"	Sir 36:14; Sir 37:9; Sir 39:25; Sir 42:14; Sir 43:32; Sir 50:9
+479	+<>[	1	"27.Sirach.par.11370 M+<>[(]MY 124	BRW/MATA [19]"	
+480	{\d{	1	"27.Sirach.par.11451 B/GDWD {15{ B/C*B) ^ =G*DWD 4	EU)ZW/NW| [26]"	
+481	<<+	1	"27.Sirach.par.11519 <<+WB>> 15 =??	E(TAI=ROS"	
+482	?\d	1	"27.Sirach.par.11620 MWCY R( 1 MWC) ZR( (?5) #	SUNTELEI/AS"	
+483	^#	1	"27.Sirach.par.12667 L/ZRH 7 L/ZR) 2 L/R(YM 1 ^#	TRAPH/SETAI"	
+484	+[	1	"27.Sirach.par.13101 M+[(MY] {72} M+(M/W 1 =%p+	E)N E)DE/SMASIN"	
+485	[...]	1	"27.Sirach.par.13207 (WL {1} (RL 2 [...]L* 7	A(MARTWLW=N"	
+486	]}	1	"27.Sirach.par.13410 M/HT($Q {...(*[M]} 7	A)PO\ PERIERGI/AS [24]"	
+487	*'	3	"27.Sirach.par.13585 $M 1 M*' 2	---"	Sir 42:11; Sir 44:23
+488	{\d	1	"27.Sirach.par.13949 SWPH {2 C*P*W*N* SWPH {1}	BORE/OU {..dPNEU/MATOS}"	
+489	\d}	1	"27.Sirach.par.13961 LBN/W 7} LBN/H 1	LEUKO/THTOS AU)TH=S"	
+490	{..^<<	2	"27.Sirach.par.14101 {..^<<KY>>} 12	GA\R"	Sir 47:9
+491	'>>	1	"27.Sirach.par.14103 TX*Q*R* 2 <<T'>> 1	A)FI/KHSQE"	
+492	*[+	2	"27.Sirach.par.14192 W/$Q*[+YM] 7 W/$WQ+YM 1	EI)RHNEU/ONTES"	Sir 45:11
+493	*[...]	1	"27.Sirach.par.15020 B*[...] 1	---"	
+494	*}	2	"27.Sirach.par.15096 {..^)*D*M*} 1	A)/NQRWPOS"	Sir 48:12
+495	*-+*	1	"27.Sirach.par.15321 W/TQLS*-+* 1	KAI\ E)NE/PLHSAS"	
+496	*[+]	1	"27.Sirach.par.15439 X*[+])* 1	---"	
+497	{..^[	1	"27.Sirach.par.15576 {..^[)]L*[Y$](*} 1	KAI\ ELISAIE"	
+498	.c	1	"28.Hosea.par.1039 CW =@$W) .c$ .)+	TW=N MATAI/WN"	
+499	.hry	1	"28.Hosea.par.1308 )P/HM =:)PRYM .hry	EFRAIM"	
+500	.qx	1	"28.Hosea.par.1350 ZRQH =ZRXH .qx	E)CH/NQHSAN"	
+501	.r+	1	"28.Hosea.par.2057 L/PY =L/PRY .r+	EI)S KARPO\N"	
+502	.ty	3	"29.Micah.par.1366 )WTH =?)WYH .ty	OI)/MMOI"	Ezek 28:7; Ezek 28:17
+503	.bq	1	"30.Amos.par.1329 NQBY =@NQP .bq	A)PETRU/GHSAN"	
+504	.y	4	"30.Amos.par.1391 KLY =K/L) .y)	KAI\ OU)X W(S"	Jer 42:1; Jer 49:2; DanTh 8:9
+505	.nym	1	"30.Amos.par.1625 )DNY =)DM .nym	A)NH\R"	
+506	{..~	1	"31.Joel.par.80 {..~L/W}	AU)TOU= "	
+507	~	3	"31.Joel.par.331 )KLH ~ =)$	PU=R"	Joel 2:22; Jonah 3:3
+508	.ym	2	"31.Joel.par.1100 W/NQYTY =W/NQMTY .ym	KAI\ E)KDIKH/SW "	Jer 10:20
+509	'=p%	1	"32.Jonah.par.24 L/PN/Y =p%	PRO/S ME"	
+510	.kr	2	"34.Nahum.par.79 K/)$ =R)$ .kr	A)RXA/S"	Ezek 23:41
+511	.cx	2	"34.Nahum.par.207 MPYC =MPYX .cx	E)MFUSW=N"	Jer 6:27
+512	.wl	1	"34.Nahum.par.504 PW+ =@?PL+ .wl	TH=S FUGH=S"	
+513	}{...	2	"38.Zech.par.755 {...K/}{...)$R}	O(\N TRO/PON O(/TAN"	Jer 7:16
+514	.kl	1	"38.Zech.par.2417 YTHLKW =?YTHLLW .kl	KATAKAUXH/SONTAI"	
+515	.rm	3	"38.Zech.par.2958 MQWR =MQWM .rm	TO/POS"	Ezek 32:23; Ezek 48:28
+516	.mk	2	"39.Malachi.par.168 MY =KY .mk	DIO/TI"	Ezek 43:7
+517	.rx	3	"40.Isaiah.par.2436 Q$R =Q$H,Q$X .rh .rx	SKLHRO/N"	Isa 8:12; Jer 22:15
+518	'=:r?	1	"40.Isaiah.par.2769 RCYN =:r?HR CYWN	E)P' O)/ROS SIWN"	
+519	.mr	1	"40.Isaiah.par.3402 H/GBYM .mr	GIBBIR"	
+520	<q\da	1	"40.Isaiah.par.3519 W/MRY) ={d} YMRW .yw .)- <q1a	{...KAI\ TAU=ROS} {d} BOSKHQH/SONTAI"	
+521	<je\d.\d,\d	2	"40.Isaiah.par.4610 GRW(H =?GDW(H .rd <je48.25,3	KATATETMHME/NOI"	Isa 16:7
+522	.xyw	1	"40.Isaiah.par.5254 B/XM =B/YWM .xyw	H(ME/RAS"	
+523	a,	2	"40.Isaiah.par.6095 NMC)/YK =@MCYa,)MC	KAI\ OI( I)SXU/ONTES E)N SOI\"	Isa 38:16
+524	'=@?{d}	1	"40.Isaiah.par.6166 H/Y(R =H/(YR .m =@?{d}(RH	TH=S PO/LEWS {d?} {...KAI\ #"	
+525	{..r?	2	"40.Isaiah.par.6853 {..r?N$)R}	E)GKATALELEIMME/NOI"	Isa 49:25
+526	'=%?p-	1	"40.Isaiah.par.7254 B/YHWH =%?p-	KU/RIE"	
+527	@?	1	"40.Isaiah.par.7887 L/CW ={d} @?RCH	{..dE)PI\ QLI=YIN} {d?} {...?PROSDE/XOU}"	
+528	'=@{d?}	1	"40.Isaiah.par.8863 THYH =@{d?}THW	E)PI\ TOI=S MATAI/OIS MATAI/A {d?} #"	
+529	.zd	1	"40.Isaiah.par.10249 QPWZ =?QPWD <q1a> .zd	E)XI=NOS"	
+530	k\d.\d>	1	"40.Isaiah.par.11270 (BD/YK =ML)K/YK <Kk19.23>	A)GGE/LWN"	
+531	'=%p-?	1	"40.Isaiah.par.11637 B/M(LWT =%p-?	A)NABAQMOU\S"	
+532	'=%vpa?	1	"40.Isaiah.par.11669 PQDTY =%vpa?	KATALEI/YW"	
+533	'=?%p-	4	"40.Isaiah.par.11812 L/HW$Y(/NY =?%p-	TH=S SWTHRI/AS MOU"	Isa 45:1; Isa 46:1; Isa 49:6
+534	'=%?p	1	"40.Isaiah.par.15262 B/QWL =%?p	FWNH\N"	
+535	{..^?	5	"40.Isaiah.par.15840 NSWGTY {..^?)XWR}	A)NTILE/GW"	Isa 50:9; Isa 64:2; Dan 3:32; Dan 4:10
+536	{?..^	2	"40.Isaiah.par.18203 (Q$W {?..^L/HM} =%vap	DIESTRAMME/NAI"	Isa 60:4
+537	.nc	2	"41.Jer.par.27 )MWN =:)MWC .nc	AMWS"	Jer 25:3
+538	<q\db?	1	"41.Jer.par.4318 ^ W/B/MQBWT =W/B/MSMRWT <q4b?	KAI\ H(/LOIS"	
+539	.cb	1	"41.Jer.par.4511 B/MCWR =B/MBXR .cb .wx	E)N E)KLEKTOI=S"	
+540	.wx	1	"41.Jer.par.4511 B/MCWR =B/MBXR .cb .wx	E)N E)KLEKTOI=S"	
+541	{!}--	2	"41.Jer.par.4751 H(D {!}--	--- ''"	Jer 11:7
+542	.z+	1	"41.Jer.par.5892 W/K/)RX =W/K/)ZRX .z+	KAI\ W(S AU)TO/XQWN"	
+543	.wnd	1	"41.Jer.par.12857 CYWN =?CYD .wnd	QH/REUMA U(MW=N [37.17]"	
+544	.bg	1	"41.Jer.par.13491 B(LTY =?@G(L .bg	H)ME/LHSA [38.32]"	
+545	.m+	3	"41.Jer.par.13896 H/(DYM =H/(MDYM .m+	TW=N E(STHKO/TWN [39.12]"	Ezek 48:3; Ezek 48:34
+546	.mw	2	"41.Jer.par.15150 W/Y$M(W =W/Y$WBW .mw .(b	KAI\ E)PESTRA/FHSAN [41.10]"	Jer 36:26
+547	.ygg	1	"41.Jer.par.15466 YGDLYHW =:GDLYHW .ygg	GODOLIOU [42.4]"	
+548	.ymh	1	"41.Jer.par.19141 YHWDYM =:YHWDH .ymh	IOUDA [50.9]"	
+549	.bx	1	"41.Jer.par.20199 )BYR/YK ={d}BXYR/K .)b .bx	O( MO/SXOS {d} O( E)KLEKTO/S SOU [26.15]"	
+550	.cwn	1	"41.Jer.par.20669 CYC =?CYWN .cwn	SHMEI=A [31.9]"	
+551	.tym	1	"41.Jer.par.21007 H$BTY =?H$KM .bk .tym	PRWI\ [31.33]"	
+552	.cm	1	"41.Jer.par.21020 (D YHC =(R/YHM .j .dr .cm	AI( PO/LEIS AU)TW=N [31.34]"	
+553	.zr	1	"41.Jer.par.22535 W/BZZW =W/BZRW .zr	KAI\ DIASKORPISQH/SONTAI [27.37]"	
+554	.myy	1	"41.Jer.par.22547 W/B/)YMYM =W/B/)YYM .myy	KAI\ E)N TAI=S NH/SOIS [27.38]"	
+555	.ns	1	"41.Jer.par.24066 NBWB =SBYB .ns .wy	KU/KLW|"	
+556	'=.yw	1	"43.Lam.par.786 HWRYDY =.yw	KATAGA/GETE"	
+557	{...?AU	1	"44.Ezekiel.par.470 {...?AU)TOU=} MDBR =v	LALOU=NTOS"	
+558	OU'=}	1	"44.Ezekiel.par.470 {...?AU)TOU=} MDBR =v	LALOU=NTOS"	
+559	mn	1	"44.Ezekiel.par.9932 MTYM =MTNY mn .m	O)SFU/OS"	
+560	.hq	1	"44.Ezekiel.par.10295 B/HM =;NQM .bn .hq	DI/KHN"	
+561	.ny	1	"44.Ezekiel.par.10344 W/YNQMW =W/YQYMW .m .ny	KAI\ E)CANE/STHSAN"	
+562	.gq	3	"44.Ezekiel.par.10607 B/HRG =;B/HRYQ <12.14> .gq	E)N TW=| SPA/SAI"	Ezek 27:20; Ezek 42:12
+563	p-	1	"44.Ezekiel.par.10819 L/NS =&p-	DO/CAN"	
+564	.g	1	"44.Ezekiel.par.10885 W/GMDYM =?$MRYM .g$ .dr	FU/LAKES"	
+565	..r	1	"44.Ezekiel.par.11326 (..r(L/YK}	E)PI\ SE\"	
+566	.gwx	1	"44.Ezekiel.par.12720 GWYM =?XYYM .gwx	TH=S ZWH=S AU)TW=N"	
+567	.+m	1	"44.Ezekiel.par.12809 )+YL/K =@?ML) <32.5> .+m .)+	PLHSQH/SETAI/ SOU"	
+568	.cs	1	"44.Ezekiel.par.13255 CDNY =?SRNY .cs .dr	STRATHGOI\"	
+569	.gz	2	"44.Ezekiel.par.13847 (GBYM =@?KZB .gz	YEU=DOS"	Ezek 47:13
+570	.p+	1	"44.Ezekiel.par.14651 $MWT ^ =$)P =;$)+ .p+ <36.5>	TOU= A)TIMASQH=NAI U(MA=S"	
+571	.pg	1	"44.Ezekiel.par.15898 PRZWT =?GRZWT <ps31.23> .pg	A)PERRIMME/NHN"	
+572	.hg	1	"44.Ezekiel.par.16334 HY) =GY) .hg	TH=S FA/RAGGOS"	
+573	{...?*	3	"44.Ezekiel.par.17203 W/M(LWT {...?*M(L/W} #	KAI\ O)KTW\"	Ezek 40:34; Ezek 40:37
+574	.rt	1	"44.Ezekiel.par.17414 L$KWT ^ =$RYM =$TYM .rt	DU/O"	
+575	.tyn	1	"44.Ezekiel.par.17695 BYT =;BYN .tyn	A)NA\ ME/SON"	
+576	.xq	1	"44.Ezekiel.par.17803 &XYP =H$QYP =vs .xq	W(/STE DIAKU/PTEIN"	
+577	<lcostly>	1	"44.Ezekiel.par.17943 W/(B =@?(BH <lcostly>	KAI\ SPOUDAI=A"	
+578	<to cover>	1	"44.Ezekiel.par.17960 W/H/(BYM =@ <to cover>	E)ZUGWME/NA"	
+579	.nw	1	"44.Ezekiel.par.18046 BNYN =W/KN <42.11> .bk .nw .m	KAI\ OU(/TWS"	
+580	\	1	"44.Ezekiel.par.20812 --+ =?W\HR <43.12>	KAI\ TO\ O)/ROS"	
+581	<q\da^	1	"45.DanielOG.par.902 --+ =;L/(LMYN <2.4> ,,a <q4a^	EI)S TO\N AI)W=NA"	
+582	+}	1	"45.DanielOG.par.4216 {..^Y$L+} ,,a	KAI\ DOQH/SETAI AU)TW=| E)COUSI/A"	
+583	{...*	2	"46.DanielTh.par.1452 {...*(L/YK **(L/K} +(M ,,a	TW=| DO/GMATI/ SOU"	DanTh 6:14
