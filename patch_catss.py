@@ -38,6 +38,13 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     joshb[9515] = "--+ '' =;M/XLQ <19.49>\tDIAMERI/SAS "
     report('\tdone')
   
+    # the quote mark is missing its accompanying mark in Gen line 9551&3
+    report('patching missing \' in 01.Genesis.par, line 9551 and 9553')
+    gen = file2text['01.Genesis.par']
+    gen[9550] = "--+ '' =;W/BH <24.14>\tKAI\ E)N TOU/TW|"
+    gen[9552] = "--+ '' =;KY <24.14>\tO(/TI"
+    report('\tdone')
+
     # the abbreviation here should be lowercase
     report('patching accidental uppercase in TC sigla, 1Esdras, line 478')
     file2text['17.1Esdras.par'][477] = 'W/Y(BYR/HW\tKAI\\ {..^A)PE/STHSAN AU)TO\\N} [cc35.24]'
@@ -168,15 +175,23 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     for file, lines in file2text.items():
         new_lines = []
         for i,line in enumerate(lines):
+
             if '~' in line:
                 report(f'\treplacing ~ in {file} with ^, line {i+1}: {line}')
                 line = line.replace('~', '^')
+
             elif "''=" in line:
                 report(f"\treplacing ''= in {file} with '' =, line {i+1}: {line}")
                 line = line.replace("''=", "'' =")
+
+            elif "^=" in line:
+                report(f"\treplacing ^= in {file} with ^ =, line {i+1}: {line}")
+                line = line.replace("^=", "^ =")
+
             new_lines.append(line)
+
         file2text[file] = new_lines
-    report('\tDONE with tilde replacements')
+    report('\tDONE with mass string replacements')
 
     # export the corrected files
     report(f'writing patched data to {output_dir}')
