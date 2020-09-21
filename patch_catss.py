@@ -38,6 +38,16 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     joshb[9515] = "--+ '' =;M/XLQ <19.49>\tDIAMERI/SAS "
     report('\tdone')
   
+    # the abbreviation here should be lowercase
+    report('patching accidental uppercase in TC sigla, 1Esdras, line 478')
+    file2text['17.1Esdras.par'][477] = 'W/Y(BYR/HW\tKAI\\ {..^A)PE/STHSAN AU)TO\\N} [cc35.24]'
+    report('\tdone')
+
+    # docs say it should be {..}, but everywhere else it is now [..]
+    report('patching lacuna sigla {..} to [..], 27.Sirach.par, line 4844')
+    file2text['27.Sirach.par'][4843] = '[..]\tA)PO\\'
+    report('\tdone')
+
     # there is a corruption in the lines for Exod 35:19:
     # 
     #     16283 ^ ^^^ =L/$RT {...?H/&RD} #  {+} E)N AI(=S LEITOURGH/SOUSIN
@@ -146,6 +156,21 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
         file2text[file] = filtered_lines
 
     report('\tdone')
+
+    # all cases of tildes should be replaced with carrots 
+    # tildes are the original sigla as reflected in the docs;
+    # but they have since been replaced, apparently, with ^
+    report('Replacing all remaining cases of tilde (~) sigla with ^')
+    for file, lines in file2text.items():
+        new_lines = []
+        for i,line in enumerate(lines):
+            if '~' in line:
+                report(f'\treplacing ~ in {file}, line {i+1}: {line}')
+                new_lines.append(line.replace('~', '^'))
+            else:
+                new_lines.append(line)
+        file2text[file] = new_lines
+    report('\tDONE with tilde replacements')
 
     # export the corrected files
     report(f'writing patched data to {output_dir}')
