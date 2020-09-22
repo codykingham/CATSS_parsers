@@ -17,43 +17,61 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
             print(msg)
     
     data = Path(data_dir)
-    file2text = {}
+    file2lines = {}
 
     for file in data.glob('*.par'):
-        file2text[file.name] = file.read_text().split('\n')
+        file2lines[file.name] = file.read_text().split('\n')
 
-    # the following lines lack a tab character between the columns
-    # corrections add a tab char
-    report('patching missing \\t chars in lines 984, 1367, 3738, 9518 of 06.JoshB.par...')
-    joshb = file2text['06.JoshB.par']
-    joshb[983] = 'W/)T H/GRG$Y ^ =W/)T W/H/)MRY\t KAI\\ TO\\N AMORRAI=ON '
-    joshb[1366] = 'W/H/KHNYM =W/H/)BNYM .m .kb #\t KAI\\ OI( LI/QOI '
-    joshb[3737] = 'W/YC+YRW =;W/YC+YDW .rd <9.12\t E)PESITI/SANTO {d} KAI\\ H(TOIMA/SANTO '
-    joshb[9517] = "--+ '' =;L/GBWLWT/YHM <19.49>\t E)N TOI=S O(RI/OIS AU)TW=N "
-    report('\tdone')
+    # -- Manual Edits --
 
-    report('patching extra \\t chars in lines 2007 and 9516 of 06.JoshB.par...')
-    # the following lines have one too many tab characters
-    joshb[2006] = '-+ =;H/(YR/H <6.20>\tEI)S TH\\N PO/LIN '
-    joshb[9515] = "--+ '' =;M/XLQ <19.49>\tDIAMERI/SAS "
-    report('\tdone')
-  
-    # the quote mark is missing its accompanying mark in Gen line 9551&3
-    report('patching missing \' in 01.Genesis.par, line 9551 and 9553')
-    gen = file2text['01.Genesis.par']
-    gen[9550] = "--+ '' =;W/BH <24.14>\tKAI\ E)N TOU/TW|"
-    gen[9552] = "--+ '' =;KY <24.14>\tO(/TI"
-    report('\tdone')
+    # manual corrections loaded into tuples consisting of:
+    # (file, line_number, regex condition, new line)
+    # where line numbers refer to the original line numbers in the docs,
+    # the regex condition is a pattern to search all in the line to confirm the 
+    # change (a safeguard for erroneous changes or for when the underlying data
+    # changes). All of the changes are enacted in a large loop.
+    # If filename is left empty, the previous filename is used
+    # NB: linenumbers are given as 0-indexed
+    edits = [
+        ('06.JoshB.par', 983, 'MRY KAI', 'W/)T H/GRG$Y ^ =W/)T W/H/)MRY\t KAI\\ TO\\N AMORRAI=ON '),
+        ('', 1366, '\.kb # KAI', 'W/H/KHNYM =W/H/)BNYM .m .kb #\t KAI\\ OI( LI/QOI '),
+        ('', 3737, '12 E', 'W/YC+YRW =;W/YC+YDW .rd <9.12>\t E)PESITI/SANTO {d} KAI\\ H(TOIMA/SANTO'), 
+        ('', 9517, '<19.49> E', "--+ '' =;L/GBWLWT/YHM <19.49>\t E)N TOI=S O(RI/OIS AU)TW=N "),
+        ('', 2006, '\t<6.20>\t', '-+ =;H/(YR/H <6.20>\tEI)S TH\\N PO/LIN '),
+        ('', 9515, '\t<19\.49>\t', "--+ '' =;M/XLQ <19.49>\tDIAMERI/SAS "),
+        ('01.Genesis.par', 9550, "--\+ ' ", "--+ '' =;W/BH <24.14>\tKAI\ E)N TOU/TW|"),
+        ('', 9552, "--\+ ' ", "--\+ '' =;KY <24.14>\tO(/TI"),
+        ('17.1Esdras.par', 477, 'CC35\.24', 'W/Y(BYR/HW\tKAI\\ {..^A)PE/STHSAN AU)TO\\N} [cc35.24]'),
+        ('27.Sirach.par', 4843, '{\.\.}', '[..]\tA)PO\\'),
+        ('11.1Sam.par', 2096, 'O\t', "--+ '' =KPWT\tOI( KARPOI\\"),
+        ('', 2097, 'T\t', "--+ '' =;YD/YW\tTW=N XEIRW=N AU)TOU="),
+        ('13.1Kings.par', 15936, 'EI\)S}\t', "W/YBW)\tKAI\ EI)SH=LQEN {...EI)S}"),
+        ('26.Job.par', 2245, 'OU\)}\t', "W/L)\t{..^OU)}DE\\"),
+        ('44.Ezekiel.par', 471, 'OU=} MDBR', "MDBR =v\t{...?AU)TOU=} LALOU=NTOS"),
+    ]
 
-    # the abbreviation here should be lowercase
-    report('patching accidental uppercase in TC sigla, 1Esdras, line 478')
-    file2text['17.1Esdras.par'][477] = 'W/Y(BYR/HW\tKAI\\ {..^A)PE/STHSAN AU)TO\\N} [cc35.24]'
-    report('\tdone')
+    report('\napplying bulk manual edits...\n')
 
-    # docs say it should be {..}, but everywhere else it is now [..]
-    report('patching lacuna sigla {..} to [..], 27.Sirach.par, line 4844')
-    file2text['27.Sirach.par'][4843] = '[..]\tA)PO\\'
-    report('\tdone')
+    file = ''
+    for edit in edits:
+
+        # unpack data
+        file = edit[0] or file
+        ln, re_confirm, redaction = edit[1:]
+        old_line = file2lines[file][ln]
+
+        # confirm and apply changes, give reports throughout
+        if re.findall(re_confirm, old_line):
+            file2lines[file][ln] = redaction
+            report(f'correction for {file} line {ln}:')
+            report(f'\tOLD: {old_line}')
+            report(f'\tNEW: {redaction}')
+        else:
+            report(f'**WARNING: THE FOLLOWING EDIT WAS NOT CONFIRMED**:')
+            report(f'\tOLD: {old_line}')
+            report(f'\tEDIT: {(file, ln, re_confirm, redaction)}')
+
+    # -- Other Edits --
 
     # there is a corruption in the lines for Exod 35:19:
     # 
@@ -70,11 +88,16 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     # these incorrect lines will be removed; the extra Exod 35:19 heading will
     # likewise become unnecessary
     # NB that line numbers below will be 1 less due to zero-indexing of Python
-    report('patching corrupt lines 16283-16289 in 02.Exodus.par...')
-    exod = file2text['02.Exodus.par']
-    fixed_lines = exod[:16283] + [exod[16285]] + exod[16288:]
-    file2text['02.Exodus.par'] = fixed_lines
-    report('\tdone')
+    
+    # first check that the edit still applies to current file
+    exod = file2lines['02.Exodus.par']
+    if exod[16284] == 'Exod 1:10':
+        report('patching corrupt lines 16283-16289 in 02.Exodus.par...')
+        fixed_lines = exod[:16283] + [exod[16285]] + exod[16288:]
+        file2lines['02.Exodus.par'] = fixed_lines
+        report('\tdone')
+    else:
+        report('**WARNING: SKIPPING EXODUS CORRUPTION REPAIR DUE TO CHANGED LINE NUMBERS; see code')
 
     # orphaned lines are cases where parts of a line are inexplicably broken off
     # these are handled in bulk in a loop further below; but Ps 68:31 contains a 
@@ -82,18 +105,26 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     # to prevent need for recursive algorith, we just fix it manually
     # we do it here to avoid needed to adjust indices after the correction
     # listed subsequent to this one
-    report('patching double-orphaned lines in lines 10849-10851 of 20.Psalms.par (Ps 68:31)')
-    ps68_31 = file2text['20.Psalms.par']
-    ps68_31_patch = [ps68_31[10848] + ps68_31[10849] + ps68_31[10850]]
-    file2text['20.Psalms.par'] = ps68_31[:10848] + ps68_31_patch + ps68_31[10851:] 
+    pss = file2lines['20.Psalms.par']
+    if pss[10848] == 'MTR':
+        report('patching double-orphaned lines in lines 10849-10851 of 20.Psalms.par (Ps 68:31)')
+        ps68_31_patch = [pss[10848] + pss[10849] + pss[10850]]
+        file2lines['20.Psalms.par'] = pss[:10848] + ps68_31_patch + pss[10851:] 
+        report('\tdone')
+    else:
+        report('**WARNING: SKIPPING PSALMS ORPHAN REPAIR DUE TO CHANGED LINE NUMBERS; see code')
 
     # An identical corruption to the one discussed above in Exodus 35:15
     # likewise in 20.Psalms.par lines 2455-2459
-    report('patching corrupt lines 2457-2461 in 20.Psalms.par...')
-    pss = file2text['20.Psalms.par']
-    fixed_lines = pss[:2456] + [pss[2457]] + pss[2460:]
-    file2text['20.Psalms.par'] = fixed_lines
-    report('\tdone')
+    if pss[2459] == 'Ps 18:40':
+        report('patching corrupt lines 2457-2461 in 20.Psalms.par...')
+        fixed_lines = pss[:2456] + [pss[2457]] + pss[2460:]
+        file2lines['20.Psalms.par'] = fixed_lines
+        report('\tdone')
+    else:
+        report('**WARNING: SKIPPING PSALMS ORPHAN REPAIR #2 DUE TO CHANGED LINE NUMBERS; see code')
+
+    # -- Repair Orphaned Lines --
 
     # a search for lines without \t reveals that numerous lines are 
     # orphaned from their original line, for instance, see DanTh 6:17:
@@ -122,7 +153,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     report('patching orphaned lines (see code for description)...')
 
     current_verse = None
-    for file, lines in file2text.items():
+    for file, lines in file2lines.items():
 
         filtered_lines = []
 
@@ -160,38 +191,55 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
             i += 1
 
         # reassign to new lines
-        file2text[file] = filtered_lines
+        file2lines[file] = filtered_lines
 
     report('\tdone')
 
-    # various errors / normalizations need to be made on string-matching bases
-    # those are listed below:
-    # 1. all cases of tildes should be replaced with carrots 
-    # tildes are the original sigla as reflected in the docs;
-    # but they have since been replaced, apparently, with ^
-    # 2. a number of cases of the string ''= should be replaced 
-    # with a separating space
-    report('Making various string-based corrections and normalizations...')
-    for file, lines in file2text.items():
-        new_lines = []
-        for i,line in enumerate(lines):
+    # -- Bulk Normalizations -- 
+    
+    # changes which need to be effected systematically are loaded into tuples:
+    # (regex, replace)
+    # the changes are enacted with regex substitutions
+    # not all of these are stricly errors (though they may be), there 
+    # are numerous cases of normalizations applied to bring idiosyncratic
+    # patterns in line with the majority
 
-            if '~' in line:
-                report(f'\treplacing ~ in {file} with ^, line {i+1}: {line}')
-                line = line.replace('~', '^')
+    normalizations = [
+        ('~', '^'),
+        ("(['^])=", '\g<1> ='), # accidental fusions to `=` on left side
+    ]
 
-            elif "''=" in line:
-                report(f"\treplacing ''= in {file} with '' =, line {i+1}: {line}")
-                line = line.replace("''=", "'' =")
+    report('\nMaking various bulk regex normalizations...\n')
 
-            elif "^=" in line:
-                report(f"\treplacing ^= in {file} with ^ =, line {i+1}: {line}")
-                line = line.replace("^=", "^ =")
+    for search, replace in normalizations:
 
-            new_lines.append(line)
+        search = re.compile(search) # compile for efficiency
 
-        file2text[file] = new_lines
-    report('\tDONE with mass string replacements')
+        for file, lines in file2lines.items():
+        
+            new_lines = []
+            curr_verse = ''
+
+            for i,line in enumerate(lines):
+                
+                # track passages for reporting since line numbers have already changed
+                if ref_string.match(line):
+                    curr_verse = line
+                    new_lines.append(line)
+
+                # apply substitutions
+                if search.findall(line):
+                    redaction = search.sub(replace, line)
+                    new_lines.append(redaction)
+                    report(f'normalization in {file} in {curr_verse}:')
+                    report(f'\tOLD: {line}')
+                    report(f'\tNEW: {redaction}')
+                
+                # else keep line the same
+                else:
+                    new_lines.append(line)
+
+            file2lines[file] = new_lines
 
     # export the corrected files
     report(f'writing patched data to {output_dir}')
@@ -199,11 +247,12 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     if not output_dir.exists():
         output_dir.mkdir()
 
-    for file, lines in file2text.items():
+    for file, lines in file2lines.items():
         text = '\n'.join(lines)
         file_path = output_dir.joinpath(file)
         file_path.write_text(text)
 
+    # write changes to a log file
     log_path = output_dir.joinpath('log.txt')
     log_path.write_text(log)
 
