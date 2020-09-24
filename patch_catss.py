@@ -3,7 +3,7 @@ from pathlib import Path
 from regex_patterns import ref_string
 from datetime import datetime
 
-def patch(data_dir='source', output_dir='source/patched', silent=False):
+def patch(data_dir='source', output_dir='source/patched', silent=False, debug=False):
     """Corrects known errors in the CATSS database."""
 
     log = ''
@@ -39,15 +39,38 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
         ('', 9517, '<19.49> E', "--+ '' =;L/GBWLWT/YHM <19.49>\t E)N TOI=S O(RI/OIS AU)TW=N "),
         ('', 2006, '\t<6.20>\t', '-+ =;H/(YR/H <6.20>\tEI)S TH\\N PO/LIN '),
         ('', 9515, '\t<19\.49>\t', "--+ '' =;M/XLQ <19.49>\tDIAMERI/SAS "),
+        ('', 7104, 'RNA.*\t', 'W/DNH =:W/RNH .dr\tKAI\ RENNA'),
         ('01.Genesis.par', 9550, "--\+ ' ", "--+ '' =;W/BH <24.14>\tKAI\ E)N TOU/TW|"),
         ('', 9552, "--\+ ' ", "--\+ '' =;KY <24.14>\tO(/TI"),
+        ('', 9557, '=:ABRHM', "--+ =:)BRHM\tABRAAM"),
+        ('', 2316, '--= ', "--+ '' =H/BHMH\tTW=N KTHNW=N"),
+        ('', 12939, '\.a', "B/GLL/K =?B/RGL/YK .s <^30.30\tTH=| SH=| ^ EI)SO/DW|"), # typo: .a for .s
         ('17.1Esdras.par', 477, 'CC35\.24', 'W/Y(BYR/HW\tKAI\\ {..^A)PE/STHSAN AU)TO\\N} [cc35.24]'),
+        ('', 6514, 'LI.*\t', ")L(ZR =:)LYW(NY\tE)LIWNA=S [e10.31]"),
         ('27.Sirach.par', 4843, '{\.\.}', '[..]\tA)PO\\'),
         ('11.1Sam.par', 2096, 'O\t', "--+ '' =KPWT\tOI( KARPOI\\"),
         ('', 2097, 'T\t', "--+ '' =;YD/YW\tTW=N XEIRW=N AU)TOU="),
+        ('', 6206, 'M;H', "^ )BN =H/YWM,HLWM <14.36>\tE)NTAU=QA"),
         ('13.1Kings.par', 15936, 'EI\)S}\t', "W/YBW)\tKAI\ EI)SH=LQEN {...EI)S}"),
+        ('40.Isaiah.par', 1855, 'E\t', "B/$LKT =;M$LKT <q1a>\tE)KPE/SH|"),
         ('26.Job.par', 2245, 'OU\)}\t', "W/L)\t{..^OU)}DE\\"),
+        ('', 2063, '=a', "$DY =@$/DYa\tO( TA\ PA/NTA POIH/SAS"),
         ('44.Ezekiel.par', 471, 'OU=} MDBR', "MDBR =v\t{...?AU)TOU=} LALOU=NTOS"),
+        ('', 18162, '<42\.9\)', "--+ =;L/HNH <42.9>\tDI' AU)TW=N"),
+        ('16.2Chron.par', 10095, '\t---$', "MLK\t--- ''"),
+        ('', 10096, '\t---$', "B/YRW$LM\t--- ''"),
+        ('02.Exodus.par', 18838, '<40\.9}', '--+ '' {x} =;B/W <40.9>\tAU)TH=S'), 
+        ('04.Num.par', 7479, '<de1\.39\)', "--+ '' =;)$R <de1.39>\tO(/SOI"),
+        ('23.Prov.par', 89, 'c18\.7\s', r"W/(NQYM <ju8.26 ge41.42 c18.7>\tKAI\ KLOIO\N XRU/SEON"),
+        ('', 3274, 'ER\t', "{...}\tW(/SPER"),
+        ('03.Lev.par', 6866, '<sp\^\s', "--+ '' =;B/W <nu19.13> <sp^> #\tE)N AU)TW=|"),
+        ('', 8126, '\.l&', "Y(LH =Y(&H .L& <sp>\tPOIH/SH|"),
+        ('41.Jer.par', 4751, '--\t', "H(D {!}-\t--- ''"),
+        ('', 4752, '--\t', "H(DTY {!}-\t--- ''"),
+        ('05.Deut.par', 11173, 'KI.*\t', "--+ '' =;KY <24.22>\tO(/TI"),
+        ('08.JudgesB.par', 8041, r'N\.\.\.\)T', r"W/TY$N/HW =W/TY$N {...)T $M$WN}\tKAI\ E)KOI/MISEN {...TO\N SAMYWN}"),
+        ('', 7568, '=@a\+', "=@+R)a\tE)KRERIMME/NHN"),
+        ('', 8151, ' %vpa', "W/YCXQ =%vpa {d}\tKAI\ E)/PAIZEN {d} {...KAI\ E)RRA/PIZON}"),
     ]
 
     report('\napplying bulk manual edits...\n')
@@ -67,11 +90,15 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
             report(f'\tOLD: {old_line}')
             report(f'\tNEW: {redaction}')
         else:
+            if debug:
+                raise Exception(f'FOLLOWING EDIT UNCONFIRMED: {edit}')
             report(f'**WARNING: THE FOLLOWING EDIT WAS NOT CONFIRMED**:')
-            report(f'\tOLD: {old_line}')
-            report(f'\tEDIT: {(file, ln, re_confirm, redaction)}')
+            report(f'\tTARGET: {old_line}')
+            report(f'\tEDIT: {edit}')
 
     # -- Other Edits --
+
+    report('\nApplying corrections to orphaned / corrupt lines...\n')
 
     # there is a corruption in the lines for Exod 35:19:
     # 
@@ -97,6 +124,8 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
         file2lines['02.Exodus.par'] = fixed_lines
         report('\tdone')
     else:
+        if debug:
+            raise Exception('EXODUS CORRUPTION REPAIR SKIPPED!')
         report('**WARNING: SKIPPING EXODUS CORRUPTION REPAIR DUE TO CHANGED LINE NUMBERS; see code')
 
     # orphaned lines are cases where parts of a line are inexplicably broken off
@@ -112,6 +141,8 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
         file2lines['20.Psalms.par'] = pss[:10848] + ps68_31_patch + pss[10851:] 
         report('\tdone')
     else:
+        if debug:
+            raise Exception('PSALMS ORPHAN REPAIR SKIPPED!')
         report('**WARNING: SKIPPING PSALMS ORPHAN REPAIR DUE TO CHANGED LINE NUMBERS; see code')
 
     # An identical corruption to the one discussed above in Exodus 35:15
@@ -122,6 +153,8 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
         file2lines['20.Psalms.par'] = fixed_lines
         report('\tdone')
     else:
+        if debug:
+            raise Exception('PSALMS ORPHAN REPAIR 2 SKIPPED!')
         report('**WARNING: SKIPPING PSALMS ORPHAN REPAIR #2 DUE TO CHANGED LINE NUMBERS; see code')
 
     # -- Repair Orphaned Lines --
@@ -204,9 +237,68 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
     # are numerous cases of normalizations applied to bring idiosyncratic
     # patterns in line with the majority
 
+    # NB that the order of some changes matters, since some patterns are 
+    # dependent on other idiosyncracies being fixed already
     normalizations = [
         ('~', '^'),
-        ("(['^])=", '\g<1> ='), # accidental fusions to `=` on left side
+        ("---\+", "--+"),
+        ('----\+---', "--- ''"), # see 2 Chr 27:8
+        ("<([^\s>]*)\s(?!.*[>#])", '<\g<1>> '), # numerous unclosed brackets
+
+        # NB: on below, cases of `{..`; some cases may be ambiguous whether they should be 
+        # {... or {..^ However, it is the stated preference of the docs that 
+        # during encoding {... is to be preferred (1986:7.6)
+        # and it also seems that several of the examples have a majority 
+        # preference of {... over {..^; thus we go with the former
+        ('{\.\.(?![.^?a-z])', '{...'),
+        ('\.\.\.\.', '...'),
+        ('\(!\)', '{!}'), # (!) to {i}, inf. abs.
+        ('(?<![-*])\-\+', '--+'), # -+ to --+
+        ('A(?=.*\t)', ''), # vowels in the Hebrew column, replace with nothing
+        ('=&p', '=%p'), # =&p typo for =%p, preposition differences
+        ('(?<!-)--(?![-+])', '---'), # -- to ---
+        ('=a', '=@a'),
+
+        # NB order of this block matters, to ensure space to left of =
+        ('=%p=', '=%p-'),
+        ('([:;])=', '=\g<1>'), # e.g. := to =:
+        ('([^A-Z\/()\s|{}])=', '\g<1> ='), # ensure space to left of = (col.B marker)
+    
+        # this is case of ellision with interruption
+        # it would be more consistent to code it as a separate {...} remark
+        # so we close the previous brace and adda second
+        ('(?<![{\[])\.\.\.(?![}\]])', '}{...'),
+        
+        ('=%pa', '=%vpa'),
+        ('-%vap', '=%vap'),
+        ('{\.\.\.r', '{..r'),
+        ('=p(?=[\s-])', '=%p'),
+        ('<Sp>', '<sp>'),
+        ('=vpa', '=%vpa'),
+        ('{d}%p(\+?)', '%p\g<1> {d}'),
+        ('\+;', '=;'),
+        
+        # normalize `?` by placing it at end of strings?
+        #(r'(\s^)\?([^\$\s?]+)', '\g<1>\g<2>?'),
+        
+        ('{\*\*(\s)', '{**}\g<1>'),
+        ('=\?:', '=:?'),
+        ('={d};', '=;{d}'),
+
+        # normalize verse cross references in Hebrew portion
+        ('\[\[(.*[a-zA-Z]+.*\d\..*)\]\](?=.*\t)', '<\g<1>>'),
+        ('=p%([-+\s])', '=%p\g<1>'),
+        ('{d\t', '{d}\t'),
+        ('{15{', '{15}'),
+        ('\(\?5\)', '{?5}'), 
+        ('\[\.\.\.\]', '[..]'),
+        ('{(\d+)(\s)', '{\g<1>}\g<2>'),
+        ('(\s)(\d+)}', '\g<1>{\g<2>}'),
+        ('=%\?p(-?)', '=%p\g<1>?'),
+        (' ([a-z][a-z]) (?=.*\t)', ' .\g<1> '),
+        ('=&p-', '=%p-'),
+        ('\(\.\.', '{..'),
+        (r'\\(?=.*\t)', '/'),
     ]
 
     report('\nMaking various bulk regex normalizations...\n')
@@ -225,7 +317,6 @@ def patch(data_dir='source', output_dir='source/patched', silent=False):
                 # track passages for reporting since line numbers have already changed
                 if ref_string.match(line):
                     curr_verse = line
-                    new_lines.append(line)
 
                 # apply substitutions
                 if search.findall(line):
