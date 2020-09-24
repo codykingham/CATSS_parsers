@@ -72,8 +72,9 @@ discontinuous lines.
 |docs|actual| meaning |
 |----| ---- |  ----   |
 |`..a`|`,,a`|"word included in one of the Aramaic sections" |
-|`{..}`|`[..]`|"lacuna in [manuscript]" (1991:123)" |
+|`{..}`|`[..]`|"lacuna in [manuscript]" (1991:123)"|
 |`=p%-` (1991); `=$p-` (1986)|`=%p-`|"omission of preposition or particle"|
+|`{#}`|`{...%}`|"Asterized passage (in Job)"|
 
 ##### Unknown symbols
 
