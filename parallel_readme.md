@@ -73,6 +73,7 @@ discontinuous lines.
 |----| ---- |  ----   |
 |`..a`|`,,a`|"word included in one of the Aramaic sections" |
 |`{..}`|`[..]`|"lacuna in [manuscript]" (1991:123)" |
+|`=p%-` (1991); `=$p-` (1986)|`=%p-`|"omission of preposition or particle"|
 
 
 ### Categories of Markup
