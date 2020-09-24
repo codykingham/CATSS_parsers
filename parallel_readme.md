@@ -75,6 +75,11 @@ discontinuous lines.
 |`{..}`|`[..]`|"lacuna in [manuscript]" (1991:123)" |
 |`=p%-` (1991); `=$p-` (1986)|`=%p-`|"omission of preposition or particle"|
 
+##### Unknown symbols
+
+|  |  | 
+|--|--|
+| `<sp>` | e.g. Gen 2:4 `)RC ^ =$MYM <sp>    TO\N OU)RANO\N` |
 
 ### Categories of Markup
 
@@ -311,8 +316,4 @@ where possible. However, only the Hebrew text order is reliably unaltered:
 
 [Question: which passages in particular have been altered?]
 
-## Unknown symbols
 
-|  |  | 
-|--|--|
-| `<sp>` | e.g. Gen 2:4 `)RC ^ =$MYM <sp>    TO\N OU)RANO\N` |
