@@ -47,6 +47,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('', 12939, '\.a', "B/GLL/K =?B/RGL/YK .s <^30.30\tTH=| SH=| ^ EI)SO/DW|"), # typo: .a for .s
         ('17.1Esdras.par', 477, 'CC35\.24', 'W/Y(BYR/HW\tKAI\\ {..^A)PE/STHSAN AU)TO\\N} [cc35.24]'),
         ('', 6514, 'LI.*\t', ")L(ZR =:)LYW(NY\tE)LIWNA=S [e10.31]"),
+        ('', 2857, '\[e2 10', "$$ M)WT )RB(YM W/$NYM =+\tE(CAKO/SIOI TESSARA/KONTA O)KTW/ [e2.10]"),
         ('27.Sirach.par', 4843, '{\.\.}', '[..]\tA)PO\\'),
         ('11.1Sam.par', 2096, 'O\t', "--+ '' =KPWT\tOI( KARPOI\\"),
         ('', 2097, 'T\t', "--+ '' =;YD/YW\tTW=N XEIRW=N AU)TOU="),
@@ -68,6 +69,8 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('41.Jer.par', 4751, '--\t', "H(D {!}-\t--- ''"),
         ('', 4752, '--\t', "H(DTY {!}-\t--- ''"),
         ('05.Deut.par', 11173, 'KI.*\t', "--+ '' =;KY <24.22>\tO(/TI"),
+        ('', 13270, 'Deut 28:65', 'Deut 28:64'), 
+        ('', 13293, '\s\*', "^ W/)BN\t^^^\n\nDeut 28:65"),
         ('08.JudgesB.par', 8041, r'N\.\.\.\)T', r"W/TY$N/HW =W/TY$N {...)T $M$WN}\tKAI\ E)KOI/MISEN {...TO\N SAMYWN}"),
         ('', 7568, '=@a\+', "=@+R)a\tE)KRERIMME/NHN"),
         ('', 8151, ' %vpa', "W/YCXQ =%vpa {d}\tKAI\ E)/PAIZEN {d} {...KAI\ E)RRA/PIZON}"),
@@ -250,7 +253,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         # during encoding {... is to be preferred (1986:7.6)
         # and it also seems that several of the examples have a majority 
         # preference of {... over {..^; thus we go with the former
-        ('{\.\.(?![.^?a-z])', '{...'),
+        ('{\.\.(?![.^a-z])', '{...'),
         ('\.\.\.\.', '...'),
         ('\(!\)', '{!}'), # (!) to {i}, inf. abs.
         ('(?<![-*])\-\+', '--+'), # -+ to --+
@@ -299,6 +302,10 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('=&p-', '=%p-'),
         ('\(\.\.', '{..'),
         (r'\\(?=.*\t)', '/'),
+
+        # order of block matters here
+        ('\[([a-zA-Z])}', '{\g<1>}'),
+        ('\[([\d.a-z]+)(?!.*\])', '[\g<1>]'),
     ]
 
     report('\nMaking various bulk regex normalizations...\n')
