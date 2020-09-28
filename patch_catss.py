@@ -40,30 +40,52 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('', 2006, '\t<6.20>\t', '-+ =;H/(YR/H <6.20>\tEI)S TH\\N PO/LIN '),
         ('', 9515, '\t<19\.49>\t', "--+ '' =;M/XLQ <19.49>\tDIAMERI/SAS "),
         ('', 7104, 'RNA.*\t', 'W/DNH =:W/RNH .dr\tKAI\ RENNA'),
+        ('', 1659, '----', "M/MCRYM\t--- ''"),
+        ('', 4673, '{=51}', "W/YMYT/M\t--- <=51>"), # Normalize this to a note
+        ('', 10235, '{TOU', "--+\tSALAMIN {d} {...TOU= SWTHRI/OU}"),
         ('01.Genesis.par', 9550, "--\+ ' ", "--+ '' =;W/BH <24.14>\tKAI\ E)N TOU/TW|"),
         ('', 9552, "--\+ ' ", "--\+ '' =;KY <24.14>\tO(/TI"),
         ('', 9557, '=:ABRHM', "--+ =:)BRHM\tABRAAM"),
         ('', 2316, '--= ', "--+ '' =H/BHMH\tTW=N KTHNW=N"),
         ('', 12939, '\.a', "B/GLL/K =?B/RGL/YK .s <^30.30\tTH=| SH=| ^ EI)SO/DW|"), # typo: .a for .s
+        ('', 10822, '}}', "NG(NW/K\t{...H(MEI=S} {...SE} ^ E)BDELUCA/MEQA"),
         ('17.1Esdras.par', 477, 'CC35\.24', 'W/Y(BYR/HW\tKAI\\ {..^A)PE/STHSAN AU)TO\\N} [cc35.24]'),
         ('', 6514, 'LI.*\t', ")L(ZR =:)LYW(NY\tE)LIWNA=S [e10.31]"),
         ('', 2857, '\[e2 10', "$$ M)WT )RB(YM W/$NYM =+\tE(CAKO/SIOI TESSARA/KONTA O)KTW/ [e2.10]"),
+        ('', 772, 'SAS 3', ")$R H$BY(/W\t{...O(RKISQEI\S}{d} E)PIORKH/SAS #"),
+        ('', 4525, 'O.I\(', "BNY GLWT/)\tOI( E)K TH=S AI)XMALWSI/AS [e6.16]"), # remove unknown char
         ('27.Sirach.par', 4843, '{\.\.}', '[..]\tA)PO\\'),
+        ('', 3697, '\s\s\s\s\s', "#\tA(MARTWLOU=} [7]}"), 
+        ('', 16898, ' no id\.', "NSH[..] 4\t--- ''<c - no id.>"), # put weird note in brackets
         ('11.1Sam.par', 2096, 'O\t', "--+ '' =KPWT\tOI( KARPOI\\"),
         ('', 2097, 'T\t', "--+ '' =;YD/YW\tTW=N XEIRW=N AU)TOU="),
         ('', 6206, 'M;H', "^ )BN =H/YWM,HLWM <14.36>\tE)NTAU=QA"),
         ('13.1Kings.par', 15936, 'EI\)S}\t', "W/YBW)\tKAI\ EI)SH=LQEN {...EI)S}"),
+        ('14.2Kings.par', 4735, '{c}\? ', "YNHG\tE)GE/NETO {c?H)=GEN}"),
         ('40.Isaiah.par', 1855, 'E\t', "B/$LKT =;M$LKT <q1a>\tE)KPE/SH|"),
+        ('', 11657, '_', "B/M(LWT\t--- ?"),
+        ('', 18586, '\.\.\.TO', "W/L/QDW$\tTO\ A(/GION {d} {..^KAI\ DIA\}{..^TO|N"),
         ('26.Job.par', 2245, 'OU\)}\t', "W/L)\t{..^OU)}DE\\"),
         ('', 2063, '=a', "$DY =@$/DYa\tO( TA\ PA/NTA POIH/SAS"),
+        ('', 7441, '{#}', "YMYN\tDECIW=N {---%}"),
+        ('', 7927, 'S\.\.\^', "W/T$Q\tEI) DE\ KAI\ {..^EPIQEI\S}{..^E)FI/LHSA}"),
+        ('', 7615, '{c\?}', "XMH =?@XSM,@ZMMa [[30:11]]\tFIMOU= {c?QUMOU=}"),
         ('44.Ezekiel.par', 471, 'OU=} MDBR', "MDBR =v\t{...?AU)TOU=} LALOU=NTOS"),
         ('', 18162, '<42\.9\)', "--+ =;L/HNH <42.9>\tDI' AU)TW=N"),
+        ('', 20424, '\s\s\s\s\s', "NTNW #\tDE/DONTAI #$"),
         ('16.2Chron.par', 10095, '\t---$', "MLK\t--- ''"),
         ('', 10096, '\t---$', "B/YRW$LM\t--- ''"),
+        ('', 1522, 'W:', "L/YHWH\tTW=| KURI/W|"),
+        ('', 3575, '-\.-', ''), # erase redundant line
+        ('', 4093, '{TOU', "W/B/BNYMN\tKAI\ {cTOU=} BENIAMIN"),
         ('02.Exodus.par', 18838, '<40\.9}', '--+ '' {x} =;B/W <40.9>\tAU)TH=S'), 
+        ('', 3197, '\s\s\s\s\s', "--+ =HW) <sp>	AU)TO\S"), 
         ('04.Num.par', 7479, '<de1\.39\)', "--+ '' =;)$R <de1.39>\tO(/SOI"),
+        ('20.Psalms.par', 21382, '{\.1\.d', "W/M/PZ\tKAI\ {..dU(PE\R} TOPA/ZION [118.127]"),
         ('23.Prov.par', 89, 'c18\.7\s', r"W/(NQYM <ju8.26 ge41.42 c18.7>\tKAI\ KLOIO\N XRU/SEON"),
         ('', 3274, 'ER\t', "{...}\tW(/SPER"),
+        ('', 5163, '{\.\.\^{p}', "B/)Y$\t{p}{..^A)NDRI\}"),
+        ('', 3317, '{c} ', r"YQB/HW =?@$BQa\tU(POLI/POITO {cU(POLH/NION} AU)TO\N"),
         ('03.Lev.par', 6866, '<sp\^\s', "--+ '' =;B/W <nu19.13> <sp^> #\tE)N AU)TW=|"),
         ('', 8126, '\.l&', "Y(LH =Y(&H .L& <sp>\tPOIH/SH|"),
         ('41.Jer.par', 4751, '--\t', "H(D {!}-\t--- ''"),
@@ -74,6 +96,12 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('08.JudgesB.par', 8041, r'N\.\.\.\)T', r"W/TY$N/HW =W/TY$N {...)T $M$WN}\tKAI\ E)KOI/MISEN {...TO\N SAMYWN}"),
         ('', 7568, '=@a\+', "=@+R)a\tE)KRERIMME/NHN"),
         ('', 8151, ' %vpa', "W/YCXQ =%vpa {d}\tKAI\ E)/PAIZEN {d} {...KAI\ E)RRA/PIZON}"),
+        ('30.Amos.par', 603, '\[c', "B/)RC\tTH=S ---  {cGH=S}"),
+        ('', 751, '\[c', ")$H\tGUMNAI\ {cGUNAI=KES}"),
+        ('18.Esther.par', 4779, 'TH=!', "--+ ''\tTH=| TESSARESKAIDEKA/TH|"),
+        ('19.Neh.par', 1663, 'MEneN', "K/H/YWM^IW(S SH/MERON"),
+        ('', 3198, '{c\?}', "$(R =?(YR\tTH=S PO/LEWS {c?PU/LHS}"),
+        ('45.DanielOG.par', 7333, '{\?}', "YMYM\t---?"),
     ]
 
     report('\napplying bulk manual edits...\n')
@@ -160,6 +188,18 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
             raise Exception('PSALMS ORPHAN REPAIR 2 SKIPPED!')
         report('**WARNING: SKIPPING PSALMS ORPHAN REPAIR #2 DUE TO CHANGED LINE NUMBERS; see code')
 
+    # There is repeated material in Ezek, lines 20600-20607 (Ezek 47:20)
+    # We repair that here
+    ezek = file2lines['44.Ezekiel.par']
+    if '     ' in ezek[20599]:
+        ezek[20599] = "--+ =:XMT\tHMAQ"
+        fix = ezek[:20600] + ezek[20607:]
+        file2lines['44.Ezekiel.par'] = fix
+    else:
+        if debug:
+            raise Exception('EZEKIEL DUPLICATE CONTENT REPAIR SKIPPED!')
+        report('**WARNING: EZEKIEL DUPLICATE CONTENT REPAIR SKIPPED; see code') 
+
     # -- Repair Orphaned Lines --
 
     # a search for lines without \t reveals that numerous lines are 
@@ -244,8 +284,8 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
     # dependent on other idiosyncracies being fixed already
     normalizations = [
         ('~', '^'),
-        ("---\+", "--+"),
         ('----\+---', "--- ''"), # see 2 Chr 27:8
+        ("---\+", "--+"),
         ("<([^\s>]*)\s(?!.*[>#])", '<\g<1>> '), # numerous unclosed brackets
 
         # NB: on below, cases of `{..`; some cases may be ambiguous whether they should be 
@@ -299,13 +339,20 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('(\s)(\d+)}', '\g<1>{\g<2>}'),
         ('=%\?p(-?)', '=%p\g<1>?'),
         (' ([a-z][a-z]) (?=.*\t)', ' .\g<1> '),
-        ('=&p-', '=%p-'),
         ('\(\.\.', '{..'),
         (r'\\(?=.*\t)', '/'),
 
         # order of block matters here
         ('\[([a-zA-Z])}', '{\g<1>}'),
         ('\[([\d.a-z]+)(?!.*\])', '[\g<1>]'),
+          
+        ('\s\s\s\s+', ' '),
+        ('{\.\.\.\^', '{..^'),
+        ('{\.\.\^\.', '{..^'),
+        ('{\.\.\.([a-z]+)', '{..\g<1>'),
+        ('{t\.}', '{t}'),
+        ('<t\?>', '{t?}'),
+        ('\s\?--\+\s', ' --+? '),
     ]
 
     report('\nMaking various bulk regex normalizations...\n')
@@ -313,6 +360,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
     for search, replace in normalizations:
 
         search = re.compile(search) # compile for efficiency
+        pattern_successful = False
 
         for file, lines in file2lines.items():
         
@@ -332,12 +380,19 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
                     report(f'normalization in {file} in {curr_verse}:')
                     report(f'\tOLD: {line}')
                     report(f'\tNEW: {redaction}')
+                    pattern_successful = True   
                 
                 # else keep line the same
                 else:
                     new_lines.append(line)
 
             file2lines[file] = new_lines
+
+        if not pattern_successful:
+            if debug:
+                raise Exception(f'PATTERN NOT FOUND: {search}')
+            else:
+                report(f'WARNING, PATTERN NOT FOUND: {search}')
 
     # export the corrected files
     report(f'writing patched data to {output_dir}')
