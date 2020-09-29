@@ -59,7 +59,6 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('', 16898, ' no id\.', "NSH[..] 4\t--- ''<c - no id.>"), # put weird note in brackets
         ('11.1Sam.par', 2096, 'O\t', "--+ '' =KPWT\tOI( KARPOI\\"),
         ('', 2097, 'T\t', "--+ '' =;YD/YW\tTW=N XEIRW=N AU)TOU="),
-        ('', 6206, 'M;H', "^ )BN =H/YWM,HLWM <14.36>\tE)NTAU=QA"),
         ('13.1Kings.par', 15936, 'EI\)S}\t', "W/YBW)\tKAI\ EI)SH=LQEN {...EI)S}"),
         ('14.2Kings.par', 4735, '{c}\? ', "YNHG\tE)GE/NETO {c?H)=GEN}"),
         ('40.Isaiah.par', 1855, 'E\t', "B/$LKT =;M$LKT <q1a>\tE)KPE/SH|"),
@@ -86,7 +85,6 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('', 21484, 'Y\*', "CR/Y\tOI( E)XQROI/ MOU [118.139]"),
         ('23.Prov.par', 89, 'c18\.7\s', r"W/(NQYM <ju8.26 ge41.42 c18.7>\tKAI\ KLOIO\N XRU/SEON"),
         ('', 3274, 'ER\t', "{...}\tW(/SPER"),
-        ('', 5163, '{\.\.\^{p}', "B/)Y$\t{p}{..^A)NDRI\}"),
         ('', 3317, '{c} ', r"YQB/HW =?@$BQa\tU(POLI/POITO {cU(POLH/NION} AU)TO\N"),
         ('03.Lev.par', 6866, '<sp\^\s', "--+ '' =;B/W <nu19.13> <sp^> #\tE)N AU)TW=|"),
         ('', 8126, '\.l&', "Y(LH =Y(&H .L& <sp>\tPOIH/SH|"),
@@ -103,7 +101,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('18.Esther.par', 4779, 'TH=!', "--+ ''\tTH=| TESSARESKAIDEKA/TH|"),
         ('19.Neh.par', 1663, 'MEneN', "K/H/YWM^IW(S SH/MERON"),
         ('', 3198, '{c\?}', "$(R =?(YR\tTH=S PO/LEWS {c?PU/LHS}"),
-        ('45.DanielOG.par', 7333, '{\?}', "YMYM\t---?"),
+        ('45.DanielOG.par', 7333, '{\?}', "YMYM\t--- <?>"),
     ]
 
     report('\napplying bulk manual edits...\n')
@@ -330,8 +328,6 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('=\?:', '=:?'),
         ('={d};', '=;{d}'),
 
-        # normalize verse cross references in Hebrew portion
-        ('\[\[(.*[a-zA-Z]+.*\d\..*)\]\](?=.*\t)', '<\g<1>>'),
         ('=p%([-+\s])', '=%p\g<1>'),
         ('{d\t', '{d}\t'),
         ('{15{', '{15}'),
@@ -360,7 +356,14 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         # to the end of the brackets; this normalizes the `?`
         # and allows us to treat them as external decorators
         # rather than allowing them to interrupt a symbol
-        (r"{([^}]*)\?(.*?)}", "{\g<1>\g<2>}?")
+        (r"{([^}]*)(\?\??)(.*?)}", "{\g<1>\g<3>}\g<2>"),
+
+        # normalize verse cross references in Hebrew portion
+        #('\[\[(.*[a-zA-Z]+.*\d\..*)\]\](?=.*\t)', '<\g<1>>'),
+        (r"\[\[(.+?)\]\](?=.*\t)", "<\g<1>>"),
+        (r"{dt}", "{d}{t}"),
+    
+
     ]
 
     report('\nMaking various bulk regex normalizations...\n')
