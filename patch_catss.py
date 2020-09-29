@@ -79,9 +79,11 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('', 3575, '-\.-', ''), # erase redundant line
         ('', 4093, '{TOU', "W/B/BNYMN\tKAI\ {cTOU=} BENIAMIN"),
         ('02.Exodus.par', 18838, '<40\.9}', '--+ '' {x} =;B/W <40.9>\tAU)TH=S'), 
-        ('', 3197, '\s\s\s\s\s', "--+ =HW) <sp>	AU)TO\S"), 
+        ('', 3197, '\s\s\s\s\s', "--+ =HW) <sp>\tAU)TO\S"), 
         ('04.Num.par', 7479, '<de1\.39\)', "--+ '' =;)$R <de1.39>\tO(/SOI"),
         ('20.Psalms.par', 21382, '{\.1\.d', "W/M/PZ\tKAI\ {..dU(PE\R} TOPA/ZION [118.127]"),
+        ('', 8991, '\*YCPYNW\*', "**YCPYNW *YCPWNW\tKAI\ KATAKRU/YOUSIN [55.7]"),
+        ('', 21484, 'Y\*', "CR/Y\tOI( E)XQROI/ MOU [118.139]"),
         ('23.Prov.par', 89, 'c18\.7\s', r"W/(NQYM <ju8.26 ge41.42 c18.7>\tKAI\ KLOIO\N XRU/SEON"),
         ('', 3274, 'ER\t', "{...}\tW(/SPER"),
         ('', 5163, '{\.\.\^{p}', "B/)Y$\t{p}{..^A)NDRI\}"),
@@ -353,6 +355,12 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('{t\.}', '{t}'),
         ('<t\?>', '{t?}'),
         ('\s\?--\+\s', ' --+? '),
+
+        # move question marks contained in brackets
+        # to the end of the brackets; this normalizes the `?`
+        # and allows us to treat them as external decorators
+        # rather than allowing them to interrupt a symbol
+        (r"{([^}]*)\?(.*?)}", "{\g<1>\g<2>}?")
     ]
 
     report('\nMaking various bulk regex normalizations...\n')
