@@ -8,6 +8,21 @@ ref_string = regex.compile(r'^[A-Za-z1-9/]+ \d+:?\d*$')
 # identify Hebrew transcription characters
 hchars = r')BGDHWZX+YKLMNS(PCQR&$T/'
 
+# recognize Greek letters
+gchars = r"ABGDEVZHQIKLMNCOPRSJTUFXYW()|/\\=+*'\-"
+
+# The following data contains patterns for capturing
+# and processing text critical sigla
+# the tuples contain the following content:
+# (regex, kind, tag, description, indices [optional])
+# kind refers to different behavior of markup:
+# • con - apply the tag to all text in a given context
+# • sub - a substitution which represents a missing text element
+# • cap - a tag which captures text elements in its vicinity for tagging
+# indices is a dict which refers to capture group indices;
+# the 'txt' key is reserved as special for text elements;
+# all other tags are used for formatting tag strings with .format().
+
 # identify text-critical sigla common to all columns
 common_tc = [
     (
@@ -319,9 +334,6 @@ heb_tc = [
         {},
     ),
 ]
-
-# recognize Greek letters
-gchars = r"ABGDEVZHQIKLMNCOPRSJTUFXYW()|/\\=+*'\-"
 
 # recognize Greek text-critical sigla
 greek_tc = [
