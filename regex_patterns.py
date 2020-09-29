@@ -2,80 +2,14 @@
 
 import regex
 
+# identify verse reference strings
 ref_string = regex.compile(r'^[A-Za-z1-9/]+ \d+:?\d*$')
 
-# Hebrew characters
+# identify Hebrew transcription characters
 hchars = r')BGDHWZX+YKLMNS(PCQR&$T/'
 
-extra_bib_tc = [
-    (
-        r"(.*)\s*(\d)+\s*", 
-        'att', 
-        'MNS.{tag}', 
-        'manuscript containing Hebrew text of extrabiblical passages',
-        {'txt': 0, 'tag': 1},
-    ),
-    (
-        r"\[\.\.\]", 
-        'sub', 
-        'lac', 
-        'lacuna reflected in manuscript of extrabiblical passage', 
-        {},
-    ),
-    (
-        r"{([\d?]+)}",
-        'sub',
-        'lac.{tag}',
-        'reports lacuna in listed manuscript of extrabiblical passage',
-        {'tag':0},
-    ),
-    (
-        r"\[.*?\]",
-        'cap',
-        'recst',
-        'reconstruction of text from an extrabiblical passage',
-        {'txt':0},
-    ),
-    (
-        r"<<(.+?)>>",
-        'cap',
-        '?',
-        'UNKNOWN; possibly reconstructed text',
-        {'txt':0},
-    ),
-    (
-        r"<(.+?)>",
-        'cap',
-        '?',
-        'UNKNOWN; possibly reconstructed text',
-        {'txt':0},
-    ),
-    (
-        r">(\d+)",
-        "con",
-        "om.{manu}",
-        "reading is omitted in cited manuscript",
-        {'manu':0},
-    ),
-    (
-        fr"([{hchars}])\*",
-        "cap",
-        "doubt",
-        "uncertain or fragmentary letter",
-        {'txt':0},
-    ),
-    (
-        fr"(\*-[{hchars}])\*",
-        "cap",
-        "doubt",
-        "reading of the character is in doubt",
-        {'txt':0},
-    )
-]
-
-# order matters: more complex patterns first
-hb_tc = [
-    # pattern, kind, NEW code, description, indicies (optional)
+# identify text-critical sigla common to all columns
+common_tc = [
     (
         r"--\+\s?(''|{x})?", 
         'con', 
@@ -91,11 +25,11 @@ hb_tc = [
         {},
     ),
     (
-        r",,a", 
-        'con', 
-        'ARA', 
-        'Word included in one of the Aramaic sections', 
-        {},
+        "{x}",
+        "con",
+        "app-/+",
+        "apparent minus/plus",
+        {}, 
     ),
     (
         r"{\.\.\.}", 
@@ -107,15 +41,9 @@ hb_tc = [
     (
         r"{\.\.\.(.+?)}", 
         'cap', 
+        'trans',
         'transposition; equivalent reflected elsewhere in the text', 
         {'txt':0},
-    ),
-    (
-        r"=?;", 
-        'con', 
-        'cret', 
-        'retroversion in Hebrew con.b based on immediate / remote context', 
-        {},
     ),
     (
         r"\^\^\^ \^|\^ \^\^\^", 
@@ -125,7 +53,7 @@ hb_tc = [
         {},
     ),
     (
-        r"{\.\.\^(.+?)}",
+        r"{\.\.p?\^(.+?)}",
         "cap",
         "strans",
         "stylistic or grammatical transposition of elements",
@@ -146,6 +74,76 @@ hb_tc = [
         {'txt':0},
     ),
     (
+        r"<(.*?)>",
+        "cap",
+        "{note}",
+        "contains a note (?)",
+        {'note': 0},
+    ),
+    (
+        r"(.*?)(?==?\{d\})",
+        "cap",
+        "<doub",
+        "elements before a doublet",
+        {'txt':0},
+    ),
+    (
+        r"=?\{d\}(.*)",
+        "cap",
+        ">doub",
+        "elements after a doublet",
+        {'txt':0},
+    ),
+    (
+        r"{\.\.p(.*?)}",
+        "cap",
+        "prept+",
+        "preposition added in LXX in accordance with Greek rules/translational habits",
+        {'txt':0},
+    ),
+     (
+        "{t}",
+        "con",
+        "transl",
+        "Transliterated Hebrew word",
+        {},
+    ),
+    (
+        "{p}\+?",
+        "con",
+        "gprev",
+        "Greek preverb representing Hebrew preposition",
+        {},
+    ),
+    (
+        "{\+}",
+        "con",
+        "?",
+        "UNKNOWN",
+        {},
+    ),
+
+]
+
+# order matters: more complex patterns first
+heb_tc = [
+    # pattern, kind, NEW code, description, indicies (optional)
+   
+    (
+        r",,a", 
+        'con', 
+        'ARA', 
+        'Word included in one of the Aramaic sections', 
+        {},
+    ),
+   (
+        r"=?;(.+)", 
+        'cap', 
+        'cret', 
+        'retroversion in Hebrew con.b based on immediate / remote context', 
+        {'txt':0},
+    ),
+   (
         fr"(\*\*([{hchars}]+)",
         'cap',
         'qere',
@@ -195,13 +193,6 @@ hb_tc = [
         {'txt': 0},
     ),
     (
-        r"<.*?>",
-        "cap",
-        "note",
-        "contains a note (?)",
-        {'txt': 0},
-    ),
-    (
         r"=?%p([-+])",
         "con",
         "prep{tag}",
@@ -223,31 +214,10 @@ hb_tc = [
         {},
     ),
     (
-        r"(.*?)(?==?\{d\})",
-        "cap",
-        "<doub",
-        "elements before a doublet",
-        {'txt':0},
-    ),
-    (
-        r"=?\{d\}(.*)",
-        "cap",
-        ">doub",
-        "elements after a doublet",
-        {'txt':0},
-    ),
-    (
         r"{\.\.r(.*?)}",
         "cap",
         "repeat",
         "elements repeated in the translation",
-        {'txt':0},
-    ),
-    (
-        r"{\.\.p(.*?)}",
-        "cap",
-        "prept+",
-        "preposition added in LXX in accordance with Greek rules/translational habits",
         {'txt':0},
     ),
     (
@@ -341,18 +311,148 @@ hb_tc = [
         "",
         {'txt':0},
     ),
-    (
-        "{t}",
+   ( # NB: this pattern will only be selected after <.+> pattern
+        ">",
         "con",
-        "transl",
-        "Transliterated Hebrew word",
+        "?",
+        "UNKNOWN",
         {},
-    )
-    
+    ),
 ]
 
-# devise technique to handle question marks
+# recognize Greek letters
+gchars = r"ABGDEVZHQIKLMNCOPRSJTUFXYW()|/\\=+*'\-"
 
-gk_tc = [
+# recognize Greek text-critical sigla
+greek_tc = [
+    (
+        "{---%}",
+        "con",
+        "ast",
+        "asterized passage in Job",
+        {},
+    ),
+    (
+        "{c(.*?)}",
+        "cap",
+        "corr",
+        "indicates a correction to the Greek text",
+        {'txt':0},
+    ),
+    (
+        "{s}",
+        "con",
+        "hsupr",
+        "Hebrew MN reflected by Greek comparative or superlative",
+        {},
+    ),
+    (
+        "\[\[(.*\d+.*)\]\]",
+        "con",
+        "{tag}",
+        "chapter & verse difference from Hebrew",
+        {'tag': 0},
+    ),
+    (
+        "\[(.*\d+.*)\]",
+        "con",
+        "{tag}",
+        "(chapter &) verse difference from Hebrew",
+        {'tag': 0},
+    ),
+    (
+        "{g(.*?)}",
+        "cap",
+        "diffg",
+        "difference between Rahlfs and Göttingen edition",
+        {},
+    ),
+    (
+        "{pm}",
+        "con",
+        "?",
+        "UNKNOWN",
+        {},
+    ),
+]
 
+# recognize text-critical characters in extra-biblical books
+extra_bib_tc = [
+    (
+        r"(.*)\s*(\d)+\s*", 
+        'att', 
+        'MNS.{tag}', 
+        'manuscript containing Hebrew text of extrabiblical passages',
+        {'txt': 0, 'tag': 1},
+    ),
+    (
+        r"\[\.\.\]", 
+        'sub', 
+        'lac', 
+        'lacuna reflected in manuscript of extrabiblical passage', 
+        {},
+    ),
+    (
+        r"{([\d?]+)}",
+        'sub',
+        'lac.{tag}',
+        'reports lacuna in listed manuscript of extrabiblical passage',
+        {'tag':0},
+    ),
+    (
+        r"\[.*?\]",
+        'cap',
+        'recst',
+        'reconstruction of text from an extrabiblical passage',
+        {'txt':0},
+    ),
+    (
+        r"<<(.+?)>>",
+        'cap',
+        '?',
+        'UNKNOWN; possibly reconstructed text',
+        {'txt':0},
+    ),
+    (
+        r"<(.+?)>",
+        'cap',
+        '?',
+        'UNKNOWN; possibly reconstructed text',
+        {'txt':0},
+    ),
+    (
+        r">(\d+)",
+        "con",
+        "om.{manu}",
+        "reading is omitted in cited manuscript",
+        {'manu':0},
+    ),
+    (
+        fr"([{hchars}])\*",
+        "cap",
+        "doubt",
+        "uncertain or fragmentary letter",
+        {'txt':0},
+    ),
+    (
+        fr"(\*-[{hchars}])\*",
+        "cap",
+        "doubt",
+        "reading of the character is in doubt",
+        {'txt':0},
+    ),
+    (
+        "(?<!')'(?!')",
+        "con",
+        "?",
+        "UNKNOWN; possibly a character aleph?",
+        {},
+    ),
+    (
+        "=s",
+        "con",
+        "?",
+        "UNKNOWN",
+        {},
+    )
 ]
