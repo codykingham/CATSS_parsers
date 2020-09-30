@@ -75,14 +75,14 @@ common_tc = [
         {'txt': 0},
     ),
     (
-        r"([^\^]+?) (?=\^)",
+        r"([^\^\s]*) +\??(?=\^)",
         "cap",
         "<trans",
         "elements before a transposition",
         {'txt':0},
     ),
     (
-        r" \^ ([^\^]+)",
+        r" \^\?? +([^\^\s]*)",
         "cap",
         ">trans",
         "elements after a transposition",
@@ -96,14 +96,14 @@ common_tc = [
         {'note': 0},
     ),
     (
-        r"([^\s]*)\s*(?=\{d\})",
+        r"([^\s]*)\s*\??(?=\{d\})",
         "cap",
         "<doub",
         "elements before a doublet",
         {'txt':0},
     ),
     (
-        r"=?\{d\}\s*([^\s]*)",
+        r"=?\{d\}\??\s*([^\s]*)",
         "cap",
         ">doub",
         "elements after a doublet",
