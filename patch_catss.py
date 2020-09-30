@@ -178,6 +178,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
 
     # An identical corruption to the one discussed above in Exodus 35:15
     # likewise in 20.Psalms.par lines 2455-2459
+    pss = file2lines['20.Psalms.par'] # rename to resume corrected data
     if pss[2459] == 'Ps 18:40':
         report('patching corrupt lines 2457-2461 in 20.Psalms.par...')
         fixed_lines = pss[:2456] + [pss[2457]] + pss[2460:]
@@ -347,7 +348,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('{\.\.\.([a-z]+)', '{..\g<1>'),
         ('{t\.}', '{t}'),
         ('<t\?>', '{t?}'),
-        ('\s\?--\+\s', ' --+? '),
+        ('(\s)\?--\+(\s)', '\g<1>--+?\g<2>'),
 
         # move question marks contained in brackets
         # to the end of the brackets; this normalizes the `?`
@@ -360,7 +361,8 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         (r"\[\[(.+?)\]\](?=.*\t)", "<\g<1>>"),
         (r"{dt}", "{d}{t}"),
     
-
+        # move `?` to end of etymological exegesis symbol
+        (r"=@\?(\S+)a", "=@\g<1>a?"),
     ]
 
     report('\nMaking various bulk regex normalizations...\n')
