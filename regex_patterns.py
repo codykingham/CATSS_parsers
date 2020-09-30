@@ -96,14 +96,14 @@ common_tc = [
         {'note': 0},
     ),
     (
-        r"([^\s]*)\s*\??(?=\{d\})",
+        r"({.*?}|[^\s]+)\s*\??(?=\{d\})",
         "cap",
         "<doub",
         "elements before a doublet",
         {'txt':0},
     ),
     (
-        r"=?\{d\}\??\s*([^\s]*)",
+        r"=?\{d\}\??\s*({.*?}|[^\s]*)",
         "cap",
         ">doub",
         "elements after a doublet",
@@ -137,7 +137,6 @@ common_tc = [
         "UNKNOWN",
         {},
     ),
-
 ]
 
 # order matters: more complex patterns first
@@ -208,7 +207,7 @@ heb_tc = [
         {'txt': 0},
     ),
     (
-        r"=?%p([-+])",
+        r"=?%p([-+])?",
         "con",
         "prep{tag}",
         "difference (±) of a preposition or particle",
