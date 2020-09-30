@@ -286,7 +286,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('~', '^'),
         ('----\+---', "--- ''"), # see 2 Chr 27:8
         ("---\+", "--+"),
-        ("<([^\s>]*)\s(?!.*[>#])", '<\g<1>> '), # numerous unclosed brackets
+        ("<([^\s>]*)(\s)(?!.*[>#])", '<\g<1>>\g<2>'), # numerous unclosed brackets
 
         # NB: on below, cases of `{..`; some cases may be ambiguous whether they should be 
         # {... or {..^ However, it is the stated preference of the docs that 
@@ -320,9 +320,6 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('=vpa', '=%vpa'),
         ('{d}%p(\+?)', '%p\g<1> {d}'),
         ('\+;', '=;'),
-        
-        # normalize `?` by placing it at end of strings?
-        #(r'(\s^)\?([^\$\s?]+)', '\g<1>\g<2>?'),
         
         ('{\*\*(\s)', '{**}\g<1>'),
         ('=\?:', '=:?'),
