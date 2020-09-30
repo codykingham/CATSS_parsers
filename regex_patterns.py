@@ -82,7 +82,7 @@ common_tc = [
         {'txt':0},
     ),
     (
-        r" \^ ([^\^]+?)",
+        r" \^ ([^\^]+)",
         "cap",
         ">trans",
         "elements after a transposition",
@@ -96,14 +96,14 @@ common_tc = [
         {'note': 0},
     ),
     (
-        r"(.*?)(?==?\{d\})",
+        r"([^\s]*)\s*(?=\{d\})",
         "cap",
         "<doub",
         "elements before a doublet",
         {'txt':0},
     ),
     (
-        r"=?\{d\}(.*)",
+        r"=?\{d\}\s*([^\s]*)",
         "cap",
         ">doub",
         "elements after a doublet",
@@ -152,21 +152,21 @@ heb_tc = [
         {},
     ),
    (
-        r"=?;(.+)", 
+        r"=?;(.*)", 
         'cap', 
         'cret', 
         'retroversion in Hebrew con.b based on immediate / remote context', 
         {'txt':0},
     ),
    (
-        fr"(\*\*([{hchars}]+)",
+        fr"\*\*([{hchars}]+)",
         'cap',
         'qere',
         'Hebrew qere reading',
         {'txt':0},
     ),
     (
-        fr"(\\*([{hchars}]+)",
+        fr"\*([{hchars}]+)",
         'cap',
         'ketiv', 
         'Hebrew ketiv reading', 
@@ -194,7 +194,7 @@ heb_tc = [
         {'txt':0},
     ),
     (
-        fr"=?@([{hchars} ?,]*?)a",
+        fr"=?@([{hchars} ,]*?)a",
         'cap', 
         'eea',
         'introduces etymological exegesis based on Aramaic',
@@ -352,7 +352,7 @@ greek_tc = [
         {'txt':0},
     ),
     (
-        "{s}",
+        "\{s\}",
         "con",
         "hsupr",
         "Hebrew MN reflected by Greek comparative or superlative",
