@@ -1,4 +1,5 @@
 # Add source directory to avoid uploadings CATSS dataset
+*.swp
 *.json
 source
 
