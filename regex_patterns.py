@@ -12,7 +12,7 @@ hchars = r')BGDHWZX+YKLMNS(PCQR&$T/'
 gchars = r"ABGDEVZHQIKLMNCOPRSJTUFXYW()|/\\=+*'\-"
 
 # strings to discard if all other matches fail
-discard = r"\s+|#|="
+discard = r"\s+|="
 
 # The following data contains patterns for capturing
 # and processing text critical sigla
@@ -57,18 +57,18 @@ common_tc = [
         {'txt': 1, 'tag': 0},
     ),
     (
-        r"--\+\s?(''|{x})?", 
+        r"(--\+\s?(''|{x})?)", 
         'con', 
-        'LXX+', 
+        '{tag}', 
         'In column A of the Hebrew: element added in the Greek', 
-        {},
+        {'tag':0},
     ),
     (
-        r"---\s?(''|{x})?", 
+        r"(---\s?(''|{x})?)", 
         'con', 
-        'MT-', 
+        '{tag}', 
         'apparent minus in the MT over against the Greek', 
-        {},
+        {'tag':0},
     ),
     (
         "{x}",
@@ -120,7 +120,7 @@ common_tc = [
         {'txt':0},
     ),
     (
-        r"(?<!\^)\^ *({.*?})",
+        r"(?<!\^)\^ *({.*?}[a-z+\-]*)",
         "cap",
         "^.",
         "elements after a transposition",
@@ -295,11 +295,11 @@ heb_tc = [
         {'txt':0},
     ),
     (
-        r"=?{!}[a-z-+]*",
+        r"=?{!}([a-z\-+]*)",
         "con",
-        "infa",
+        "infa.{tag}",
         "infinitive absolute with additional data",
-        {},
+        {'tag':0},
     ),
     (
         r"\.m(\s+|$)",
@@ -372,10 +372,10 @@ heb_tc = [
         {},
     ),
     (
-        r",([^,]*)",
+        r",([^,<]*)",
         "cap",
-        "",
-        "",
+        "OR",
+        "introduces a second reconstruction",
         {'txt':0},
     ),
    ( # NB: this pattern will only be selected after <.+> pattern
@@ -434,7 +434,7 @@ greek_tc = [
     (
         "{pm}",
         "con",
-        "! {pm}",
+        "! {{pm}}",
         "UNKNOWN",
         {},
     ),
