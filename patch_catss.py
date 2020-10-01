@@ -1,6 +1,6 @@
 import re
 from pathlib import Path
-from regex_patterns import ref_string
+from regex_patterns import ref_string, hchars, gchars
 from datetime import datetime
 
 def patch(data_dir='source', output_dir='source/patched', silent=False, debug=False):
@@ -44,7 +44,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('', 4673, '{=51}', "W/YMYT/M\t--- <=51>"), # Normalize this to a note
         ('', 10235, '{TOU', "--+\tSALAMIN {d} {...TOU= SWTHRI/OU}"),
         ('01.Genesis.par', 9550, "--\+ ' ", "--+ '' =;W/BH <24.14>\tKAI\ E)N TOU/TW|"),
-        ('', 9552, "--\+ ' ", "--\+ '' =;KY <24.14>\tO(/TI"),
+        ('', 9552, "--\+ ' ", "--+ '' =;KY <24.14>\tO(/TI"),
         ('', 9557, '=:ABRHM', "--+ =:)BRHM\tABRAAM"),
         ('', 2316, '--= ', "--+ '' =H/BHMH\tTW=N KTHNW=N"),
         ('', 12939, '\.a', "B/GLL/K =?B/RGL/YK .s <^30.30\tTH=| SH=| ^ EI)SO/DW|"), # typo: .a for .s
@@ -57,6 +57,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('27.Sirach.par', 4843, '{\.\.}', '[..]\tA)PO\\'),
         ('', 3697, '\s\s\s\s\s', "#\tA(MARTWLOU=} [7]}"), 
         ('', 16898, ' no id\.', "NSH[..] 4\t--- ''<c - no id.>"), # put weird note in brackets
+        ('', 14099, '{\.\.\.\)', "<<KY>> 12\t{...}"),
         ('11.1Sam.par', 2096, 'O\t', "--+ '' =KPWT\tOI( KARPOI\\"),
         ('', 2097, 'T\t', "--+ '' =;YD/YW\tTW=N XEIRW=N AU)TOU="),
         ('13.1Kings.par', 15936, 'EI\)S}\t', "W/YBW)\tKAI\ EI)SH=LQEN {...EI)S}"),
@@ -64,6 +65,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('40.Isaiah.par', 1855, 'E\t', "B/$LKT =;M$LKT <q1a>\tE)KPE/SH|"),
         ('', 11657, '_', "B/M(LWT\t--- ?"),
         ('', 18586, '\.\.\.TO', "W/L/QDW$\tTO\ A(/GION {d} {..^KAI\ DIA\}{..^TO|N"),
+        ('', 11769, '=XWHa,XYY', "YXYW =@XWHa =@XYY\tA)NHGGE/LH {d} {...KAI\ E)CHGEIRA/S}"),
         ('26.Job.par', 2245, 'OU\)}\t', "W/L)\t{..^OU)}DE\\"),
         ('', 2063, '=a', "$DY =@$/DYa\tO( TA\ PA/NTA POIH/SAS"),
         ('', 7441, '{#}', "YMYN\tDECIW=N {---%}"),
@@ -87,7 +89,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('', 3274, 'ER\t', "{...}\tW(/SPER"),
         ('', 3317, '{c} ', "YQB/HW =?@$BQa\tU(POLI/POITO {cU(POLH/NION} AU)TO\\N"),
         ('03.Lev.par', 6866, '<sp\^\s', "--+ '' =;B/W <nu19.13> <sp^> #\tE)N AU)TW=|"),
-        ('', 8126, '\.l&', "Y(LH =Y(&H .L& <sp>\tPOIH/SH|"),
+        ('', 12382, '{\.\.\.L\)\t', "W/PSL {...L)}\tOU)DE\ GLUPTA\\"),
         ('41.Jer.par', 4751, '--\t', "H(D {!}-\t--- ''"),
         ('', 4752, '--\t', "H(DTY {!}-\t--- ''"),
         ('05.Deut.par', 11173, 'KI.*\t', "--+ '' =;KY <24.22>\tO(/TI"),
@@ -101,6 +103,7 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('18.Esther.par', 4779, 'TH=!', "--+ ''\tTH=| TESSARESKAIDEKA/TH|"),
         ('19.Neh.par', 1663, 'MEneN', "K/H/YWM^IW(S SH/MERON"),
         ('', 3198, '{c\?}', "$(R =?(YR\tTH=S PO/LEWS {c?PU/LHS}"),
+        ('', 166, '{\*\*\t', "*W/HBW)TY/M **W/HBY)WTY/M {**}\tKAI\ EI)SA/CW AU)TOU\S"),
         ('45.DanielOG.par', 7333, '{\?}', "YMYM\t--- <?>"),
     ]
 
@@ -322,7 +325,6 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         ('{d}%p(\+?)', '%p\g<1> {d}'),
         ('\+;', '=;'),
         
-        ('{\*\*(\s)', '{**}\g<1>'),
         ('=\?:', '=:?'),
         ('={d};', '=;{d}'),
 
@@ -362,7 +364,17 @@ def patch(data_dir='source', output_dir='source/patched', silent=False, debug=Fa
         (r"{dt}", "{d}{t}"),
     
         # move `?` to end of etymological exegesis symbol
-        (r"=@\?(\S+)a", "=@\g<1>a?"),
+        (r"=@\?(\S*)a", "=@\g<1>a?"),
+
+        # close up unclosed curly brackets
+        (r"{([^\[}#]+)( +|$)(?!.*[}#])", "{\g<1>}\g<2>"),
+
+        (r"\^\^\^ \^ ''", "^^^ ^"),
+        (r"=([A-Z()/&$+]+)a", "=@\g<1>a"),
+    
+        # change brackets of cross references in Hebrew portion to <>
+        # where <...> represents a 'note'
+        ("\[([^\]]*?\d[\]]*?)\](?=.*\t)", "<\g<1>>")
     ]
 
     report('\nMaking various bulk regex normalizations...\n')
