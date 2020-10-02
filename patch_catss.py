@@ -3,6 +3,73 @@ from pathlib import Path
 from regex_patterns import ref_string, hchars, gchars
 from datetime import datetime
 
+def patch_morpho(data_dir='source', output_dir='source/patched', silent=False, debug=False):
+    log = ''
+    log += datetime.now().__str__() + '\n'
+
+    n_edits = 0
+
+    def report(msg):
+        # give feedback
+        nonlocal log # see https://stackoverflow.com/a/8178808/8351428
+        log += msg + '\n'
+        if not silent:
+            print(msg)
+    
+    data = Path(data_dir)
+    file2lines = {}
+
+    for file in data.glob('*.mlxx'):
+        file2lines[file.name] = file.read_text().split('\n')
+
+    # apply select changes 
+    edits = [
+        ('01.Gen.1.mlxx', 12540, 'ADI2P', "KAQI/SATE                VA  AAD2P  I(/ZW            KATA"),
+        ('05.Num.mlxx', 24859, 'SONTAIVC', "SUGKATAKLHRONOMHQH/SONTAI VC  APS2S  KLHRONOME/W      SUN   KATA"),
+    ]
+    report('\napplying bulk manual edits...\n')
+
+    file = ''
+    for edit in edits:
+
+        # unpack data
+        file = edit[0] or file
+        ln, re_confirm, redaction = edit[1:]
+        old_line = file2lines[file][ln]
+
+        # confirm and apply changes, give reports throughout
+        if re.findall(re_confirm, old_line):
+            file2lines[file][ln] = redaction
+            report(f'correction for {file} line {ln}:')
+            report(f'\tOLD: {old_line}')
+            report(f'\tNEW: {redaction}')
+            n_edits += 1
+        else:
+            if debug:
+                raise Exception(f'FOLLOWING EDIT UNCONFIRMED: {edit} at {old_line}')
+            report(f'**WARNING: THE FOLLOWING EDIT WAS NOT CONFIRMED**:')
+            report(f'\tTARGET: {old_line}')
+            report(f'\tEDIT: {edit}')
+
+    # export the corrected files
+    report(f'\nwriting patched data to {output_dir}')
+    output_dir = Path(output_dir)
+    if not output_dir.exists():
+        output_dir.mkdir()
+
+    for file, lines in file2lines.items():
+        text = '\n'.join(lines)
+        file_path = output_dir.joinpath(file)
+        file_path.write_text(text)
+
+    # write changes to a log file
+    log_path = output_dir.joinpath('log.txt')
+    log_path.write_text(log)
+
+    report('\nDONE with all patches!')
+    report(f'\ttotal edits: {n_edits}')
+
+
 def patch_parallel(data_dir='source', output_dir='source/patched', silent=False, debug=False):
     """Corrects known errors in the CATSS database."""
 
